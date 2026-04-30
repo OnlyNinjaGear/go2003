@@ -178,7 +178,7 @@ function Table({
   const containerRef = React.useRef<HTMLDivElement>(null)
 
   return (
-    <div className="flex">
+    <div className="flex [&_thead_tr>*:last-child]:[border-right:none] [&_tfoot_tr>*:last-child]:[border-right:none]">
       <div
         ref={containerRef}
         className={cn(
