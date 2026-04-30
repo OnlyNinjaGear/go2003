@@ -139,14 +139,6 @@
   border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
 }
 
-@utility panel-gradient {
-  background: linear-gradient(to bottom, #7B8B6C, #5B6B4C);
-}
-
-@utility panel-gradient-pressed {
-  background: linear-gradient(to bottom, #5B6B4C, #7B8B6C);
-}
-
 @utility win32-focus {
   outline: 1px dotted #000000;
   outline-offset: -3px;
