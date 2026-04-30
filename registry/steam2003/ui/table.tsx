@@ -37,8 +37,7 @@ function Win32Scrollbar({
     const tfoot = el.querySelector<HTMLElement>("table > tfoot")
     const theadH = thead?.offsetHeight ?? 0
     const tfootH = tfoot?.offsetHeight ?? 0
-    const sbH = el.clientHeight - theadH - tfootH
-    const trackH = sbH - BTN_H * 2
+    const trackH = el.clientHeight - theadH - tfootH - BTN_H * 2
     const range = el.scrollHeight - el.clientHeight
 
     if (range <= 0 || trackH <= 0) {
@@ -64,14 +63,14 @@ function Win32Scrollbar({
     }
   }, [containerRef, update])
 
-  // Thumb drag
   const onThumbDown = (e: React.MouseEvent) => {
     const el = containerRef.current
     if (!el) return
     e.preventDefault()
     const startY = e.clientY
     const startScroll = el.scrollTop
-    const trackUsable = el.clientHeight - s.theadH - s.tfootH - BTN_H * 2 - s.thumbHeight
+    const trackUsable =
+      el.clientHeight - s.theadH - s.tfootH - BTN_H * 2 - s.thumbHeight
     const range = el.scrollHeight - el.clientHeight
 
     const onMove = (ev: MouseEvent) => {
@@ -86,12 +85,10 @@ function Win32Scrollbar({
     window.addEventListener("mouseup", onUp)
   }
 
-  // Hold-to-scroll buttons
   const holdRef = React.useRef<ReturnType<typeof setInterval> | null>(null)
   const startHold = (dir: 1 | -1) => {
     const tick = () => {
-      const el = containerRef.current
-      if (el) el.scrollTop += dir * ROW_H
+      if (containerRef.current) containerRef.current.scrollTop += dir * ROW_H
     }
     tick()
     holdRef.current = setInterval(tick, 80)
@@ -107,10 +104,10 @@ function Win32Scrollbar({
     "bevel-out bg-panel flex items-center justify-center cursor-default select-none shrink-0 active:bevel-in"
 
   return (
-    <div
-      className="absolute right-0 flex flex-col"
-      style={{ top: s.theadH, bottom: s.tfootH, width: SB_W, zIndex: 20 }}
-    >
+    <div className="flex flex-col self-stretch shrink-0" style={{ width: SB_W }}>
+      {/* spacer aligned with thead */}
+      <div style={{ height: s.theadH, flexShrink: 0 }} />
+
       {/* Up button */}
       <div
         className={btn}
@@ -124,7 +121,7 @@ function Win32Scrollbar({
         </svg>
       </div>
 
-      {/* Track */}
+      {/* Track + thumb */}
       <div className="relative flex-1" style={trackBg}>
         {s.canScroll && (
           <div
@@ -147,6 +144,9 @@ function Win32Scrollbar({
           <polygon points="3.5,5 7,0 0,0" fill="#232E19" />
         </svg>
       </div>
+
+      {/* spacer aligned with tfoot */}
+      <div style={{ height: s.tfootH, flexShrink: 0 }} />
     </div>
   )
 }
@@ -159,11 +159,13 @@ function Table({
   const containerRef = React.useRef<HTMLDivElement>(null)
 
   return (
-    <div className={cn("relative overflow-hidden", containerClassName)}>
+    <div className="flex">
       <div
         ref={containerRef}
-        className="h-full w-full overflow-x-auto overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [scroll-snap-type:y_mandatory] [scroll-behavior:auto]"
-        style={{ paddingRight: SB_W }}
+        className={cn(
+          "flex-1 min-w-0 overflow-x-auto overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [scroll-snap-type:y_mandatory] [scroll-behavior:auto]",
+          containerClassName
+        )}
       >
         <table
           data-slot="table"
@@ -243,7 +245,10 @@ function TableCaption({ className, ...props }: React.ComponentProps<"caption">) 
   return (
     <caption
       data-slot="table-caption"
-      className={cn("py-0.5 px-1 bg-panel bevel-out text-left text-foreground", className)}
+      className={cn(
+        "py-0.5 px-1 bg-panel bevel-out text-left text-foreground",
+        className
+      )}
       {...props}
     />
   )
