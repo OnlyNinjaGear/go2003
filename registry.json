@@ -29,6 +29,19 @@
       ]
     },
     {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Win32-style tab control. Active tab is taller and accent-colored.",
+      "dependencies": ["radix-ui"],
+      "files": [
+        {
+          "path": "registry/steam2003/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "table",
       "type": "registry:ui",
       "title": "Table",
