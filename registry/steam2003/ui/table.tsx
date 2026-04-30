@@ -9,7 +9,7 @@ function Table({ className, containerClassName, ...props }: React.ComponentProps
     <div
       data-slot="table-container"
       className={cn(
-        "relative w-full overflow-x-auto overflow-y-scroll [scroll-snap-type:y_mandatory]",
+        "relative w-full overflow-x-auto overflow-y-scroll [scroll-snap-type:y_mandatory] [scroll-behavior:auto]",
         containerClassName
       )}
     >
