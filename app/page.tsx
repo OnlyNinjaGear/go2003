@@ -2,6 +2,16 @@ import { Button } from "@/registry/steam2003/ui/button";
 import { Input } from "@/registry/steam2003/ui/input";
 import { Checkbox } from "@/registry/steam2003/ui/checkbox";
 import {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from "@/registry/steam2003/ui/table";
+import {
   Card,
   CardHeader,
   CardTitle,
