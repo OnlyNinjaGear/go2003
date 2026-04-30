@@ -10,7 +10,7 @@ const buttonVariants = cva(
     "font-sans text-[11px] leading-none",
     "[&_svg]:pointer-events-none [&_svg]:size-3 [&_svg]:shrink-0",
     "outline-none focus-visible:win32-focus",
-    "disabled:opacity-50 disabled:pointer-events-none",
+    "disabled:text-[var(--border-light)] disabled:pointer-events-none",
   ].join(" "),
   {
     variants: {
@@ -18,11 +18,11 @@ const buttonVariants = cva(
         default:
           "bevel-out panel-gradient text-foreground active:bevel-in active:panel-gradient-pressed",
         destructive:
-          "bevel-out text-white [background:linear-gradient(to_bottom,#A04A4A,#6B2828)] active:bevel-in active:[background:linear-gradient(to_bottom,#6B2828,#A04A4A)]",
+          "bevel-out panel-gradient text-[var(--accent)] active:bevel-in active:panel-gradient-pressed",
         outline:
           "bevel-out bg-[var(--input-bg)] text-[var(--input-fg)] active:bevel-in",
         secondary:
-          "bevel-out [background:linear-gradient(to_bottom,#9BAB8C,#7B8B6C)] text-foreground active:bevel-in active:[background:linear-gradient(to_bottom,#7B8B6C,#9BAB8C)]",
+          "bevel-out panel-gradient text-foreground active:bevel-in active:panel-gradient-pressed",
         ghost:
           "border border-transparent bg-transparent text-foreground active:bevel-in active:panel-gradient-pressed",
         link: "border border-transparent bg-transparent text-[var(--accent)] underline underline-offset-2",
