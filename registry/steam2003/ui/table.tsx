@@ -167,8 +167,14 @@ function Win32Scrollbar({
 function Table({
   className,
   containerClassName,
+  scrollbarHeader,
+  scrollbarFooter,
   ...props
-}: React.ComponentProps<"table"> & { containerClassName?: string }) {
+}: React.ComponentProps<"table"> & {
+  containerClassName?: string
+  scrollbarHeader?: React.ReactNode
+  scrollbarFooter?: React.ReactNode
+}) {
   const containerRef = React.useRef<HTMLDivElement>(null)
 
   return (
@@ -186,7 +192,7 @@ function Table({
           {...props}
         />
       </div>
-      <Win32Scrollbar containerRef={containerRef} />
+      <Win32Scrollbar containerRef={containerRef} header={scrollbarHeader} footer={scrollbarFooter} />
     </div>
   )
 }
