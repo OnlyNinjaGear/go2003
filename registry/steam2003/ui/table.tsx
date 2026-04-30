@@ -1,23 +1,177 @@
 "use client"
 
 import * as React from "react"
-
 import { cn } from "@/lib/utils"
 
-function Table({ className, containerClassName, ...props }: React.ComponentProps<"table"> & { containerClassName?: string }) {
+const SB_W = 16
+const BTN_H = 16
+const ROW_H = 19
+
+const trackBg: React.CSSProperties = {
+  backgroundImage: [
+    "linear-gradient(45deg,#3D4635 25%,transparent 25%,transparent 75%,#3D4635 75%)",
+    "linear-gradient(45deg,#3D4635 25%,transparent 25%,transparent 75%,#3D4635 75%)",
+  ].join(","),
+  backgroundSize: "2px 2px",
+  backgroundPosition: "0 0,1px 1px",
+  backgroundColor: "#4B5942",
+}
+
+function Win32Scrollbar({
+  containerRef,
+}: {
+  containerRef: React.RefObject<HTMLDivElement | null>
+}) {
+  const [s, setS] = React.useState({
+    thumbTop: 0,
+    thumbHeight: 20,
+    canScroll: false,
+    theadH: 0,
+    tfootH: 0,
+  })
+
+  const update = React.useCallback(() => {
+    const el = containerRef.current
+    if (!el) return
+    const thead = el.querySelector<HTMLElement>("table > thead")
+    const tfoot = el.querySelector<HTMLElement>("table > tfoot")
+    const theadH = thead?.offsetHeight ?? 0
+    const tfootH = tfoot?.offsetHeight ?? 0
+    const sbH = el.clientHeight - theadH - tfootH
+    const trackH = sbH - BTN_H * 2
+    const range = el.scrollHeight - el.clientHeight
+
+    if (range <= 0 || trackH <= 0) {
+      setS((p) => ({ ...p, canScroll: false, theadH, tfootH }))
+      return
+    }
+
+    const thumbH = Math.max(BTN_H, (el.clientHeight / el.scrollHeight) * trackH)
+    const thumbTop = ((trackH - thumbH) * el.scrollTop) / range
+    setS({ thumbTop, thumbHeight: thumbH, canScroll: true, theadH, tfootH })
+  }, [containerRef])
+
+  React.useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+    update()
+    el.addEventListener("scroll", update, { passive: true })
+    const ro = new ResizeObserver(update)
+    ro.observe(el)
+    return () => {
+      el.removeEventListener("scroll", update)
+      ro.disconnect()
+    }
+  }, [containerRef, update])
+
+  // Thumb drag
+  const onThumbDown = (e: React.MouseEvent) => {
+    const el = containerRef.current
+    if (!el) return
+    e.preventDefault()
+    const startY = e.clientY
+    const startScroll = el.scrollTop
+    const trackUsable = el.clientHeight - s.theadH - s.tfootH - BTN_H * 2 - s.thumbHeight
+    const range = el.scrollHeight - el.clientHeight
+
+    const onMove = (ev: MouseEvent) => {
+      if (trackUsable <= 0 || range <= 0) return
+      el.scrollTop = startScroll + ((ev.clientY - startY) / trackUsable) * range
+    }
+    const onUp = () => {
+      window.removeEventListener("mousemove", onMove)
+      window.removeEventListener("mouseup", onUp)
+    }
+    window.addEventListener("mousemove", onMove)
+    window.addEventListener("mouseup", onUp)
+  }
+
+  // Hold-to-scroll buttons
+  const holdRef = React.useRef<ReturnType<typeof setInterval> | null>(null)
+  const startHold = (dir: 1 | -1) => {
+    const tick = () => {
+      const el = containerRef.current
+      if (el) el.scrollTop += dir * ROW_H
+    }
+    tick()
+    holdRef.current = setInterval(tick, 80)
+  }
+  const stopHold = () => {
+    if (holdRef.current) {
+      clearInterval(holdRef.current)
+      holdRef.current = null
+    }
+  }
+
+  const btn =
+    "bevel-out bg-panel flex items-center justify-center cursor-default select-none shrink-0 active:bevel-in"
+
   return (
     <div
-      data-slot="table-container"
-      className={cn(
-        "relative w-full overflow-x-auto overflow-y-scroll [scroll-snap-type:y_mandatory] [scroll-behavior:auto]",
-        containerClassName
-      )}
+      className="absolute right-0 flex flex-col"
+      style={{ top: s.theadH, bottom: s.tfootH, width: SB_W, zIndex: 20 }}
     >
-      <table
-        data-slot="table"
-        className={cn("w-full caption-top border-separate border-spacing-0", className)}
-        {...props}
-      />
+      {/* Up button */}
+      <div
+        className={btn}
+        style={{ height: BTN_H }}
+        onMouseDown={() => startHold(-1)}
+        onMouseUp={stopHold}
+        onMouseLeave={stopHold}
+      >
+        <svg width="7" height="5" viewBox="0 0 7 5">
+          <polygon points="3.5,0 7,5 0,5" fill="#232E19" />
+        </svg>
+      </div>
+
+      {/* Track */}
+      <div className="relative flex-1" style={trackBg}>
+        {s.canScroll && (
+          <div
+            className="absolute inset-x-0 bevel-out bg-panel cursor-default active:bevel-in"
+            style={{ top: s.thumbTop, height: s.thumbHeight }}
+            onMouseDown={onThumbDown}
+          />
+        )}
+      </div>
+
+      {/* Down button */}
+      <div
+        className={btn}
+        style={{ height: BTN_H }}
+        onMouseDown={() => startHold(1)}
+        onMouseUp={stopHold}
+        onMouseLeave={stopHold}
+      >
+        <svg width="7" height="5" viewBox="0 0 7 5">
+          <polygon points="3.5,5 7,0 0,0" fill="#232E19" />
+        </svg>
+      </div>
+    </div>
+  )
+}
+
+function Table({
+  className,
+  containerClassName,
+  ...props
+}: React.ComponentProps<"table"> & { containerClassName?: string }) {
+  const containerRef = React.useRef<HTMLDivElement>(null)
+
+  return (
+    <div className={cn("relative overflow-hidden", containerClassName)}>
+      <div
+        ref={containerRef}
+        className="h-full w-full overflow-x-auto overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [scroll-snap-type:y_mandatory] [scroll-behavior:auto]"
+        style={{ paddingRight: SB_W }}
+      >
+        <table
+          data-slot="table"
+          className={cn("w-full caption-top border-separate border-spacing-0", className)}
+          {...props}
+        />
+      </div>
+      <Win32Scrollbar containerRef={containerRef} />
     </div>
   )
 }
@@ -33,23 +187,14 @@ function TableHeader({ className, ...props }: React.ComponentProps<"thead">) {
 }
 
 function TableBody({ className, ...props }: React.ComponentProps<"tbody">) {
-  return (
-    <tbody
-      data-slot="table-body"
-      className={cn(className)}
-      {...props}
-    />
-  )
+  return <tbody data-slot="table-body" className={cn(className)} {...props} />
 }
 
 function TableFooter({ className, ...props }: React.ComponentProps<"tfoot">) {
   return (
     <tfoot
       data-slot="table-footer"
-      className={cn(
-        "sticky bottom-0 z-10 [&_td]:bevel-out [&_td]:bg-panel",
-        className
-      )}
+      className={cn("sticky bottom-0 z-10 [&_td]:bevel-out [&_td]:bg-panel", className)}
       {...props}
     />
   )
@@ -60,7 +205,7 @@ function TableRow({ className, ...props }: React.ComponentProps<"tr">) {
     <tr
       data-slot="table-row"
       className={cn(
-        "[scroll-snap-align:start] hover:bg-panel-hover has-aria-expanded:bg-panel-hover data-[state=selected]:bg-primary data-[state=selected]:text-primary-foreground",
+        "[scroll-snap-align:start] hover:bg-panel-hover data-[state=selected]:bg-primary data-[state=selected]:text-primary-foreground",
         className
       )}
       {...props}
@@ -94,10 +239,7 @@ function TableCell({ className, ...props }: React.ComponentProps<"td">) {
   )
 }
 
-function TableCaption({
-  className,
-  ...props
-}: React.ComponentProps<"caption">) {
+function TableCaption({ className, ...props }: React.ComponentProps<"caption">) {
   return (
     <caption
       data-slot="table-caption"
