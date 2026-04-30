@@ -129,6 +129,50 @@ export default function Home() {
           </div>
         </section>
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Table</h2>
+
+          <div className="bevel-in bg-input-bg">
+            <Table>
+              <TableCaption>Installed games</TableCaption>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Name</TableHead>
+                  <TableHead>Size</TableHead>
+                  <TableHead>Last Played</TableHead>
+                  <TableHead>Status</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell>Half-Life 2</TableCell>
+                  <TableCell>4.2 GB</TableCell>
+                  <TableCell>Today</TableCell>
+                  <TableCell>Ready</TableCell>
+                </TableRow>
+                <TableRow data-state="selected">
+                  <TableCell>Counter-Strike</TableCell>
+                  <TableCell>600 MB</TableCell>
+                  <TableCell>Yesterday</TableCell>
+                  <TableCell>Ready</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Team Fortress 2</TableCell>
+                  <TableCell>15 GB</TableCell>
+                  <TableCell>3 days ago</TableCell>
+                  <TableCell>Needs update</TableCell>
+                </TableRow>
+              </TableBody>
+              <TableFooter>
+                <TableRow>
+                  <TableCell colSpan={3}>Total</TableCell>
+                  <TableCell>19.8 GB</TableCell>
+                </TableRow>
+              </TableFooter>
+            </Table>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Card</h2>
 
           <div className="flex flex-wrap gap-3">
