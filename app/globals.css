@@ -21,10 +21,13 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-panel: var(--panel);
+  --color-panel-pressed: var(--panel-pressed);
+  --color-panel-hover: var(--panel-hover);
   --color-border-light: var(--border-light);
   --color-border-dark: var(--border-dark);
   --color-input-bg: var(--input-bg);
   --color-input-fg: var(--input-fg);
+  --color-destructive-pressed: var(--destructive-pressed);
   --font-sans: "Tahoma", "Verdana", "Geneva", sans-serif;
   --font-mono: "Tahoma", "Verdana", "Geneva", sans-serif;
 }
