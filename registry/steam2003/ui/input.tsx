@@ -20,6 +20,7 @@ function Input({ className, type, ...props }: InputProps) {
         "file:border-0 file:bg-transparent file:font-sans file:text-[11px] file:font-normal file:text-foreground",
         className
       )}
+      {...props}
     />
   );
 }
