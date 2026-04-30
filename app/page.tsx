@@ -1,6 +1,15 @@
 import { Button } from "@/registry/steam2003/ui/button";
 import { Input } from "@/registry/steam2003/ui/input";
 import { Checkbox } from "@/registry/steam2003/ui/checkbox";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardAction,
+  CardContent,
+  CardFooter,
+} from "@/registry/steam2003/ui/card";
 import { X } from "lucide-react";
 
 export default function Home() {
