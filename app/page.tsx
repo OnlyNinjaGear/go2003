@@ -118,6 +118,38 @@ export default function Home() {
             </label>
           </div>
         </section>
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Card</h2>
+
+          <div className="flex flex-wrap gap-3">
+            <Card className="w-64">
+              <CardHeader>
+                <CardTitle>Steam Account</CardTitle>
+                <CardDescription>Manage your account settings</CardDescription>
+                <CardAction>
+                  <Button size="sm">Edit</Button>
+                </CardAction>
+              </CardHeader>
+              <CardContent>
+                <p>Username: GabeN</p>
+                <p>Status: Online</p>
+              </CardContent>
+              <CardFooter className="border-t border-border-dark pt-3">
+                <Button variant="destructive" size="sm">Delete Account</Button>
+              </CardFooter>
+            </Card>
+
+            <Card className="w-64">
+              <CardHeader>
+                <CardTitle>No Footer</CardTitle>
+                <CardDescription>Simple card without footer</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>Some content goes here.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
       </main>
     </div>
   );
