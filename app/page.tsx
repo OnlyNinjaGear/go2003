@@ -1,5 +1,6 @@
 import { Button } from "@/registry/steam2003/ui/button";
 import { Input } from "@/registry/steam2003/ui/input";
+import { Checkbox } from "@/registry/steam2003/ui/checkbox";
 import { X } from "lucide-react";
 
 export default function Home() {
@@ -66,6 +67,33 @@ export default function Home() {
               <Input placeholder="Search Steam..." className="flex-1" />
               <Button size="sm">Find</Button>
             </div>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Checkbox</h2>
+
+          <div className="flex flex-col gap-2">
+            <label className="flex items-center gap-1.5 cursor-default">
+              <Checkbox />
+              <span>Unchecked</span>
+            </label>
+            <label className="flex items-center gap-1.5 cursor-default">
+              <Checkbox defaultChecked />
+              <span>Checked</span>
+            </label>
+            <label className="flex items-center gap-1.5 cursor-default">
+              <Checkbox checked="indeterminate" />
+              <span>Indeterminate</span>
+            </label>
+            <label className="flex items-center gap-1.5 cursor-default">
+              <Checkbox disabled />
+              <span>Disabled unchecked</span>
+            </label>
+            <label className="flex items-center gap-1.5 cursor-default">
+              <Checkbox defaultChecked disabled />
+              <span>Disabled checked</span>
+            </label>
           </div>
         </section>
       </main>
