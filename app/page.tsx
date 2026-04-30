@@ -162,8 +162,10 @@ export default function Home() {
           <h2 className="font-bold">Table</h2>
 
           <Table containerClassName="max-h-[160px] bg-input-bg">
-            <TableCaption>Installed games</TableCaption>
             <TableHeader>
+              <TableRow>
+                <TableHead colSpan={4}>Installed games</TableHead>
+              </TableRow>
               <TableRow>
                 <TableHead>Name</TableHead>
                 <TableHead>Size</TableHead>
