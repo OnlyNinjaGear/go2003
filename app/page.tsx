@@ -1,5 +1,6 @@
 import { Button } from "@/registry/steam2003/ui/button";
 import { Input } from "@/registry/steam2003/ui/input";
+import { X } from "lucide-react";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
               <Button size="sm">Small</Button>
               <Button size="default">Default</Button>
               <Button size="lg">Large</Button>
-              <Button size="icon" aria-label="Icon">X</Button>
+              <Button size="icon" aria-label="Icon"><X /></Button>
             </div>
           </div>
 
@@ -55,15 +56,15 @@ export default function Home() {
             <Input placeholder="Placeholder text" />
             <Input defaultValue="Has value" />
             <Input type="password" defaultValue="secret" />
-            <Input placeholder="Read only" readOnly />
-            <Input placeholder="Disabled" disabled />
+            <Input defaultValue="Read only" readOnly />
+            <Input defaultValue="Disabled" disabled />
           </div>
 
           <div className="flex flex-col gap-1">
             <span>With button</span>
-            <div className="flex gap-1 max-w-xs">
+            <div className="flex gap-1.5 max-w-xs">
               <Input placeholder="Search Steam..." className="flex-1" />
-              <Button>Find</Button>
+              <Button size="sm">Find</Button>
             </div>
           </div>
         </section>

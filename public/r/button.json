@@ -3,7 +3,7 @@
   "name": "button",
   "type": "registry:ui",
   "title": "Button",
-  "description": "Win32-style raised button. Outset bevel and gradient at rest, instant swap to inset bevel and reversed gradient on press.",
+  "description": "Win32-style raised button with outset bevel. Instant swap to inset bevel on press.",
   "dependencies": [
     "@radix-ui/react-slot",
     "class-variance-authority"

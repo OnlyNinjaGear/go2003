@@ -34,7 +34,7 @@
 
 :root {
   --background: #3D4635;
-  --foreground: #D5DBC8;
+  --foreground: #FFFFFF;
   --panel: #4C5844;
   --panel-pressed: #272C22;
   --panel-hover: #3D4635;
@@ -42,9 +42,9 @@
   --border-dark: #232E19;
   --accent: #C4BE78;
   --accent-foreground: #000000;
-  --input-bg: #FFFFFF;
-  --input-fg: #000000;
-  --primary: #C8B560;
+  --input-bg: #3D4635;
+  --input-fg: #FFFFFF;
+  --primary: #908637;
   --primary-foreground: #000000;
   --secondary: #6B7B5C;
   --secondary-foreground: #D5DBC8;
@@ -52,8 +52,8 @@
   --card-foreground: #D5DBC8;
   --popover: #6B7B5C;
   --popover-foreground: #D5DBC8;
-  --muted: #4B5942;
-  --muted-foreground: #D5DBC8;
+  --muted: #636D5F;
+  --muted-foreground: #AFBCA9;
   --destructive: #940A0A;
   --destructive-pressed: #730808;
   --destructive-foreground: #FFFFFF;
@@ -143,4 +143,6 @@
 @utility win32-focus {
   outline: 1px dotted #000000;
   outline-offset: -3px;
+  box-shadow: 0 0 0 1px #000000;
+  border-width: 1px;
 }
