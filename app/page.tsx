@@ -1,6 +1,7 @@
 import { Button } from "@/registry/steam2003/ui/button";
 import { Input } from "@/registry/steam2003/ui/input";
 import { Checkbox } from "@/registry/steam2003/ui/checkbox";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/registry/steam2003/ui/tabs";
 import {
   Table,
   TableHeader,
