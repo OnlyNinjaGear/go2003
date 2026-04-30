@@ -15,9 +15,9 @@ function Checkbox({
       data-slot="checkbox"
       className={cn(
         "peer bevel-in size-[13px] shrink-0 cursor-default",
-        "bg-input-bg text-input-fg",
+        "bg-input-bg text-input-fg data-[state=checked]:text-primary data-[state=indeterminate]:text-primary",
         "outline-none focus-visible:win32-focus focus-visible:[outline-offset:1px]",
-        "disabled:bg-panel-pressed disabled:text-[var(--border-light)] disabled:pointer-events-none",
+        "disabled:bg-panel-pressed disabled:text-[var(--primary)] disabled:pointer-events-none",
         "aria-invalid:border-destructive",
         className
       )}
