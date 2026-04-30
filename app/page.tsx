@@ -1,4 +1,5 @@
 import { Button } from "@/registry/steam2003/ui/button";
+import { Input } from "@/registry/steam2003/ui/input";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
           <h2 className="font-bold">Button</h2>
 
           <div className="flex flex-col gap-1">
-            <span className="text-foreground">Variants</span>
+            <span>Variants</span>
             <div className="flex flex-wrap items-center gap-2">
               <Button>Default</Button>
               <Button variant="destructive">Destructive</Button>
@@ -28,26 +29,41 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <span className="text-foreground">Sizes</span>
+            <span>Sizes</span>
             <div className="flex flex-wrap items-center gap-2">
               <Button size="sm">Small</Button>
               <Button size="default">Default</Button>
               <Button size="lg">Large</Button>
-              <Button size="icon" aria-label="Icon">
-                X
-              </Button>
+              <Button size="icon" aria-label="Icon">X</Button>
             </div>
           </div>
 
           <div className="flex flex-col gap-1">
-            <span className="text-foreground">States</span>
+            <span>States</span>
             <div className="flex flex-wrap items-center gap-2">
               <Button>Normal</Button>
               <Button disabled>Disabled</Button>
-              <Button autoFocus>Focused (Tab to others)</Button>
-              <Button asChild>
-                <a href="#">As link (asChild)</a>
-              </Button>
+              <Button autoFocus>Focused</Button>
+            </div>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Input</h2>
+
+          <div className="flex flex-col gap-2 max-w-xs">
+            <Input placeholder="Placeholder text" />
+            <Input defaultValue="Has value" />
+            <Input type="password" defaultValue="secret" />
+            <Input placeholder="Read only" readOnly />
+            <Input placeholder="Disabled" disabled />
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <span>With button</span>
+            <div className="flex gap-1 max-w-xs">
+              <Input placeholder="Search Steam..." className="flex-1" />
+              <Button>Find</Button>
             </div>
           </div>
         </section>
