@@ -44,7 +44,7 @@ function TableFooter({ className, ...props }: React.ComponentProps<"tfoot">) {
     <tfoot
       data-slot="table-footer"
       className={cn(
-        "bg-panel bevel-out font-normal [&>tr]:last:border-b-0",
+        "bg-panel [&_td]:bevel-out [&_td]:bg-panel [&>tr]:last:border-b-0",
         className
       )}
       {...props}
