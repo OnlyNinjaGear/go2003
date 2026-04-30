@@ -18,7 +18,7 @@ function Checkbox({
         "bg-input-bg text-input-fg data-[state=checked]:text-primary data-[state=indeterminate]:text-primary",
         "outline-none focus-visible:win32-focus focus-visible:[outline-offset:1px]",
         "disabled:bg-panel-pressed disabled:text-[var(--primary)] disabled:pointer-events-none",
-        "aria-invalid:border-destructive",
+        "aria-invalid:shadow-[0_0_0_1px_var(--destructive)] aria-invalid:data-[state=checked]:text-destructive-light aria-invalid:data-[state=indeterminate]:text-destructive-light",
         className
       )}
       {...props}

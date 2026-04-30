@@ -101,7 +101,11 @@ export default function Home() {
             </label>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox aria-invalid="true" defaultChecked />
-              <span className="peer-aria-[invalid=true]:text-destructive">Invalid checked</span>
+              <span className="peer-aria-[invalid=true]:text-destructive-light">Invalid checked</span>
+            </label>
+            <label className="flex items-center gap-1.5 cursor-default">
+              <Checkbox />
+              <span className="peer-data-[state=checked]:text-primary peer-data-[state=indeterminate]:text-primary">Another checkbox</span>
             </label>
           </div>
         </section>

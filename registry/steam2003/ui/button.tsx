@@ -19,7 +19,7 @@ const buttonVariants = cva(
         default:
           "bevel-out bg-panel text-foreground active:bevel-in active:bg-background active:text-muted-foreground",
         destructive:
-          "bevel-out bg-destructive text-destructive-foreground active:bevel-in active:bg-destructive-pressed",
+          "bevel-out bg-destructive text-destructive-foreground active:bevel-in active:bg-destructive-pressed active:text-destructive-light",
         outline:
           "bevel-out bg-panel text-foreground active:bevel-in active:bg-background",
         secondary:
