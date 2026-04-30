@@ -59,6 +59,7 @@ export default function Home() {
             <Input type="password" defaultValue="secret" />
             <Input defaultValue="Read only" readOnly />
             <Input defaultValue="Disabled" disabled />
+            <Input defaultValue="Invalid value" aria-invalid="true" />
           </div>
 
           <div className="flex flex-col gap-1">
