@@ -139,7 +139,7 @@ function Win32Scrollbar({
       </div>
 
       {/* spacer aligned with tfoot — styled as footer cell */}
-      <div className="bevel-out bg-panel shrink-0" style={{ height: s.tfootH }} />
+      <div className="bg-panel shrink-0" style={{ height: s.tfootH }} />
     </div>
   )
 }
