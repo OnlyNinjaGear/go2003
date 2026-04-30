@@ -11,6 +11,7 @@ const buttonVariants = cva(
     "[&_svg]:pointer-events-none [&_svg]:size-3 [&_svg]:shrink-0",
     "outline-none focus-visible:win32-focus active:focus-visible:outline-none active:focus-visible:shadow-none",
     "disabled:text-[var(--panel-pressed)] disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)] disabled:pointer-events-none",
+    "aria-invalid:border-destructive",
   ].join(" "),
   {
     variants: {
