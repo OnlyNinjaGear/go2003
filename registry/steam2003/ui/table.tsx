@@ -104,8 +104,16 @@ function Win32Scrollbar({
 
   return (
     <div className="flex flex-col self-stretch shrink-0" style={{ width: SB_W }}>
-      {/* spacer aligned with thead */}
-      <div className="bevel-out bg-panel shrink-0 overflow-hidden px-1 py-0.5 text-left align-middle" style={{ height: s.theadH - BTN_H }}>{header}</div>
+      {/* header row extension — no left border so it merges with last th */}
+      <div
+        className="bg-panel shrink-0 overflow-hidden px-1 py-0.5"
+        style={{
+          height: s.theadH - BTN_H,
+          borderTop: "1px solid var(--border-light)",
+          borderRight: "1px solid var(--border-dark)",
+          borderBottom: "1px solid var(--border-dark)",
+        }}
+      >{header}</div>
 
       {/* Up button */}
       <div
