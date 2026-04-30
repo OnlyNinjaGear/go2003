@@ -130,6 +130,35 @@ export default function Home() {
           </div>
         </section>
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Tabs</h2>
+
+          <Tabs defaultValue="internet">
+            <TabsList>
+              <TabsTrigger value="internet">Internet</TabsTrigger>
+              <TabsTrigger value="favorites">Favorites</TabsTrigger>
+              <TabsTrigger value="history">History</TabsTrigger>
+              <TabsTrigger value="lan">LAN</TabsTrigger>
+              <TabsTrigger value="friends">Friends</TabsTrigger>
+            </TabsList>
+            <TabsContent value="internet">
+              <div className="bevel-in bg-input-bg p-2">Internet servers content</div>
+            </TabsContent>
+            <TabsContent value="favorites">
+              <div className="bevel-in bg-input-bg p-2">Favorites content</div>
+            </TabsContent>
+            <TabsContent value="history">
+              <div className="bevel-in bg-input-bg p-2">History content</div>
+            </TabsContent>
+            <TabsContent value="lan">
+              <div className="bevel-in bg-input-bg p-2">LAN content</div>
+            </TabsContent>
+            <TabsContent value="friends">
+              <div className="bevel-in bg-input-bg p-2">Friends content</div>
+            </TabsContent>
+          </Tabs>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Table</h2>
 
           <div className="bevel-in bg-input-bg">
