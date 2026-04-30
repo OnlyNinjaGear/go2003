@@ -81,27 +81,27 @@ export default function Home() {
             </label>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox defaultChecked />
-              <span>Checked</span>
+              <span className="peer-data-[state=checked]:text-primary">Checked</span>
             </label>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox checked="indeterminate" />
-              <span>Indeterminate</span>
+              <span className="peer-data-[state=indeterminate]:text-primary">Indeterminate</span>
             </label>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox disabled />
-              <span>Disabled unchecked</span>
+              <span className="peer-disabled:text-[var(--muted)]">Disabled unchecked</span>
             </label>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox defaultChecked disabled />
-              <span>Disabled checked</span>
+              <span className="peer-disabled:text-[var(--muted)]">Disabled checked</span>
             </label>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox aria-invalid="true" />
-              <span>Invalid</span>
+              <span className="peer-aria-[invalid=true]:text-destructive">Invalid</span>
             </label>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox aria-invalid="true" defaultChecked />
-              <span>Invalid checked</span>
+              <span className="peer-aria-[invalid=true]:text-destructive peer-data-[state=checked]:text-primary">Invalid checked</span>
             </label>
           </div>
         </section>
