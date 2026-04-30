@@ -13,8 +13,12 @@ const trackBg: React.CSSProperties = {
 
 function Win32Scrollbar({
   containerRef,
+  header,
+  footer,
 }: {
   containerRef: React.RefObject<HTMLDivElement | null>
+  header?: React.ReactNode
+  footer?: React.ReactNode
 }) {
   const [s, setS] = React.useState({
     thumbTop: 0,
