@@ -3,18 +3,12 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const SB_W = 16
-const BTN_H = 16
+const SB_W = 17
+const BTN_H = 17
 const ROW_H = 19
 
 const trackBg: React.CSSProperties = {
-  backgroundImage: [
-    "linear-gradient(45deg,#3D4635 25%,transparent 25%,transparent 75%,#3D4635 75%)",
-    "linear-gradient(45deg,#3D4635 25%,transparent 25%,transparent 75%,#3D4635 75%)",
-  ].join(","),
-  backgroundSize: "2px 2px",
-  backgroundPosition: "0 0,1px 1px",
-  backgroundColor: "#4B5942",
+  backgroundColor: "var(--scrollbar)",
 }
 
 function Win32Scrollbar({
@@ -37,7 +31,7 @@ function Win32Scrollbar({
     const tfoot = el.querySelector<HTMLElement>("table > tfoot")
     const theadH = thead?.offsetHeight ?? 0
     const tfootH = tfoot?.offsetHeight ?? 0
-    const trackH = el.clientHeight - theadH - tfootH - BTN_H * 2
+    const trackH = el.clientHeight - theadH - tfootH - BTN_H
     const range = el.scrollHeight - el.clientHeight
 
     if (range <= 0 || trackH <= 0) {
@@ -70,7 +64,7 @@ function Win32Scrollbar({
     const startY = e.clientY
     const startScroll = el.scrollTop
     const trackUsable =
-      el.clientHeight - s.theadH - s.tfootH - BTN_H * 2 - s.thumbHeight
+      el.clientHeight - s.theadH - s.tfootH - BTN_H - s.thumbHeight
     const range = el.scrollHeight - el.clientHeight
 
     const onMove = (ev: MouseEvent) => {
@@ -87,11 +81,12 @@ function Win32Scrollbar({
 
   const holdRef = React.useRef<ReturnType<typeof setInterval> | null>(null)
   const startHold = (dir: 1 | -1) => {
-    const tick = () => {
-      if (containerRef.current) containerRef.current.scrollTop += dir * ROW_H
-    }
-    tick()
-    holdRef.current = setInterval(tick, 80)
+    // const tick = () => {
+    //   if (containerRef.current) containerRef.current.scrollTop += dir * ROW_H
+    // }
+    // tick()
+    // holdRef.current = setInterval(tick, 60)
+    if (containerRef.current) containerRef.current.scrollTop += dir * ROW_H
   }
   const stopHold = () => {
     if (holdRef.current) {
@@ -105,8 +100,8 @@ function Win32Scrollbar({
 
   return (
     <div className="flex flex-col self-stretch shrink-0" style={{ width: SB_W }}>
-      {/* spacer aligned with thead */}
-      <div style={{ height: s.theadH, flexShrink: 0 }} />
+      {/* spacer aligned with thead — styled as header cell */}
+      <div className="bevel-out bg-panel shrink-0" style={{ height: s.theadH - BTN_H }} />
 
       {/* Up button */}
       <div
@@ -123,13 +118,11 @@ function Win32Scrollbar({
 
       {/* Track + thumb */}
       <div className="relative flex-1" style={trackBg}>
-        {s.canScroll && (
-          <div
-            className="absolute inset-x-0 bevel-out bg-panel cursor-default active:bevel-in"
-            style={{ top: s.thumbTop, height: s.thumbHeight }}
-            onMouseDown={onThumbDown}
-          />
-        )}
+        <div
+          className="absolute inset-x-0 bevel-out bg-panel cursor-default"
+          style={{ top: s.thumbTop, height: s.thumbHeight }}
+          onMouseDown={onThumbDown}
+        />
       </div>
 
       {/* Down button */}
@@ -220,7 +213,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
     <th
       data-slot="table-head"
       className={cn(
-        "bevel-out bg-panel px-1 py-0.5 text-left align-middle font-normal whitespace-nowrap text-foreground cursor-default select-none [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+        "bevel-out bg-panel px-1 py-0 text-left align-middle font-normal whitespace-nowrap text-foreground cursor-default select-none [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
         className
       )}
       {...props}

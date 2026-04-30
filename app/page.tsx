@@ -210,6 +210,24 @@ export default function Home() {
                 <TableCell>2 weeks ago</TableCell>
                 <TableCell>Ready</TableCell>
               </TableRow>
+              <TableRow>
+                <TableCell>Left 4 Dead 2</TableCell>
+                <TableCell>8.1 GB</TableCell>
+                <TableCell>2 weeks ago</TableCell>
+                <TableCell>Ready</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Left 4 Dead 2</TableCell>
+                <TableCell>8.1 GB</TableCell>
+                <TableCell>2 weeks ago</TableCell>
+                <TableCell>Ready</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Left 4 Dead 2</TableCell>
+                <TableCell>8.1 GB</TableCell>
+                <TableCell>2 weeks ago</TableCell>
+                <TableCell>Ready</TableCell>
+              </TableRow>
             </TableBody>
             <TableFooter>
               <TableRow>

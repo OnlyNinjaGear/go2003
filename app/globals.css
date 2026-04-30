@@ -29,6 +29,7 @@
   --color-input-fg: var(--input-fg);
   --color-destructive-pressed: var(--destructive-pressed);
   --color-destructive-light: var(--destructive-light);
+  --color-scrollbar: var(--scrollbar);
   --font-sans: "Tahoma", "Verdana", "Geneva", sans-serif;
   --font-mono: "Tahoma", "Verdana", "Geneva", sans-serif;
 }
@@ -62,6 +63,7 @@
   --border: #2F3A28;
   --input: #FFFFFF;
   --ring: #8D8311;
+  --scrollbar: #55654E;
 }
 
 @layer base {
