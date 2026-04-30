@@ -161,7 +161,7 @@ export default function Home() {
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Table</h2>
 
-          <div className="bevel-in bg-input-bg">
+          <div className="bg-input-bg">
             <Table>
               <TableCaption>Installed games</TableCaption>
               <TableHeader>
@@ -179,7 +179,7 @@ export default function Home() {
                   <TableCell>Today</TableCell>
                   <TableCell>Ready</TableCell>
                 </TableRow>
-                <TableRow data-state="selected">
+                <TableRow>
                   <TableCell>Counter-Strike</TableCell>
                   <TableCell>600 MB</TableCell>
                   <TableCell>Yesterday</TableCell>
