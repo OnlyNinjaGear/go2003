@@ -16,15 +16,15 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bevel-out panel-gradient text-foreground active:bevel-in active:panel-gradient-pressed",
+          "bevel-out bg-panel text-foreground active:bevel-in active:bg-panel-pressed",
         destructive:
-          "bevel-out panel-gradient text-[var(--accent)] active:bevel-in active:panel-gradient-pressed",
+          "bevel-out bg-destructive text-destructive-foreground active:bevel-in active:bg-destructive-pressed",
         outline:
-          "bevel-out bg-[var(--input-bg)] text-[var(--input-fg)] active:bevel-in",
+          "bevel-out bg-panel text-foreground active:bevel-in active:bg-panel-pressed",
         secondary:
-          "bevel-out panel-gradient text-foreground active:bevel-in active:panel-gradient-pressed",
+          "bevel-out bg-panel text-foreground active:bevel-in active:bg-panel-pressed",
         ghost:
-          "border border-transparent bg-transparent text-foreground active:bevel-in active:panel-gradient-pressed",
+          "border border-transparent bg-transparent text-foreground hover:bg-panel-hover active:bevel-in active:bg-panel-pressed",
         link: "border border-transparent bg-transparent text-[var(--accent)] underline underline-offset-2",
       },
       size: {
