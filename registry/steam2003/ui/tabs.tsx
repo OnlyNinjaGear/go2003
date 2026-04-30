@@ -51,7 +51,7 @@ function TabsTrigger({
         "inline-flex items-center justify-center gap-1.5 px-3 h-[22px] whitespace-nowrap cursor-default select-none",
         "bevel-out bg-panel text-muted-foreground",
         "hover:text-foreground",
-        "data-[state=active]:bg-panel data-[state=active]:text-accent data-[state=active]:h-[24px]",
+        "data-[state=active]:bg-panel data-[state=active]:text-accent",
         "focus-visible:win32-focus",
         "disabled:text-[var(--muted)] disabled:pointer-events-none",
         "group-data-[orientation=vertical]/tabs:w-full group-data-[orientation=vertical]/tabs:justify-start",
