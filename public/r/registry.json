@@ -27,6 +27,19 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Win32-style 13px checkbox. Inset bevel, white fill, black check glyph. Supports checked, unchecked, indeterminate.",
+      "dependencies": ["@radix-ui/react-checkbox", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/steam2003/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
