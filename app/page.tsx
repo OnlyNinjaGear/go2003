@@ -161,45 +161,61 @@ export default function Home() {
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Table</h2>
 
-          <div className="bg-input-bg">
-            <Table>
-              <TableCaption>Installed games</TableCaption>
-              <TableHeader>
-                <TableRow>
-                  <TableHead>Name</TableHead>
-                  <TableHead>Size</TableHead>
-                  <TableHead>Last Played</TableHead>
-                  <TableHead>Status</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                <TableRow>
-                  <TableCell>Half-Life 2</TableCell>
-                  <TableCell>4.2 GB</TableCell>
-                  <TableCell>Today</TableCell>
-                  <TableCell>Ready</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>Counter-Strike</TableCell>
-                  <TableCell>600 MB</TableCell>
-                  <TableCell>Yesterday</TableCell>
-                  <TableCell>Ready</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell>Team Fortress 2</TableCell>
-                  <TableCell>15 GB</TableCell>
-                  <TableCell>3 days ago</TableCell>
-                  <TableCell>Needs update</TableCell>
-                </TableRow>
-              </TableBody>
-              <TableFooter>
-                <TableRow>
-                  <TableCell colSpan={3}>Total</TableCell>
-                  <TableCell>19.8 GB</TableCell>
-                </TableRow>
-              </TableFooter>
-            </Table>
-          </div>
+          <Table containerClassName="max-h-[160px] bg-input-bg">
+            <TableCaption>Installed games</TableCaption>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Name</TableHead>
+                <TableHead>Size</TableHead>
+                <TableHead>Last Played</TableHead>
+                <TableHead>Status</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              <TableRow>
+                <TableCell>Half-Life 2</TableCell>
+                <TableCell>4.2 GB</TableCell>
+                <TableCell>Today</TableCell>
+                <TableCell>Ready</TableCell>
+              </TableRow>
+              <TableRow data-state="selected">
+                <TableCell>Counter-Strike</TableCell>
+                <TableCell>600 MB</TableCell>
+                <TableCell>Yesterday</TableCell>
+                <TableCell>Ready</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Team Fortress 2</TableCell>
+                <TableCell>15 GB</TableCell>
+                <TableCell>3 days ago</TableCell>
+                <TableCell>Needs update</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Portal</TableCell>
+                <TableCell>870 MB</TableCell>
+                <TableCell>Last week</TableCell>
+                <TableCell>Ready</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Dota 2</TableCell>
+                <TableCell>32 GB</TableCell>
+                <TableCell>Never</TableCell>
+                <TableCell>Needs update</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Left 4 Dead 2</TableCell>
+                <TableCell>8.1 GB</TableCell>
+                <TableCell>2 weeks ago</TableCell>
+                <TableCell>Ready</TableCell>
+              </TableRow>
+            </TableBody>
+            <TableFooter>
+              <TableRow>
+                <TableCell colSpan={3}>Total</TableCell>
+                <TableCell>61 GB</TableCell>
+              </TableRow>
+            </TableFooter>
+          </Table>
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
