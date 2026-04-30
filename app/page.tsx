@@ -12,7 +12,7 @@ export default function Home() {
       </header>
 
       <main className="flex flex-1 flex-col gap-6">
-        <section className="bevel-in bg-panel flex flex-col gap-3 p-3">
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Button</h2>
 
           <div className="flex flex-col gap-1">
