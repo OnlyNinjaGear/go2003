@@ -29,6 +29,18 @@
       ]
     },
     {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "Win32-style data table with solid borders and selection highlight.",
+      "files": [
+        {
+          "path": "registry/steam2003/ui/table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "card",
       "type": "registry:ui",
       "title": "Card",
