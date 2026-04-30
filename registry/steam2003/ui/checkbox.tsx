@@ -22,15 +22,9 @@ function Checkbox({
       )}
       {...props}
     >
-      <CheckboxPrimitive.Indicator className="flex items-center justify-center">
-        <Check
-          className="size-3 stroke-[2.5] data-[state=indeterminate]:hidden"
-          data-state={props.checked === "indeterminate" ? "indeterminate" : "checked"}
-        />
-        <Minus
-          className="size-3 stroke-[2.5] data-[state=checked]:hidden"
-          data-state={props.checked === "indeterminate" ? "indeterminate" : "checked"}
-        />
+      <CheckboxPrimitive.Indicator className="group flex items-center justify-center">
+        <Check className="size-3 stroke-[2.5] group-data-[state=indeterminate]:hidden" />
+        <Minus className="size-3 stroke-[2.5] group-data-[state=checked]:hidden" />
       </CheckboxPrimitive.Indicator>
     </CheckboxPrimitive.Root>
   );
