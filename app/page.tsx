@@ -161,7 +161,7 @@ export default function Home() {
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Table</h2>
 
-          <Table containerClassName="max-h-[160px] bg-input-bg">
+          <Table containerClassName="max-h-[160px] bg-input-bg" scrollbarHeader="Installed games" scrollbarFooter="61 GB">
             <TableHeader>
               <TableRow>
                 <TableHead colSpan={4}>Installed games</TableHead>
