@@ -16,7 +16,7 @@ export default function Home() {
           <h2 className="font-bold">Button</h2>
 
           <div className="flex flex-col gap-1">
-            <span className="text-foreground/80">Variants</span>
+            <span className="text-foreground">Variants</span>
             <div className="flex flex-wrap items-center gap-2">
               <Button>Default</Button>
               <Button variant="destructive">Destructive</Button>
@@ -28,7 +28,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <span className="text-foreground/80">Sizes</span>
+            <span className="text-foreground">Sizes</span>
             <div className="flex flex-wrap items-center gap-2">
               <Button size="sm">Small</Button>
               <Button size="default">Default</Button>
@@ -40,7 +40,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-1">
-            <span className="text-foreground/80">States</span>
+            <span className="text-foreground">States</span>
             <div className="flex flex-wrap items-center gap-2">
               <Button>Normal</Button>
               <Button disabled>Disabled</Button>
