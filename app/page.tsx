@@ -14,7 +14,7 @@ import { X } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="mx-auto flex min-h-svh max-w-3xl flex-col gap-8 px-4 py-8">
+    <div className="mx-auto flex min-h-svh max-w-3xl flex-col gap-8 px-4 py-20">
       <header className="flex flex-col gap-1">
         <h1 className="text-base font-bold">go2003 registry</h1>
         <p>
@@ -134,8 +134,8 @@ export default function Home() {
                 <p>Username: GabeN</p>
                 <p>Status: Online</p>
               </CardContent>
-              <CardFooter className="border-t border-border-dark pt-3">
-                <Button variant="destructive" size="sm">Delete Account</Button>
+              <CardFooter>
+                <Button variant="destructive" size="sm" className="w-full">Delete Account</Button>
               </CardFooter>
             </Card>
 
