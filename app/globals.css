@@ -33,6 +33,8 @@
   --background: #4B5942;
   --foreground: #D5DBC8;
   --panel: #6B7B5C;
+  --panel-pressed: #5B6B4C;
+  --panel-hover: #5F6E50;
   --border-light: #8A9B7B;
   --border-dark: #2F3A28;
   --accent: #C8B560;
@@ -50,6 +52,7 @@
   --muted: #4B5942;
   --muted-foreground: #D5DBC8;
   --destructive: #8B3A3A;
+  --destructive-pressed: #6B2A2A;
   --destructive-foreground: #FFFFFF;
   --border: #2F3A28;
   --input: #FFFFFF;
