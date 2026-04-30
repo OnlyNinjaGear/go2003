@@ -94,6 +94,14 @@ export default function Home() {
               <Checkbox defaultChecked disabled />
               <span>Disabled checked</span>
             </label>
+            <label className="flex items-center gap-1.5 cursor-default">
+              <Checkbox aria-invalid="true" />
+              <span>Invalid</span>
+            </label>
+            <label className="flex items-center gap-1.5 cursor-default">
+              <Checkbox aria-invalid="true" defaultChecked />
+              <span>Invalid checked</span>
+            </label>
           </div>
         </section>
       </main>
