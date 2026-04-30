@@ -150,8 +150,16 @@ function Win32Scrollbar({
         </svg>
       </div>
 
-      {/* spacer aligned with tfoot — styled as footer cell */}
-      <div className="bg-panel shrink-0" style={{ height: s.tfootH }} />
+      {/* footer row extension */}
+      <div
+        className="bg-panel shrink-0 overflow-hidden px-1 py-0.5"
+        style={{
+          height: s.tfootH,
+          borderTop: "1px solid var(--border-light)",
+          borderRight: "1px solid var(--border-dark)",
+          borderBottom: "1px solid var(--border-dark)",
+        }}
+      >{footer}</div>
     </div>
   )
 }
