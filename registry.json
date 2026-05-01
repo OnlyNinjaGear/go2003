@@ -42,6 +42,19 @@
       ]
     },
     {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Win32-style combo box. Bevel-in input with bevel-out dropdown button.",
+      "dependencies": ["radix-ui", "lucide-react"],
+      "files": [
+        {
+          "path": "registry/steam2003/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "table",
       "type": "registry:ui",
       "title": "Table",
