@@ -202,7 +202,7 @@ export default function Home() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className="px-2 h-6 flex items-center cursor-default hover:bg-primary hover:text-primary-foreground">About</NavigationMenuLink>
+                <NavigationMenuLink className="px-2 h-6 flex-row items-center cursor-default hover:bg-primary hover:text-primary-foreground">About</NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
