@@ -61,7 +61,7 @@ function NavigationMenuItem({
 }
 
 const navigationMenuTriggerStyle = cva(
-  "inline-flex items-center gap-1 px-2 h-6 cursor-default select-none outline-none focus-visible:win32-focus data-[state=open]:bg-primary data-[state=open]:text-primary-foreground focus:bg-primary focus:text-primary-foreground"
+  "inline-flex items-center gap-1 px-2 h-6 cursor-default select-none outline-none focus-visible:win32-focus data-[state=open]:bg-primary data-[state=open]:text-primary-foreground"
 )
 
 function NavigationMenuTrigger({
