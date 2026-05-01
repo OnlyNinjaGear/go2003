@@ -6,7 +6,7 @@ import { Progress as ProgressPrimitive } from "radix-ui"
 import { cn } from "@/lib/utils"
 
 const MIN_BLOCK = 10
-const GAP = 2
+const GAP = 3
 
 function Progress({
   className,
@@ -14,12 +14,13 @@ function Progress({
   ...props
 }: React.ComponentProps<typeof ProgressPrimitive.Root>) {
   const rootRef = React.useRef<HTMLDivElement>(null)
+  const trackRef = React.useRef<HTMLDivElement>(null)
   const [innerW, setInnerW] = React.useState(0)
 
   React.useEffect(() => {
-    const el = rootRef.current
+    const el = trackRef.current
     if (!el) return
-    const ro = new ResizeObserver(() => setInnerW(el.clientWidth - 4))
+    const ro = new ResizeObserver(() => setInnerW(el.clientWidth))
     ro.observe(el)
     return () => ro.disconnect()
   }, [])
@@ -33,7 +34,7 @@ function Progress({
     <ProgressPrimitive.Root
       ref={rootRef}
       data-slot="progress"
-      className={cn("relative h-6 p-0.5 w-full overflow-hidden bevel-in bg-input-bg", className)}
+      className={cn("relative h-6 p-0.75 w-full overflow-hidden bevel-in bg-input-bg", className)}
       {...props}
     >
       <div className="flex h-full" style={{ gap: GAP }}>
