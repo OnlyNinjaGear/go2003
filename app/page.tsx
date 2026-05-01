@@ -231,7 +231,7 @@ export default function Home() {
             </TableBody>
             <TableFooter>
               <TableRow>
-                <TableCell colSpan={4}><Button size="sm">Connect</Button></TableCell>
+                <TableCell colSpan={4}></TableCell>
               </TableRow>
             </TableFooter>
           </Table>
