@@ -58,7 +58,7 @@ import {
   AlertDialogFooter, AlertDialogTitle, AlertDialogDescription,
   AlertDialogAction, AlertDialogCancel,
 } from "@/registry/steam2003/ui/alert-dialog";
-import { Avatar, AvatarImage, AvatarFallback } from "@/registry/steam2003/ui/avatar";
+import { Avatar, AvatarImage, AvatarFallback, AvatarBadge } from "@/registry/steam2003/ui/avatar";
 import { Skeleton } from "@/registry/steam2003/ui/skeleton";
 import { Toggle } from "@/registry/steam2003/ui/toggle";
 import { ToggleGroup, ToggleGroupItem } from "@/registry/steam2003/ui/toggle-group";
@@ -126,7 +126,7 @@ export default function Home() {
   return (
     <div className="mx-auto flex min-h-svh max-w-3xl flex-col gap-8 px-4 py-20">
       <header className="flex flex-col gap-1">
-        <h1 className="text-base font-bold">go2003 registry</h1>
+        <h1 className="text-base ">go2003 registry</h1>
         <p>
           Steam 2003 / Windows XP-era reskin of shadcn/ui primitives.
           Components will appear here as they are added.
@@ -135,7 +135,7 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Alert</h2>
+          <h2 className="">Alert</h2>
 
           <div className="flex flex-col gap-2 max-w-sm">
             <Alert>
@@ -161,7 +161,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Alert Dialog</h2>
+          <h2 className="">Alert Dialog</h2>
           <div className="flex flex-wrap gap-2">
             <AlertDialog>
               <AlertDialogTrigger asChild><Button>Delete game</Button></AlertDialogTrigger>
@@ -180,16 +180,16 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Avatar</h2>
+          <h2 className="">Avatar</h2>
           <div className="flex flex-wrap items-center gap-3">
-            <Avatar className="size-10"><AvatarImage src="https://github.com/shadcn.png" /><AvatarFallback>SC</AvatarFallback></Avatar>
-            <Avatar className="size-8"><AvatarFallback>HL</AvatarFallback></Avatar>
-            <Avatar className="size-12"><AvatarFallback>GN</AvatarFallback></Avatar>
+            <Avatar className="size-10"><AvatarImage src="https://github.com/shadcn.png" /><AvatarFallback>SC</AvatarFallback><AvatarBadge className="bg-green-600 dark:bg-green-800" /></Avatar>
+            <Avatar className="size-8"><AvatarFallback>HL</AvatarFallback><AvatarBadge className="bg-orange-600 dark:bg-orange-800" /></Avatar>
+            <Avatar className="size-12"><AvatarFallback>GN</AvatarFallback><AvatarBadge className="bg-red-600 dark:bg-red-800" /></Avatar>
           </div>
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Skeleton</h2>
+          <h2 className="">Skeleton</h2>
           <div className="flex flex-col gap-2 max-w-xs">
             <Skeleton className="h-6 w-full" />
             <Skeleton className="h-4 w-3/4" />
@@ -205,7 +205,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Toggle</h2>
+          <h2 className="">Toggle</h2>
           <div className="flex flex-col gap-3">
             <div className="flex flex-wrap gap-1.5">
               <Toggle><BoldIcon /></Toggle>
@@ -222,7 +222,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Collapsible</h2>
+          <h2 className="">Collapsible</h2>
           <Collapsible className="max-w-xs">
             <CollapsibleTrigger asChild>
               <Button variant="ghost" className="flex w-full justify-between">
@@ -240,7 +240,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Breadcrumb</h2>
+          <h2 className="">Breadcrumb</h2>
           <Breadcrumb>
             <BreadcrumbList>
               <BreadcrumbItem><BreadcrumbLink href="#">Steam</BreadcrumbLink></BreadcrumbItem>
@@ -253,7 +253,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Pagination</h2>
+          <h2 className="">Pagination</h2>
           <Pagination>
             <PaginationContent>
               <PaginationItem><PaginationPrevious href="#" /></PaginationItem>
@@ -268,14 +268,14 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Hover Card</h2>
+          <h2 className="">Hover Card</h2>
           <div className="flex flex-wrap gap-3">
             <HoverCard>
               <HoverCardTrigger asChild><Button variant="link">@valve</Button></HoverCardTrigger>
               <HoverCardContent className="w-64">
                 <div className="flex items-center gap-2">
                   <Avatar className="size-8"><AvatarFallback>VL</AvatarFallback></Avatar>
-                  <div><div className="font-bold">Valve</div><div className="text-muted-foreground">Game developer since 1996</div></div>
+                  <div><div className="">Valve</div><div className="text-muted-foreground">Game developer since 1996</div></div>
                 </div>
               </HoverCardContent>
             </HoverCard>
@@ -283,10 +283,10 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Scroll Area</h2>
+          <h2 className="">Scroll Area</h2>
           <ScrollArea className="bevel-in bg-input-bg h-32 w-64">
             <div className="p-2 flex flex-col">
-              {["Half-Life 2","Counter-Strike","Team Fortress 2","Portal","Dota 2","Left 4 Dead 2","Garry's Mod","Portal 2","CS:GO","Half-Life: Alyx"].map(g => (
+              {["Half-Life 2", "Counter-Strike", "Team Fortress 2", "Portal", "Dota 2", "Left 4 Dead 2", "Garry's Mod", "Portal 2", "CS:GO", "Half-Life: Alyx"].map(g => (
                 <div key={g} className="py-0.5 px-1">{g}</div>
               ))}
             </div>
@@ -294,7 +294,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Sheet</h2>
+          <h2 className="">Sheet</h2>
           <div className="flex flex-wrap gap-2">
             <Sheet>
               <SheetTrigger asChild><Button>Open right</Button></SheetTrigger>
@@ -330,7 +330,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Menubar</h2>
+          <h2 className="">Menubar</h2>
 
           <Menubar>
             <MenubarMenu>
@@ -378,7 +378,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Popover</h2>
+          <h2 className="">Popover</h2>
 
           <div className="flex flex-wrap gap-2">
             <Popover>
@@ -435,7 +435,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Accordion</h2>
+          <h2 className="">Accordion</h2>
 
           <Accordion type="single" collapsible defaultValue="graphics" className="max-w-xs">
             <AccordionItem value="graphics">
@@ -491,7 +491,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Textarea</h2>
+          <h2 className="">Textarea</h2>
 
           <div className="flex flex-col gap-2 max-w-xs">
             <Textarea placeholder="Write a message..." />
@@ -502,7 +502,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Radio Group</h2>
+          <h2 className="">Radio Group</h2>
 
           <div className="flex flex-wrap gap-6">
             <RadioGroup defaultValue="cs">
@@ -538,7 +538,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Context Menu</h2>
+          <h2 className="">Context Menu</h2>
 
           <ContextMenu>
             <ContextMenuTrigger className="bevel-in bg-input-bg flex h-16 items-center justify-center text-muted-foreground select-none">
@@ -575,7 +575,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Dropdown Menu</h2>
+          <h2 className="">Dropdown Menu</h2>
 
           <div className="flex flex-wrap gap-2">
             <DropdownMenu>
@@ -634,7 +634,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Field</h2>
+          <h2 className="">Field</h2>
 
           <div className="flex flex-col gap-3 max-w-xs">
             <Field orientation="horizontal">
@@ -661,7 +661,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Switch</h2>
+          <h2 className="">Switch</h2>
 
           <div className="flex flex-col gap-2">
             <label className="flex items-center gap-2 cursor-default">
@@ -684,7 +684,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Slider</h2>
+          <h2 className="">Slider</h2>
 
           <div className="flex flex-col gap-4 max-w-xs">
             <Slider defaultValue={[33]} />
@@ -695,7 +695,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Badge</h2>
+          <h2 className="">Badge</h2>
 
           <div className="flex flex-wrap items-center gap-2">
             <Badge>Default</Badge>
@@ -709,7 +709,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Tooltip</h2>
+          <h2 className="">Tooltip</h2>
 
           <div className="flex flex-wrap gap-3">
             <Tooltip>
@@ -736,7 +736,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Button</h2>
+          <h2 className="">Button</h2>
 
           <div className="flex flex-col gap-1">
             <span>Variants</span>
@@ -771,7 +771,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Input</h2>
+          <h2 className="">Input</h2>
 
           <div className="flex flex-col gap-2 max-w-xs">
             <Input placeholder="Placeholder text" />
@@ -792,7 +792,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Checkbox</h2>
+          <h2 className="">Checkbox</h2>
 
           <div className="flex flex-col gap-2">
             <label className="flex items-center gap-1.5 cursor-default">
@@ -826,7 +826,7 @@ export default function Home() {
           </div>
         </section>
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Tabs</h2>
+          <h2 className="">Tabs</h2>
 
           <Tabs defaultValue="internet">
             <TabsList>
@@ -855,7 +855,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Table</h2>
+          <h2 className="">Table</h2>
 
           <Table containerClassName="max-h-[160px] bg-input-bg">
             <TableHeader>
@@ -929,7 +929,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Card</h2>
+          <h2 className="">Card</h2>
 
           <div className="flex flex-wrap gap-3">
             <Card className="w-64">
@@ -962,7 +962,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Dialog</h2>
+          <h2 className="">Dialog</h2>
 
           <div className="flex flex-wrap gap-2">
             <Dialog>
@@ -1003,7 +1003,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Progress</h2>
+          <h2 className="">Progress</h2>
 
           <div className="flex flex-col gap-2 max-w-xs">
             <Progress value={0} />
@@ -1016,7 +1016,7 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
-          <h2 className="font-bold">Select</h2>
+          <h2 className="">Select</h2>
 
           <div className="flex flex-wrap items-start gap-3">
             <Select>
