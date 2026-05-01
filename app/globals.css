@@ -8,6 +8,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-primary-boost: var(--primary-boost);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -47,6 +48,7 @@
   --input-bg: #3D4635;
   --input-fg: #FFFFFF;
   --primary: #908637;
+  --primary-boost: #FF7302;
   --primary-foreground: #272C22;
   --secondary: #6B7B5C;
   --secondary-foreground: #D5DBC8;
