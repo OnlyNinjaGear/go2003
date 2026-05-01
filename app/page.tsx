@@ -60,6 +60,20 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Badge</h2>
+
+          <div className="flex flex-wrap items-center gap-2">
+            <Badge>Default</Badge>
+            <Badge variant="secondary">Secondary</Badge>
+            <Badge variant="destructive">Destructive</Badge>
+            <Badge variant="outline">Outline</Badge>
+            <Badge>Ready</Badge>
+            <Badge variant="destructive">Needs update</Badge>
+            <Badge variant="secondary">Offline</Badge>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Tooltip</h2>
 
           <div className="flex flex-wrap gap-3">
