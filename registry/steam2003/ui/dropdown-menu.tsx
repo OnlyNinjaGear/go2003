@@ -33,7 +33,7 @@ function DropdownMenuTrigger({
 
 function DropdownMenuContent({
   className,
-  sideOffset = 2,
+  sideOffset = 0,
   ...props
 }: React.ComponentProps<typeof DropdownMenuPrimitive.Content>) {
   return (
@@ -42,7 +42,7 @@ function DropdownMenuContent({
         data-slot="dropdown-menu-content"
         sideOffset={sideOffset}
         className={cn(
-          "z-50 min-w-[8rem] overflow-hidden bevel-out bg-panel py-0.5 outline-none",
+          "z-50 min-w-8 overflow-hidden bevel-out bg-panel outline-none",
           className
         )}
         {...props}
@@ -74,7 +74,7 @@ function DropdownMenuItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "relative flex cursor-default items-center gap-2 px-4 py-0.5 outline-none select-none",
+        "relative flex cursor-default items-center gap-2 px-4 py-1 outline-none select-none",
         "focus:bg-primary focus:text-primary-foreground",
         "data-[disabled]:pointer-events-none data-[disabled]:text-[var(--panel-pressed)] data-[disabled]:[text-shadow:0.5px_0.5px_0px_var(--border-light)]",
         "data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive data-[variant=destructive]:focus:text-destructive-foreground",
@@ -181,7 +181,7 @@ function DropdownMenuSeparator({
   return (
     <DropdownMenuPrimitive.Separator
       data-slot="dropdown-menu-separator"
-      className={cn("my-0.5 h-px bg-border-dark mx-1", className)}
+      className={cn("h-0.5 mx-2 [background:var(--border-dark)_0_0/100%_50%_no-repeat,var(--border-light)_0_100%/100%_50%_no-repeat]", className)}
       {...props}
     />
   )
@@ -241,7 +241,7 @@ function DropdownMenuSubContent({
     <DropdownMenuPrimitive.SubContent
       data-slot="dropdown-menu-sub-content"
       className={cn(
-        "z-50 min-w-[8rem] overflow-hidden bevel-out bg-panel py-0.5 outline-none",
+        "z-50 min-w-[8rem] overflow-hidden bevel-out bg-panel outline-none",
         className
       )}
       {...props}
