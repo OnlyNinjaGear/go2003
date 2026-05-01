@@ -37,7 +37,7 @@ function Progress({
       className={cn("relative h-6 p-0.75 w-full overflow-hidden bevel-in bg-input-bg", className)}
       {...props}
     >
-      <div className="flex h-full" style={{ gap: GAP }}>
+      <div ref={trackRef} className="flex h-full" style={{ gap: GAP }}>
         {Array.from({ length: filledBlocks }).map((_, i) => (
           <div key={i} className="h-full bg-primary shrink-0" style={{ width: blockW }} />
         ))}
