@@ -20,7 +20,7 @@ function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card-header"
       className={cn(
-        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start p-3 gap-1 has-data-[slot=card-action]:grid-cols-[1fr_auto] bevel-out",
+        "@container/card-header grid auto-rows-min grid-rows-[auto_auto] items-start px-3 py-2 gap-1 has-data-[slot=card-action]:grid-cols-[1fr_auto] bevel-out",
         className
       )}
       {...props}
@@ -65,7 +65,7 @@ function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-content"
-      className={cn("bevel-out p-3", className)}
+      className={cn("bevel-out px-3 py-2", className)}
       {...props}
     />
   )
@@ -75,7 +75,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-footer"
-      className={cn("bevel-out px-1 py-2", className)}
+      className={cn("bevel-out px-3 py-2", className)}
       {...props}
     />
   )
