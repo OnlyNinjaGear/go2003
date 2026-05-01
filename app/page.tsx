@@ -288,6 +288,47 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Dialog</h2>
+
+          <div className="flex flex-wrap gap-2">
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button>Open Dialog</Button>
+              </DialogTrigger>
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Steam — Warning</DialogTitle>
+                </DialogHeader>
+                <DialogDescription>
+                  Are you sure you want to delete Half-Life 2? This will remove all saved games.
+                </DialogDescription>
+                <DialogFooter>
+                  <DialogClose asChild><Button variant="secondary">Cancel</Button></DialogClose>
+                  <DialogClose asChild><Button variant="destructive">Delete</Button></DialogClose>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button>No Close Button</Button>
+              </DialogTrigger>
+              <DialogContent showCloseButton={false}>
+                <DialogHeader>
+                  <DialogTitle>Downloading update…</DialogTitle>
+                </DialogHeader>
+                <div className="px-3 pt-3 pb-1 flex flex-col gap-2">
+                  <Progress value={66} />
+                </div>
+                <DialogFooter>
+                  <DialogClose asChild><Button variant="secondary">Cancel</Button></DialogClose>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Progress</h2>
 
           <div className="flex flex-col gap-2 max-w-xs">
