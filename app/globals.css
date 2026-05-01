@@ -216,7 +216,8 @@
   border-width: 1px;
 }
 
-html, * {
+html,
+* {
   scroll-behavior: auto !important;
 }
 
@@ -234,19 +235,77 @@ body {
 [data-sonner-toast] {
   box-shadow: none !important;
 }
+
 [data-sonner-toast] [data-title] {
   font-weight: normal !important;
 }
+
 [data-sonner-toast] [data-description] {
   font-weight: normal !important;
 }
 
-@keyframes win32-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+/* Win32 toast buttons */
+[data-sonner-toast] [data-button] {
+  background: var(--panel) !important;
+  color: var(--foreground) !important;
+  border-radius: 0 !important;
+  height: 22px !important;
+  padding: 0 10px !important;
+  border: 1px solid var(--border-light) !important;
+  border-right-color: var(--border-dark) !important;
+  border-bottom-color: var(--border-dark) !important;
+  box-shadow: inset 1px 1px 0 var(--border-light), inset -1px -1px 0 var(--border-dark) !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  margin: 0 !important;
+  cursor: default !important;
 }
+
+[data-sonner-toast] [data-button]:active {
+  box-shadow: inset 1px 1px 0 var(--border-dark), inset -1px -1px 0 var(--border-light) !important;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark) !important;
+}
+
+/* Two-row layout: icon+title on row 1, progress+button on row 2 */
+[data-sonner-toast]:has([data-description]) {
+  flex-wrap: wrap !important;
+  align-items: flex-start !important;
+  row-gap: 6px !important;
+}
+
+[data-sonner-toast]:has([data-description]) [data-content] {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+}
+
+[data-sonner-toast]:has([data-description]) [data-description] {
+  margin-top: 6px !important;
+  width: 100% !important;
+  flex-basis: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+/* Move button onto description row by reordering via flex */
+[data-sonner-toast]:has([data-description]) [data-button] {
+  order: 2 !important;
+  margin-left: auto !important;
+  align-self: center !important;
+}
+
+@keyframes win32-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 [data-sonner-toast] .animate-spin,
 [data-sonner-toast] .win32-spin,
 .win32-spin {
-  animation: win32-spin 1s steps(12, end) infinite !important;
+  animation: win32-spin 1s steps(6, end) infinite !important;
 }
