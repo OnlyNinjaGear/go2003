@@ -75,7 +75,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-footer"
-      className={cn("bevel-out p-3", className)}
+      className={cn("bevel-out px-1 py-2", className)}
       {...props}
     />
   )

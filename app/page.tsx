@@ -274,6 +274,53 @@ export default function Home() {
             </Card>
           </div>
         </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Select</h2>
+
+          <div className="flex flex-wrap items-start gap-3">
+            <Select>
+              <SelectTrigger className="w-48">
+                <SelectValue placeholder="Select a game…" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Valve</SelectLabel>
+                  <SelectItem value="hl2">Half-Life 2</SelectItem>
+                  <SelectItem value="cs">Counter-Strike</SelectItem>
+                  <SelectItem value="tf2">Team Fortress 2</SelectItem>
+                </SelectGroup>
+                <SelectSeparator />
+                <SelectGroup>
+                  <SelectLabel>Third-party</SelectLabel>
+                  <SelectItem value="portal">Portal</SelectItem>
+                  <SelectItem value="dota2">Dota 2</SelectItem>
+                  <SelectItem value="l4d2" disabled>Left 4 Dead 2 (disabled)</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+
+            <Select defaultValue="cs">
+              <SelectTrigger className="w-48">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="hl2">Half-Life 2</SelectItem>
+                <SelectItem value="cs">Counter-Strike</SelectItem>
+                <SelectItem value="tf2">Team Fortress 2</SelectItem>
+              </SelectContent>
+            </Select>
+
+            <Select disabled>
+              <SelectTrigger className="w-48">
+                <SelectValue placeholder="Disabled" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="hl2">Half-Life 2</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </section>
       </main>
     </div>
   );
