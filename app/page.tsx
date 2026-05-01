@@ -21,6 +21,16 @@ import {
   CardContent,
   CardFooter,
 } from "@/registry/steam2003/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from "@/registry/steam2003/ui/select";
 import { X } from "lucide-react";
 
 export default function Home() {
