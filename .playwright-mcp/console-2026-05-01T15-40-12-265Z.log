@@ -81,3 +81,5 @@
 [ 1592459ms] [LOG] [Fast Refresh] done in 134ms @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5809
 [ 1592664ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5949
 [ 1597223ms] [LOG] [Fast Refresh] done in 4661ms @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5809
+[ 1635547ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5949
+[ 1635776ms] [LOG] [Fast Refresh] done in 221ms @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5809

@@ -139,24 +139,19 @@ function Calendar({
             />
           )
         },
-        Chevron: ({ className, orientation, ...props }) => {
+        Chevron: ({ orientation }) => {
           if (orientation === "left") {
             return (
-              <ChevronLeftIcon className={cn("size-4", className)} {...props} />
+              <svg width="5" height="7" viewBox="0 0 5 7" aria-hidden="true" fill="currentColor"><polygon points="0,3.5 5,0 5,7" /></svg>
             )
           }
-
           if (orientation === "right") {
             return (
-              <ChevronRightIcon
-                className={cn("size-4", className)}
-                {...props}
-              />
+              <svg width="5" height="7" viewBox="0 0 5 7" aria-hidden="true" fill="currentColor"><polygon points="5,3.5 0,0 0,7" /></svg>
             )
           }
-
           return (
-            <ChevronDownIcon className={cn("size-4", className)} {...props} />
+            <svg width="7" height="5" viewBox="0 0 7 5" aria-hidden="true" fill="currentColor"><polygon points="3.5,5 7,0 0,0" /></svg>
           )
         },
         DayButton: CalendarDayButton,
