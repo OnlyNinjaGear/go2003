@@ -93,6 +93,42 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Radio Group</h2>
+
+          <div className="flex flex-wrap gap-6">
+            <RadioGroup defaultValue="cs">
+              <label className="flex items-center gap-1.5 cursor-default">
+                <RadioGroupItem value="hl2" />
+                <span>Half-Life 2</span>
+              </label>
+              <label className="flex items-center gap-1.5 cursor-default">
+                <RadioGroupItem value="cs" />
+                <span>Counter-Strike</span>
+              </label>
+              <label className="flex items-center gap-1.5 cursor-default">
+                <RadioGroupItem value="tf2" />
+                <span>Team Fortress 2</span>
+              </label>
+            </RadioGroup>
+
+            <RadioGroup defaultValue="medium">
+              <Field orientation="horizontal" data-disabled="true">
+                <RadioGroupItem value="small" id="rg-small" disabled />
+                <FieldLabel htmlFor="rg-small">Small icons</FieldLabel>
+              </Field>
+              <label className="flex items-center gap-1.5 cursor-default">
+                <RadioGroupItem value="medium" id="rg-medium" />
+                <span>Medium icons</span>
+              </label>
+              <label className="flex items-center gap-1.5 cursor-default">
+                <RadioGroupItem value="large" id="rg-large" />
+                <span>Large icons</span>
+              </label>
+            </RadioGroup>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Context Menu</h2>
 
           <ContextMenu>
