@@ -47,6 +47,7 @@ import { Badge } from "@/registry/steam2003/ui/badge";
 import { Switch } from "@/registry/steam2003/ui/switch";
 import { Slider } from "@/registry/steam2003/ui/slider";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/registry/steam2003/ui/tooltip";
+import { Field, FieldLabel } from "@/registry/steam2003/ui/field";
 import { X } from "lucide-react";
 
 export default function Home() {
