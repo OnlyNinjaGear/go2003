@@ -42,6 +42,19 @@
       ]
     },
     {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "Win32-style trackbar. Bevel-in sunken track, rectangular bevel-out thumb.",
+      "dependencies": ["radix-ui"],
+      "files": [
+        {
+          "path": "registry/steam2003/ui/slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "badge",
       "type": "registry:ui",
       "title": "Badge",
