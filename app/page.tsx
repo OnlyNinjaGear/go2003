@@ -109,6 +109,54 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Menubar</h2>
+
+          <Menubar>
+            <MenubarMenu>
+              <MenubarTrigger>Steam</MenubarTrigger>
+              <MenubarContent>
+                <MenubarItem>Settings<MenubarShortcut>Ctrl+,</MenubarShortcut></MenubarItem>
+                <MenubarSeparator />
+                <MenubarItem variant="destructive">Exit<MenubarShortcut>Alt+F4</MenubarShortcut></MenubarItem>
+              </MenubarContent>
+            </MenubarMenu>
+            <MenubarMenu>
+              <MenubarTrigger>Games</MenubarTrigger>
+              <MenubarContent>
+                <MenubarItem>Add a game…</MenubarItem>
+                <MenubarItem>Activate a product…</MenubarItem>
+                <MenubarSeparator />
+                <MenubarCheckboxItem checked>Show friends panel</MenubarCheckboxItem>
+                <MenubarCheckboxItem>Show news</MenubarCheckboxItem>
+                <MenubarSeparator />
+                <MenubarSub>
+                  <MenubarSubTrigger>Sort by</MenubarSubTrigger>
+                  <MenubarSubContent>
+                    <MenubarItem>Name</MenubarItem>
+                    <MenubarItem>Last played</MenubarItem>
+                    <MenubarItem>Size</MenubarItem>
+                  </MenubarSubContent>
+                </MenubarSub>
+              </MenubarContent>
+            </MenubarMenu>
+            <MenubarMenu>
+              <MenubarTrigger>View</MenubarTrigger>
+              <MenubarContent>
+                <MenubarItem>Small mode</MenubarItem>
+                <MenubarItem disabled>Offline mode<MenubarShortcut>unavailable</MenubarShortcut></MenubarItem>
+              </MenubarContent>
+            </MenubarMenu>
+            <MenubarMenu>
+              <MenubarTrigger>Help</MenubarTrigger>
+              <MenubarContent>
+                <MenubarItem>Steam support</MenubarItem>
+                <MenubarItem>About Steam</MenubarItem>
+              </MenubarContent>
+            </MenubarMenu>
+          </Menubar>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Popover</h2>
 
           <div className="flex flex-wrap gap-2">
