@@ -41,7 +41,7 @@ function TooltipContent({
         data-slot="tooltip-content"
         sideOffset={sideOffset}
         className={cn(
-          "z-50 w-fit bevel-out bg-panel text-foreground px-1.5 py-0.5 font-sans text-[11px] outline-none select-none",
+          "z-50 w-fit bevel-out bg-primary text-primary-foreground px-1.5 py-0.5 font-sans text-[11px] outline-none select-none",
           className
         )}
         {...props}
