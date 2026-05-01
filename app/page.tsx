@@ -238,10 +238,10 @@ export default function Home() {
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="">Carousel</h2>
-          <div className="mx-12">
-            <Carousel>
+          <div className="max-w-lg mx-auto">
+            <Carousel orientation="vertical">
               <div className="bevel-in overflow-hidden">
-                <CarouselContent className="-ml-0">
+                <CarouselContent>
                   {[
                     { id: 220, name: "Half-Life 2" },
                     { id: 440, name: "Team Fortress 2" },
@@ -249,11 +249,11 @@ export default function Home() {
                     { id: 550, name: "Left 4 Dead 2" },
                     { id: 620, name: "Portal 2" },
                   ].map((game) => (
-                    <CarouselItem key={game.id} className="pl-0">
+                    <CarouselItem key={game.id}>
                       <img
                         src={`https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.id}/header.jpg`}
                         alt={game.name}
-                        className="block w-full h-32 object-cover"
+                        className="block w-full aspect-92/43 object-cover"
                       />
                     </CarouselItem>
                   ))}

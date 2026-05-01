@@ -1,0 +1,687 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - heading "go2003 registry" [level=1] [ref=e4]
+      - paragraph [ref=e5]: Steam 2003 / Windows XP-era reskin of shadcn/ui primitives. Components will appear here as they are added.
+    - main [ref=e6]:
+      - generic [ref=e7]:
+        - heading "Sonner" [level=2] [ref=e8]
+        - generic [ref=e9]:
+          - button "Default" [ref=e10]
+          - button "Success" [ref=e11]
+          - button "Error" [ref=e12]
+          - button "Warning" [ref=e13]
+          - button "Info" [ref=e14]
+          - button "Loading" [ref=e15]
+      - generic [ref=e16]:
+        - heading "Command" [level=2] [ref=e17]
+        - generic [ref=e18]:
+          - generic [ref=e20]:
+            - img [ref=e21]
+            - combobox [expanded] [ref=e24]
+          - listbox "Suggestions" [ref=e25]:
+            - generic [ref=e26]:
+              - text: No results found.
+              - generic [ref=e27]: Games
+              - group "Games" [ref=e28]:
+                - option "Half-Life 2 Play" [ref=e29]:
+                  - img [ref=e30]
+                  - text: Half-Life 2
+                  - generic [ref=e32]: Play
+                - option "Counter-Strike Play" [ref=e33]:
+                  - img [ref=e34]
+                  - text: Counter-Strike
+                  - generic [ref=e36]: Play
+                - option "Left 4 Dead 2 Update" [disabled]:
+                  - img
+                  - text: Left 4 Dead 2
+                  - generic: Update
+              - separator [ref=e37]
+              - generic [ref=e38]: Actions
+              - group "Actions" [ref=e39]:
+                - option "Add a game…" [ref=e40]:
+                  - img [ref=e41]
+                  - text: Add a game…
+                - option "Settings" [ref=e44]:
+                  - img [ref=e45]
+                  - text: Settings
+      - generic [ref=e48]:
+        - heading "Navigation Menu" [level=2] [ref=e49]
+        - navigation "Main" [ref=e50]:
+          - list [ref=e52]:
+            - listitem [ref=e53]:
+              - button "Store" [ref=e54]:
+                - text: Store
+                - img [ref=e55]
+            - listitem [ref=e57]:
+              - button "Community" [ref=e58]:
+                - text: Community
+                - img [ref=e59]
+            - listitem [ref=e61]:
+              - generic [ref=e62]: About
+      - generic [ref=e63]:
+        - heading "Calendar" [level=2] [ref=e64]
+        - generic [ref=e66]:
+          - navigation "Navigation bar" [ref=e67]:
+            - button "Go to the Previous Month" [ref=e68]:
+              - img
+            - button "Go to the Next Month" [ref=e69]:
+              - img
+          - generic [ref=e70]:
+            - status [ref=e72]: May 2026
+            - grid "May 2026" [ref=e73]:
+              - rowgroup [ref=e74]:
+                - row [ref=e75]:
+                  - columnheader [ref=e76]: Su
+                  - columnheader [ref=e77]: Mo
+                  - columnheader [ref=e78]: Tu
+                  - columnheader [ref=e79]: We
+                  - columnheader [ref=e80]: Th
+                  - columnheader [ref=e81]: Fr
+                  - columnheader [ref=e82]: Sa
+              - rowgroup [ref=e83]:
+                - row "Sunday, April 26th, 2026 Monday, April 27th, 2026 Tuesday, April 28th, 2026 Wednesday, April 29th, 2026 Thursday, April 30th, 2026 Today, Friday, May 1st, 2026 Saturday, May 2nd, 2026" [ref=e84]:
+                  - gridcell "Sunday, April 26th, 2026" [ref=e85]:
+                    - button "Sunday, April 26th, 2026" [ref=e86]: "26"
+                  - gridcell "Monday, April 27th, 2026" [ref=e87]:
+                    - button "Monday, April 27th, 2026" [ref=e88]: "27"
+                  - gridcell "Tuesday, April 28th, 2026" [ref=e89]:
+                    - button "Tuesday, April 28th, 2026" [ref=e90]: "28"
+                  - gridcell "Wednesday, April 29th, 2026" [ref=e91]:
+                    - button "Wednesday, April 29th, 2026" [ref=e92]: "29"
+                  - gridcell "Thursday, April 30th, 2026" [ref=e93]:
+                    - button "Thursday, April 30th, 2026" [ref=e94]: "30"
+                  - gridcell "Today, Friday, May 1st, 2026" [ref=e95]:
+                    - button "Today, Friday, May 1st, 2026" [ref=e96]: "1"
+                  - gridcell "Saturday, May 2nd, 2026" [ref=e97]:
+                    - button "Saturday, May 2nd, 2026" [ref=e98]: "2"
+                - row "Sunday, May 3rd, 2026 Monday, May 4th, 2026 Tuesday, May 5th, 2026 Wednesday, May 6th, 2026 Thursday, May 7th, 2026 Friday, May 8th, 2026 Saturday, May 9th, 2026" [ref=e99]:
+                  - gridcell "Sunday, May 3rd, 2026" [ref=e100]:
+                    - button "Sunday, May 3rd, 2026" [ref=e101]: "3"
+                  - gridcell "Monday, May 4th, 2026" [ref=e102]:
+                    - button "Monday, May 4th, 2026" [ref=e103]: "4"
+                  - gridcell "Tuesday, May 5th, 2026" [ref=e104]:
+                    - button "Tuesday, May 5th, 2026" [ref=e105]: "5"
+                  - gridcell "Wednesday, May 6th, 2026" [ref=e106]:
+                    - button "Wednesday, May 6th, 2026" [ref=e107]: "6"
+                  - gridcell "Thursday, May 7th, 2026" [ref=e108]:
+                    - button "Thursday, May 7th, 2026" [ref=e109]: "7"
+                  - gridcell "Friday, May 8th, 2026" [ref=e110]:
+                    - button "Friday, May 8th, 2026" [ref=e111]: "8"
+                  - gridcell "Saturday, May 9th, 2026" [ref=e112]:
+                    - button "Saturday, May 9th, 2026" [ref=e113]: "9"
+                - row "Sunday, May 10th, 2026 Monday, May 11th, 2026 Tuesday, May 12th, 2026 Wednesday, May 13th, 2026 Thursday, May 14th, 2026 Friday, May 15th, 2026 Saturday, May 16th, 2026" [ref=e114]:
+                  - gridcell "Sunday, May 10th, 2026" [ref=e115]:
+                    - button "Sunday, May 10th, 2026" [ref=e116]: "10"
+                  - gridcell "Monday, May 11th, 2026" [ref=e117]:
+                    - button "Monday, May 11th, 2026" [ref=e118]: "11"
+                  - gridcell "Tuesday, May 12th, 2026" [ref=e119]:
+                    - button "Tuesday, May 12th, 2026" [ref=e120]: "12"
+                  - gridcell "Wednesday, May 13th, 2026" [ref=e121]:
+                    - button "Wednesday, May 13th, 2026" [ref=e122]: "13"
+                  - gridcell "Thursday, May 14th, 2026" [ref=e123]:
+                    - button "Thursday, May 14th, 2026" [ref=e124]: "14"
+                  - gridcell "Friday, May 15th, 2026" [ref=e125]:
+                    - button "Friday, May 15th, 2026" [ref=e126]: "15"
+                  - gridcell "Saturday, May 16th, 2026" [ref=e127]:
+                    - button "Saturday, May 16th, 2026" [ref=e128]: "16"
+                - row "Sunday, May 17th, 2026 Monday, May 18th, 2026 Tuesday, May 19th, 2026 Wednesday, May 20th, 2026 Thursday, May 21st, 2026 Friday, May 22nd, 2026 Saturday, May 23rd, 2026" [ref=e129]:
+                  - gridcell "Sunday, May 17th, 2026" [ref=e130]:
+                    - button "Sunday, May 17th, 2026" [ref=e131]: "17"
+                  - gridcell "Monday, May 18th, 2026" [ref=e132]:
+                    - button "Monday, May 18th, 2026" [ref=e133]: "18"
+                  - gridcell "Tuesday, May 19th, 2026" [ref=e134]:
+                    - button "Tuesday, May 19th, 2026" [ref=e135]: "19"
+                  - gridcell "Wednesday, May 20th, 2026" [ref=e136]:
+                    - button "Wednesday, May 20th, 2026" [ref=e137]: "20"
+                  - gridcell "Thursday, May 21st, 2026" [ref=e138]:
+                    - button "Thursday, May 21st, 2026" [ref=e139]: "21"
+                  - gridcell "Friday, May 22nd, 2026" [ref=e140]:
+                    - button "Friday, May 22nd, 2026" [ref=e141]: "22"
+                  - gridcell "Saturday, May 23rd, 2026" [ref=e142]:
+                    - button "Saturday, May 23rd, 2026" [ref=e143]: "23"
+                - row "Sunday, May 24th, 2026 Monday, May 25th, 2026 Tuesday, May 26th, 2026 Wednesday, May 27th, 2026 Thursday, May 28th, 2026 Friday, May 29th, 2026 Saturday, May 30th, 2026" [ref=e144]:
+                  - gridcell "Sunday, May 24th, 2026" [ref=e145]:
+                    - button "Sunday, May 24th, 2026" [ref=e146]: "24"
+                  - gridcell "Monday, May 25th, 2026" [ref=e147]:
+                    - button "Monday, May 25th, 2026" [ref=e148]: "25"
+                  - gridcell "Tuesday, May 26th, 2026" [ref=e149]:
+                    - button "Tuesday, May 26th, 2026" [ref=e150]: "26"
+                  - gridcell "Wednesday, May 27th, 2026" [ref=e151]:
+                    - button "Wednesday, May 27th, 2026" [ref=e152]: "27"
+                  - gridcell "Thursday, May 28th, 2026" [ref=e153]:
+                    - button "Thursday, May 28th, 2026" [ref=e154]: "28"
+                  - gridcell "Friday, May 29th, 2026" [ref=e155]:
+                    - button "Friday, May 29th, 2026" [ref=e156]: "29"
+                  - gridcell "Saturday, May 30th, 2026" [ref=e157]:
+                    - button "Saturday, May 30th, 2026" [ref=e158]: "30"
+                - row "Sunday, May 31st, 2026 Monday, June 1st, 2026 Tuesday, June 2nd, 2026 Wednesday, June 3rd, 2026 Thursday, June 4th, 2026 Friday, June 5th, 2026 Saturday, June 6th, 2026" [ref=e159]:
+                  - gridcell "Sunday, May 31st, 2026" [ref=e160]:
+                    - button "Sunday, May 31st, 2026" [ref=e161]: "31"
+                  - gridcell "Monday, June 1st, 2026" [ref=e162]:
+                    - button "Monday, June 1st, 2026" [ref=e163]: "1"
+                  - gridcell "Tuesday, June 2nd, 2026" [ref=e164]:
+                    - button "Tuesday, June 2nd, 2026" [ref=e165]: "2"
+                  - gridcell "Wednesday, June 3rd, 2026" [ref=e166]:
+                    - button "Wednesday, June 3rd, 2026" [ref=e167]: "3"
+                  - gridcell "Thursday, June 4th, 2026" [ref=e168]:
+                    - button "Thursday, June 4th, 2026" [ref=e169]: "4"
+                  - gridcell "Friday, June 5th, 2026" [ref=e170]:
+                    - button "Friday, June 5th, 2026" [ref=e171]: "5"
+                  - gridcell "Saturday, June 6th, 2026" [ref=e172]:
+                    - button "Saturday, June 6th, 2026" [ref=e173]: "6"
+      - generic [ref=e174]:
+        - heading "Drawer" [level=2] [ref=e175]
+        - button "Open bottom" [ref=e177]
+      - generic [ref=e178]:
+        - heading "Carousel" [level=2] [ref=e179]
+        - region [ref=e181]:
+          - generic [ref=e184]:
+            - group [ref=e185]:
+              - img "Half-Life 2" [ref=e186]
+            - group [ref=e187]:
+              - img "Team Fortress 2" [ref=e188]
+            - group [ref=e189]:
+              - img "Portal" [ref=e190]
+            - group [ref=e191]:
+              - img "Left 4 Dead 2" [ref=e192]
+            - group [ref=e193]:
+              - img "Portal 2" [ref=e194]
+          - button "Previous slide" [disabled]:
+            - img
+            - generic: Previous slide
+          - button "Next slide" [disabled]:
+            - img
+            - generic: Next slide
+      - generic [ref=e195]:
+        - heading "Input OTP" [level=2] [ref=e196]
+        - generic [ref=e197]:
+          - generic:
+            - separator:
+              - img
+            - textbox [ref=e198]
+          - textbox [ref=e199]
+      - generic [ref=e200]:
+        - heading "Alert" [level=2] [ref=e201]
+        - generic [ref=e202]:
+          - alert [ref=e203]:
+            - img [ref=e204]
+            - generic [ref=e206]: Update available
+            - generic [ref=e207]: Steam has downloaded an update. Restart to apply.
+          - alert [ref=e208]:
+            - img [ref=e209]
+            - generic [ref=e211]: Low disk space
+            - generic [ref=e212]: You have less than 1 GB free on drive C:.
+          - alert [ref=e213]:
+            - img [ref=e214]
+            - generic [ref=e218]: Installation failed
+            - generic [ref=e219]: "Half-Life 2 could not be installed. Error code: -107."
+          - alert [ref=e220]:
+            - generic [ref=e221]: No icon
+            - generic [ref=e222]: Alert without an icon also works.
+      - generic [ref=e223]:
+        - heading "Alert Dialog" [level=2] [ref=e224]
+        - button "Delete game" [ref=e226]
+      - generic [ref=e227]:
+        - heading "Avatar" [level=2] [ref=e228]
+        - generic [ref=e229]:
+          - generic [ref=e231]: SC
+          - generic [ref=e234]: HL
+          - generic [ref=e237]: GN
+      - heading "Skeleton" [level=2] [ref=e240]
+      - generic [ref=e250]:
+        - heading "Toggle" [level=2] [ref=e251]
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - button [ref=e254]:
+              - img
+            - button [pressed] [ref=e255]:
+              - img
+            - button [ref=e256]:
+              - img
+            - button [disabled]:
+              - img
+          - group [ref=e257]:
+            - radio [checked] [ref=e258]:
+              - img
+            - radio [ref=e259]:
+              - img
+            - radio [ref=e260]:
+              - img
+      - generic [ref=e261]:
+        - heading "Collapsible" [level=2] [ref=e262]
+        - button "Installed games" [ref=e264]:
+          - text: Installed games
+          - img
+      - generic [ref=e265]:
+        - heading "Breadcrumb" [level=2] [ref=e266]
+        - navigation "breadcrumb" [ref=e267]:
+          - list [ref=e268]:
+            - listitem [ref=e269]:
+              - link "Steam" [ref=e270]:
+                - /url: "#"
+            - listitem [ref=e271]: ">"
+            - listitem [ref=e272]:
+              - link "Library" [ref=e273]:
+                - /url: "#"
+            - listitem [ref=e274]: ">"
+            - listitem [ref=e275]:
+              - link "Half-Life 2" [disabled] [ref=e276]
+      - generic [ref=e277]:
+        - heading "Pagination" [level=2] [ref=e278]
+        - navigation "pagination" [ref=e279]:
+          - list [ref=e280]:
+            - listitem [ref=e281]:
+              - link "Go to previous page" [ref=e282]:
+                - /url: "#"
+                - img [ref=e283]
+            - listitem [ref=e285]:
+              - link "1" [ref=e286]:
+                - /url: "#"
+            - listitem [ref=e287]:
+              - link "2" [ref=e288]:
+                - /url: "#"
+            - listitem [ref=e289]:
+              - link "3" [ref=e290]:
+                - /url: "#"
+            - listitem [ref=e291]:
+              - generic [ref=e292]: …
+            - listitem [ref=e293]:
+              - link "12" [ref=e294]:
+                - /url: "#"
+            - listitem [ref=e295]:
+              - link "Go to next page" [ref=e296]:
+                - /url: "#"
+                - img [ref=e297]
+      - generic [ref=e299]:
+        - heading "Hover Card" [level=2] [ref=e300]
+        - button "@valve" [ref=e302] [cursor=pointer]
+      - generic [ref=e303]:
+        - heading "Scroll Area" [level=2] [ref=e304]
+        - generic [ref=e308]:
+          - generic [ref=e309]: Half-Life 2
+          - generic [ref=e310]: Counter-Strike
+          - generic [ref=e311]: Team Fortress 2
+          - generic [ref=e312]: Portal
+          - generic [ref=e313]: Dota 2
+          - generic [ref=e314]: Left 4 Dead 2
+          - generic [ref=e315]: Garry's Mod
+          - generic [ref=e316]: Portal 2
+          - generic [ref=e317]: CS:GO
+          - generic [ref=e318]: "Half-Life: Alyx"
+      - generic [ref=e319]:
+        - heading "Sheet" [level=2] [ref=e320]
+        - generic [ref=e321]:
+          - button "Open right" [ref=e322]
+          - button "Open left" [ref=e323]
+      - generic [ref=e324]:
+        - heading "Menubar" [level=2] [ref=e325]
+        - menubar [ref=e326]:
+          - menuitem "Steam" [ref=e327]
+          - menuitem "Games" [ref=e328]
+          - menuitem "View" [ref=e329]
+          - menuitem "Help" [ref=e330]
+      - generic [ref=e331]:
+        - heading "Popover" [level=2] [ref=e332]
+        - generic [ref=e333]:
+          - button "Game info" [ref=e334]
+          - button "Filter" [ref=e335]
+      - generic [ref=e336]:
+        - heading "Accordion" [level=2] [ref=e337]
+        - generic [ref=e338]:
+          - generic [ref=e339]:
+            - heading "Graphics settings" [level=3] [ref=e340]:
+              - button "Graphics settings" [expanded] [ref=e341]:
+                - img
+                - text: Graphics settings
+            - region "Graphics settings" [ref=e342]:
+              - generic [ref=e344]:
+                - generic [ref=e345]:
+                  - checkbox "Enable HDR" [checked] [ref=e346]:
+                    - generic:
+                      - img
+                  - checkbox [checked]
+                  - generic [ref=e347]: Enable HDR
+                - generic [ref=e348]:
+                  - checkbox "Anti-aliasing" [ref=e349]
+                  - checkbox
+                  - generic [ref=e350]: Anti-aliasing
+                - generic [ref=e351]:
+                  - checkbox "Vsync" [checked] [ref=e352]:
+                    - generic:
+                      - img
+                  - checkbox [checked]
+                  - generic [ref=e353]: Vsync
+          - heading "Audio settings" [level=3] [ref=e355]:
+            - button "Audio settings" [ref=e356]:
+              - img
+              - text: Audio settings
+          - heading "Network settings" [level=3] [ref=e358]:
+            - button "Network settings" [ref=e359]:
+              - img
+              - text: Network settings
+      - generic [ref=e360]:
+        - heading "Textarea" [level=2] [ref=e361]
+        - generic [ref=e362]:
+          - textbox "Write a message..." [ref=e363]
+          - textbox [ref=e364]: Read only content
+          - textbox [disabled] [ref=e365]: Disabled content
+          - textbox [ref=e366]: Invalid content
+      - generic [ref=e367]:
+        - heading "Radio Group" [level=2] [ref=e368]
+        - generic [ref=e369]:
+          - radiogroup [ref=e370]:
+            - generic [ref=e371]:
+              - radio "Half-Life 2" [ref=e372]
+              - radio
+              - generic [ref=e373]: Half-Life 2
+            - generic [ref=e374]:
+              - radio "Counter-Strike" [checked] [ref=e375]
+              - radio [checked]
+              - generic [ref=e378]: Counter-Strike
+            - generic [ref=e379]:
+              - radio "Team Fortress 2" [ref=e380]
+              - radio
+              - generic [ref=e381]: Team Fortress 2
+          - radiogroup [ref=e382]:
+            - group [ref=e383]:
+              - radio "Small icons" [disabled]
+              - radio [disabled]
+              - generic: Small icons
+            - generic [ref=e384]:
+              - radio "Medium icons" [checked] [ref=e385]
+              - radio [checked]
+              - generic [ref=e388]: Medium icons
+            - generic [ref=e389]:
+              - radio "Large icons" [ref=e390]
+              - radio
+              - generic [ref=e391]: Large icons
+      - generic [ref=e392]:
+        - heading "Context Menu" [level=2] [ref=e393]
+        - generic [ref=e394]: Right-click here
+      - generic [ref=e395]:
+        - heading "Dropdown Menu" [level=2] [ref=e396]
+        - generic [ref=e397]:
+          - button "Games" [ref=e398]
+          - button "View options" [ref=e399]
+      - generic [ref=e400]:
+        - heading "Field" [level=2] [ref=e401]
+        - generic [ref=e402]:
+          - group [ref=e403]:
+            - checkbox "Enable notifications" [ref=e404]
+            - checkbox
+            - generic [ref=e405]: Enable notifications
+          - group [ref=e406]:
+            - checkbox "Auto-update games" [checked] [ref=e407]:
+              - generic:
+                - img
+            - checkbox [checked]
+            - generic [ref=e408]: Auto-update games
+          - group [ref=e409]:
+            - checkbox "Disabled option" [disabled]
+            - checkbox [disabled]
+            - generic: Disabled option
+          - group [ref=e410]:
+            - switch "Show friends online" [ref=e411]
+            - checkbox
+            - generic [ref=e412]: Show friends online
+          - group [ref=e413]:
+            - switch "Disabled switch" [disabled]
+            - checkbox [disabled]
+            - generic: Disabled switch
+      - generic [ref=e414]:
+        - heading "Switch" [level=2] [ref=e415]
+        - generic [ref=e416]:
+          - generic [ref=e417]:
+            - switch "Off" [ref=e418]
+            - checkbox
+            - generic [ref=e419]: "Off"
+          - generic [ref=e420]:
+            - switch "On" [checked] [ref=e421]
+            - checkbox [checked]
+            - generic [ref=e422]: "On"
+          - group [ref=e423]:
+            - switch "Disabled off" [disabled]
+            - checkbox [disabled]
+            - generic: Disabled off
+          - group [ref=e424]:
+            - switch "Disabled on" [checked] [disabled]
+            - checkbox [checked] [disabled]
+            - generic: Disabled on
+      - heading "Slider" [level=2] [ref=e426]
+      - generic [ref=e439]:
+        - heading "Badge" [level=2] [ref=e440]
+        - generic [ref=e441]:
+          - generic [ref=e442]: Default
+          - generic [ref=e443]: Secondary
+          - generic [ref=e444]: Destructive
+          - generic [ref=e445]: Outline
+          - generic [ref=e446]: Ready
+          - generic [ref=e447]: Needs update
+          - generic [ref=e448]: Offline
+      - generic [ref=e449]:
+        - heading "Tooltip" [level=2] [ref=e450]
+        - generic [ref=e451]:
+          - button "Hover me" [ref=e452]
+          - button "Server info" [ref=e453]
+          - button "Close" [ref=e454]:
+            - img
+      - generic [ref=e455]:
+        - heading "Button" [level=2] [ref=e456]
+        - generic [ref=e457]:
+          - generic [ref=e458]: Variants
+          - generic [ref=e459]:
+            - button "Default" [ref=e460]
+            - button "Destructive" [ref=e461]
+            - button "Outline" [ref=e462]
+            - button "Secondary" [ref=e463]
+            - button "Ghost" [ref=e464]
+            - button "Link" [ref=e465] [cursor=pointer]
+        - generic [ref=e466]:
+          - generic [ref=e467]: Sizes
+          - generic [ref=e468]:
+            - button "Small" [ref=e469]
+            - button "Default" [ref=e470]
+            - button "Large" [ref=e471]
+            - button "Icon" [ref=e472]:
+              - img
+        - generic [ref=e473]:
+          - generic [ref=e474]: States
+          - generic [ref=e475]:
+            - button "Normal" [ref=e476]
+            - button "Disabled" [disabled]
+            - button "Focused" [active] [ref=e477]
+      - generic [ref=e478]:
+        - heading "Input" [level=2] [ref=e479]
+        - generic [ref=e480]:
+          - textbox "Placeholder text" [ref=e481]
+          - textbox [ref=e482]: Has value
+          - textbox [ref=e483]: secret
+          - textbox [ref=e484]: Read only
+          - textbox [disabled] [ref=e485]: Disabled
+          - textbox [ref=e486]: Invalid value
+        - generic [ref=e487]:
+          - generic [ref=e488]: With button
+          - generic [ref=e489]:
+            - textbox "Search Steam..." [ref=e490]
+            - button "Find" [ref=e491]
+      - generic [ref=e492]:
+        - heading "Checkbox" [level=2] [ref=e493]
+        - generic [ref=e494]:
+          - generic [ref=e495]:
+            - checkbox "Unchecked" [ref=e496]
+            - checkbox
+            - generic [ref=e497]: Unchecked
+          - generic [ref=e498]:
+            - checkbox "Checked" [checked] [ref=e499]:
+              - generic:
+                - img
+            - checkbox [checked]
+            - generic [ref=e500]: Checked
+          - generic [ref=e501]:
+            - checkbox "Indeterminate" [checked=mixed] [ref=e502]:
+              - generic:
+                - img
+            - checkbox
+            - generic [ref=e503]: Indeterminate
+          - group [ref=e504]:
+            - checkbox "Disabled unchecked" [disabled]
+            - checkbox [disabled]
+            - generic: Disabled unchecked
+          - group [ref=e505]:
+            - checkbox "Disabled checked" [checked] [disabled]:
+              - generic:
+                - img
+            - checkbox [checked] [disabled]
+            - generic: Disabled checked
+          - generic [ref=e506]:
+            - checkbox "Invalid" [ref=e507]
+            - checkbox
+            - generic [ref=e508]: Invalid
+          - generic [ref=e509]:
+            - checkbox "Invalid checked" [checked] [ref=e510]:
+              - generic:
+                - img
+            - checkbox [checked]
+            - generic [ref=e511]: Invalid checked
+      - generic [ref=e512]:
+        - heading "Tabs" [level=2] [ref=e513]
+        - generic [ref=e514]:
+          - tablist [ref=e515]:
+            - tab "Internet" [selected] [ref=e516]
+            - tab "Favorites" [ref=e517]
+            - tab "History" [ref=e518]
+            - tab "LAN" [ref=e519]
+            - tab "Friends" [ref=e520]
+          - tabpanel "Internet" [ref=e521]:
+            - generic [ref=e522]: Internet servers content
+      - generic [ref=e523]:
+        - heading "Table" [level=2] [ref=e524]
+        - generic [ref=e525]:
+          - table [ref=e527]:
+            - rowgroup [ref=e528]:
+              - row "Name Size Last Played Status" [ref=e529]:
+                - columnheader "Name" [ref=e530]
+                - columnheader "Size" [ref=e531]
+                - columnheader "Last Played" [ref=e532]
+                - columnheader "Status" [ref=e533]
+            - rowgroup [ref=e534]:
+              - row "Half-Life 2 4.2 GB Today Ready" [ref=e535]:
+                - cell "Half-Life 2" [ref=e536]
+                - cell "4.2 GB" [ref=e537]
+                - cell "Today" [ref=e538]
+                - cell "Ready" [ref=e539]
+              - row "Counter-Strike 600 MB Yesterday Ready" [ref=e540]:
+                - cell "Counter-Strike" [ref=e541]
+                - cell "600 MB" [ref=e542]
+                - cell "Yesterday" [ref=e543]
+                - cell "Ready" [ref=e544]
+              - row "Team Fortress 2 15 GB 3 days ago Needs update" [ref=e545]:
+                - cell "Team Fortress 2" [ref=e546]
+                - cell "15 GB" [ref=e547]
+                - cell "3 days ago" [ref=e548]
+                - cell "Needs update" [ref=e549]
+              - row "Portal 870 MB Last week Ready" [ref=e550]:
+                - cell "Portal" [ref=e551]
+                - cell "870 MB" [ref=e552]
+                - cell "Last week" [ref=e553]
+                - cell "Ready" [ref=e554]
+              - row "Dota 2 32 GB Never Needs update" [ref=e555]:
+                - cell "Dota 2" [ref=e556]
+                - cell "32 GB" [ref=e557]
+                - cell "Never" [ref=e558]
+                - cell "Needs update" [ref=e559]
+              - row "Left 4 Dead 2 8.1 GB 2 weeks ago Ready" [ref=e560]:
+                - cell "Left 4 Dead 2" [ref=e561]
+                - cell "8.1 GB" [ref=e562]
+                - cell "2 weeks ago" [ref=e563]
+                - cell "Ready" [ref=e564]
+              - row "Left 4 Dead 2 8.1 GB 2 weeks ago Ready" [ref=e565]:
+                - cell "Left 4 Dead 2" [ref=e566]
+                - cell "8.1 GB" [ref=e567]
+                - cell "2 weeks ago" [ref=e568]
+                - cell "Ready" [ref=e569]
+              - row "Left 4 Dead 2 8.1 GB 2 weeks ago Ready" [ref=e570]:
+                - cell "Left 4 Dead 2" [ref=e571]
+                - cell "8.1 GB" [ref=e572]
+                - cell "2 weeks ago" [ref=e573]
+                - cell "Ready" [ref=e574]
+              - row "Left 4 Dead 2 8.1 GB 2 weeks ago Ready" [ref=e575]:
+                - cell "Left 4 Dead 2" [ref=e576]
+                - cell "8.1 GB" [ref=e577]
+                - cell "2 weeks ago" [ref=e578]
+                - cell "Ready" [ref=e579]
+            - rowgroup
+          - generic [ref=e580]:
+            - img [ref=e582]
+            - img [ref=e587]
+      - generic [ref=e589]:
+        - heading "Card" [level=2] [ref=e590]
+        - generic [ref=e591]:
+          - generic [ref=e592]:
+            - generic [ref=e593]:
+              - generic [ref=e594]: Steam Account
+              - generic [ref=e595]: Manage your account settings
+              - button "Edit" [ref=e597]
+            - generic [ref=e598]:
+              - paragraph [ref=e599]: "Username: GabeN"
+              - paragraph [ref=e600]: "Status: Online"
+            - button "Delete Account" [ref=e602]
+          - generic [ref=e603]:
+            - generic [ref=e604]:
+              - generic [ref=e605]: No Footer
+              - generic [ref=e606]: Simple card without footer
+            - paragraph [ref=e608]: Some content goes here.
+      - generic [ref=e609]:
+        - heading "Dialog" [level=2] [ref=e610]
+        - generic [ref=e611]:
+          - button "Open Dialog" [ref=e612]
+          - button "No Close Button" [ref=e613]
+      - generic [ref=e614]:
+        - heading "Progress" [level=2] [ref=e615]
+        - generic [ref=e616]:
+          - progressbar [ref=e617]
+          - progressbar [ref=e619]
+          - progressbar [ref=e621]
+          - progressbar [ref=e623]
+        - generic [ref=e625]:
+          - progressbar [ref=e626]
+          - generic [ref=e628]: 0%
+          - button "Reset" [ref=e629]
+      - generic [ref=e630]:
+        - heading "Select" [level=2] [ref=e631]
+        - generic [ref=e632]:
+          - combobox [ref=e633]:
+            - generic [ref=e634]:
+              - generic: Select a game…
+            - img [ref=e636]
+          - combobox [ref=e638]
+          - combobox [ref=e639]:
+            - img [ref=e642]
+          - combobox [ref=e644]
+          - combobox [disabled]:
+            - generic:
+              - generic: Disabled
+            - generic:
+              - img
+          - combobox [disabled] [ref=e645]
+      - generic [ref=e646]:
+        - heading "Aspect Ratio" [level=2] [ref=e647]
+        - generic [ref=e648]:
+          - generic [ref=e652]: 16:9
+          - generic [ref=e656]: 4:3
+          - generic [ref=e660]: 1:1
+      - generic [ref=e661]:
+        - heading "Resizable" [level=2] [ref=e662]
+        - generic [ref=e663]:
+          - generic [ref=e665]:
+            - generic [ref=e669]: Library
+            - separator [ref=e670]:
+              - img [ref=e672]
+            - generic [ref=e682]: Details
+          - generic [ref=e684]:
+            - generic [ref=e688]: Top panel
+            - separator [ref=e689]:
+              - img [ref=e691]
+            - generic [ref=e701]: Bottom panel
+  - region "Notifications alt+T"

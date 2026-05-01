@@ -2,3 +2,5 @@
 [   32366ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) @ http://localhost:3000/:0
 [   33259ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5949
 [   33588ms] [LOG] [Fast Refresh] done in 430ms @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5809
+[  103918ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5949
+[  104849ms] [LOG] [Fast Refresh] done in 877ms @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5809
