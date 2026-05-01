@@ -286,6 +286,8 @@ export default function Home() {
             <Progress value={66} />
             <Progress value={100} />
           </div>
+
+          <ProgressDemo />
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
