@@ -222,10 +222,11 @@
   font-weight: normal !important;
 }
 
-@keyframes spin-steps {
+@keyframes win32-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
-[data-sonner-toast] .animate-spin {
-  animation: spin-steps 1s steps(12, end) infinite !important;
+[data-sonner-toast] .animate-spin,
+.win32-spin {
+  animation: win32-spin 1s steps(12, end) infinite;
 }
