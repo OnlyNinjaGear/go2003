@@ -150,6 +150,130 @@ export default function Home() {
       </header>
 
       <main className="flex flex-1 flex-col gap-6">
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="">Sonner</h2>
+          <SonnerDemo />
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="">Command</h2>
+          <Command className="bevel-out bg-panel max-w-xs">
+            <CommandInput placeholder="Search games…" />
+            <CommandList>
+              <CommandEmpty>No results found.</CommandEmpty>
+              <CommandGroup heading="Games">
+                <CommandItem><TerminalIcon />Half-Life 2<CommandShortcut>Play</CommandShortcut></CommandItem>
+                <CommandItem><TerminalIcon />Counter-Strike<CommandShortcut>Play</CommandShortcut></CommandItem>
+                <CommandItem disabled><TerminalIcon />Left 4 Dead 2<CommandShortcut>Update</CommandShortcut></CommandItem>
+              </CommandGroup>
+              <CommandSeparator />
+              <CommandGroup heading="Actions">
+                <CommandItem><SearchIcon />Add a game…</CommandItem>
+                <CommandItem><SearchIcon />Settings</CommandItem>
+              </CommandGroup>
+            </CommandList>
+          </Command>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="">Navigation Menu</h2>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Store</NavigationMenuTrigger>
+                <NavigationMenuContent className="bevel-out bg-panel p-2 min-w-[180px]">
+                  <NavigationMenuLink className="block px-3 py-1 hover:bg-primary hover:text-primary-foreground cursor-default">Featured</NavigationMenuLink>
+                  <NavigationMenuLink className="block px-3 py-1 hover:bg-primary hover:text-primary-foreground cursor-default">New releases</NavigationMenuLink>
+                  <NavigationMenuLink className="block px-3 py-1 hover:bg-primary hover:text-primary-foreground cursor-default">Specials</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>Community</NavigationMenuTrigger>
+                <NavigationMenuContent className="bevel-out bg-panel p-2 min-w-[180px]">
+                  <NavigationMenuLink className="block px-3 py-1 hover:bg-primary hover:text-primary-foreground cursor-default">Forums</NavigationMenuLink>
+                  <NavigationMenuLink className="block px-3 py-1 hover:bg-primary hover:text-primary-foreground cursor-default">Workshop</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink className="px-2 h-6 flex items-center cursor-default hover:bg-primary hover:text-primary-foreground">About</NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="">Calendar</h2>
+          <Calendar mode="single" />
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="">Drawer</h2>
+          <div className="flex flex-wrap gap-2">
+            <Drawer>
+              <DrawerTrigger asChild><Button>Open bottom</Button></DrawerTrigger>
+              <DrawerContent>
+                <DrawerHeader>
+                  <DrawerTitle>Game settings</DrawerTitle>
+                  <DrawerDescription>Configure Half-Life 2 launch options.</DrawerDescription>
+                </DrawerHeader>
+                <div className="p-3 flex flex-col gap-2">
+                  <label className="flex items-center gap-1.5 cursor-default"><Checkbox defaultChecked /><span>Enable console</span></label>
+                  <label className="flex items-center gap-1.5 cursor-default"><Checkbox /><span>Safe mode</span></label>
+                </div>
+                <DrawerFooter>
+                  <DrawerClose asChild><Button variant="secondary" size="sm">Cancel</Button></DrawerClose>
+                  <DrawerClose asChild><Button size="sm">Apply</Button></DrawerClose>
+                </DrawerFooter>
+              </DrawerContent>
+            </Drawer>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="">Carousel</h2>
+          <Carousel className="w-full max-w-xs mx-8">
+            <CarouselContent>
+              {["Half-Life 2","Counter-Strike","Team Fortress 2","Portal","Dota 2"].map((game, i) => (
+                <CarouselItem key={i}>
+                  <div className="bevel-in bg-input-bg flex h-20 items-center justify-center p-4">
+                    <span>{game}</span>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="">Input OTP</h2>
+          <div className="flex flex-col gap-3">
+            <InputOTP maxLength={6}>
+              <InputOTPGroup>
+                <InputOTPSlot index={0} />
+                <InputOTPSlot index={1} />
+                <InputOTPSlot index={2} />
+              </InputOTPGroup>
+              <InputOTPSeparator />
+              <InputOTPGroup>
+                <InputOTPSlot index={3} />
+                <InputOTPSlot index={4} />
+                <InputOTPSlot index={5} />
+              </InputOTPGroup>
+            </InputOTP>
+            <InputOTP maxLength={4}>
+              <InputOTPGroup>
+                <InputOTPSlot index={0} />
+                <InputOTPSlot index={1} />
+                <InputOTPSlot index={2} />
+                <InputOTPSlot index={3} />
+              </InputOTPGroup>
+            </InputOTP>
+          </div>
+        </section>
+
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="">Alert</h2>
 
