@@ -1207,6 +1207,58 @@ export default function Home() {
             </Select>
           </div>
         </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2>Aspect Ratio</h2>
+          <div className="flex flex-wrap gap-3">
+            <div className="w-48">
+              <AspectRatio ratio={16 / 9} className="bevel-in bg-input-bg flex items-center justify-center">
+                <span className="text-muted-foreground">16:9</span>
+              </AspectRatio>
+            </div>
+            <div className="w-48">
+              <AspectRatio ratio={4 / 3} className="bevel-in bg-input-bg flex items-center justify-center">
+                <span className="text-muted-foreground">4:3</span>
+              </AspectRatio>
+            </div>
+            <div className="w-24">
+              <AspectRatio ratio={1} className="bevel-in bg-input-bg flex items-center justify-center">
+                <span className="text-muted-foreground">1:1</span>
+              </AspectRatio>
+            </div>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2>Resizable</h2>
+          <ResizablePanelGroup direction="horizontal" className="bevel-in bg-input-bg h-32 max-w-sm">
+            <ResizablePanel defaultSize={60}>
+              <div className="flex h-full items-center justify-center p-2">
+                <span>Library</span>
+              </div>
+            </ResizablePanel>
+            <ResizableHandle withHandle />
+            <ResizablePanel defaultSize={40}>
+              <div className="flex h-full items-center justify-center p-2">
+                <span>Details</span>
+              </div>
+            </ResizablePanel>
+          </ResizablePanelGroup>
+          <ResizablePanelGroup direction="vertical" className="bevel-in bg-input-bg h-40 max-w-sm">
+            <ResizablePanel defaultSize={60}>
+              <div className="flex h-full items-center justify-center p-2">
+                <span>Top panel</span>
+              </div>
+            </ResizablePanel>
+            <ResizableHandle withHandle />
+            <ResizablePanel defaultSize={40}>
+              <div className="flex h-full items-center justify-center p-2">
+                <span>Bottom panel</span>
+              </div>
+            </ResizablePanel>
+          </ResizablePanelGroup>
+        </section>
+
       </main>
     </div>
   );
