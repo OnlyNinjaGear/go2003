@@ -74,14 +74,14 @@ export default function Home() {
               <Switch defaultChecked />
               <span>On</span>
             </label>
-            <label className="flex items-center gap-2 cursor-default">
-              <Switch disabled />
-              <span className="peer-disabled:text-[var(--panel-pressed)] peer-disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)]">Disabled off</span>
-            </label>
-            <label className="flex items-center gap-2 cursor-default">
-              <Switch defaultChecked disabled />
-              <span className="peer-disabled:text-[var(--panel-pressed)] peer-disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)]">Disabled on</span>
-            </label>
+            <Field orientation="horizontal" data-disabled="true">
+              <Switch id="switch-disabled-off" disabled />
+              <FieldLabel htmlFor="switch-disabled-off">Disabled off</FieldLabel>
+            </Field>
+            <Field orientation="horizontal" data-disabled="true">
+              <Switch id="switch-disabled-on" defaultChecked disabled />
+              <FieldLabel htmlFor="switch-disabled-on">Disabled on</FieldLabel>
+            </Field>
           </div>
         </section>
 
