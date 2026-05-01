@@ -204,6 +204,7 @@
 }
 
 @utility win32-focus-primary {
-  box-shadow: 0 0 0 2px var(--muted);
+  outline: 0px;
+  border-color: #000000;
   border-width: 1px;
 }
