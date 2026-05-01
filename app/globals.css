@@ -210,3 +210,22 @@
   border-color: #000000;
   border-width: 1px;
 }
+
+/* Sonner overrides */
+[data-sonner-toast] {
+  box-shadow: none !important;
+}
+[data-sonner-toast] [data-title] {
+  font-weight: normal !important;
+}
+[data-sonner-toast] [data-description] {
+  font-weight: normal !important;
+}
+
+@keyframes spin-steps {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+[data-sonner-toast] .animate-spin {
+  animation: spin-steps 1s steps(12, end) infinite !important;
+}
