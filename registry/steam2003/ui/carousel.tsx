@@ -225,7 +225,7 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="size-3" />
+      <svg width="5" height="7" viewBox="0 0 5 7" aria-hidden="true" fill="currentColor"><polygon points="5,3.5 0,0 0,7" /></svg>
       <span className="sr-only">Next slide</span>
     </Button>
   )
