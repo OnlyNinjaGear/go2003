@@ -41,9 +41,9 @@ function SelectTrigger({
         {children}
       </span>
       <SelectPrimitive.Icon asChild>
-        <span className="bevel-out bg-panel flex items-center justify-center shrink-0 w-4 self-stretch">
+        <span className="flex items-center justify-center shrink-0 w-4 self-stretch">
           <svg width="7" height="5" viewBox="0 0 7 5">
-            <polygon points="3.5,5 7,0 0,0" fill="#232E19" />
+            <polygon points="3.5,5 7,0 0,0" fill="var(--muted-foreground)" />
           </svg>
         </span>
       </SelectPrimitive.Icon>
@@ -65,7 +65,7 @@ function SelectContent({
         className={cn(
           "relative z-50 min-w-[var(--radix-select-trigger-width)] overflow-hidden",
           "bevel-out bg-panel text-foreground font-sans text-[11px]",
-          position === "popper" && "data-[side=bottom]:translate-y-0.5 data-[side=top]:-translate-y-0.5",
+          position === "popper" && "data-[side=bottom]:-translate-y-px data-[side=top]:translate-y-px",
           className
         )}
         {...props}
