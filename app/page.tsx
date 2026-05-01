@@ -52,6 +52,8 @@ import { RadioGroup, RadioGroupItem } from "@/registry/steam2003/ui/radio-group"
 import { Textarea } from "@/registry/steam2003/ui/textarea";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/registry/steam2003/ui/accordion";
 import { Popover, PopoverTrigger, PopoverContent, PopoverHeader, PopoverTitle, PopoverDescription } from "@/registry/steam2003/ui/popover";
+import { Alert, AlertTitle, AlertDescription } from "@/registry/steam2003/ui/alert";
+import { InfoIcon, AlertTriangleIcon, XCircleIcon } from "lucide-react";
 import {
   Menubar,
   MenubarMenu,
