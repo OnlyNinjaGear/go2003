@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema.json",
-  "style": "new-york",
+  "style": "steam2003",
   "rsc": true,
   "tsx": true,
   "tailwind": {
