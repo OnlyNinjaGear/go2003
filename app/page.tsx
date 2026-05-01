@@ -137,6 +137,8 @@ import {
   DropdownMenuSubContent,
 } from "@/registry/steam2003/ui/dropdown-menu";
 import { X } from "lucide-react";
+import { AspectRatio } from "@/registry/steam2003/ui/aspect-ratio";
+import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "@/registry/steam2003/ui/resizable";
 
 export default function Home() {
   return (
