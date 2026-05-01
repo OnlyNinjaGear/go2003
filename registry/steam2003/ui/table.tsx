@@ -3,9 +3,9 @@
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
-const SB_W = 17
-const BTN_H = 17
-const ROW_H = 19
+const SB_W = 16
+const BTN_H = 16
+const ROW_H = 18
 
 const trackBg: React.CSSProperties = {
   backgroundColor: "var(--scrollbar)",
@@ -108,7 +108,7 @@ function Win32Scrollbar({
       <div
         className="bg-panel shrink-0 overflow-hidden px-1 py-0.5"
         style={{
-          height: s.theadH - BTN_H,
+          height: s.theadH - BTN_H - 1,
           borderTop: "1px solid var(--border-light)",
           borderRight: "1px solid var(--border-dark)",
           borderBottom: "1px solid var(--border-dark)",
@@ -132,7 +132,7 @@ function Win32Scrollbar({
       <div className="relative flex-1" style={trackBg}>
         <div
           className="absolute inset-x-0 bevel-out bg-panel cursor-default"
-          style={{ top: s.thumbTop, height: s.thumbHeight }}
+          style={{ top: s.thumbTop, height: s.thumbHeight + 1 }}
           onMouseDown={onThumbDown}
         />
       </div>
@@ -154,7 +154,7 @@ function Win32Scrollbar({
       <div
         className="bg-panel shrink-0 overflow-hidden px-1 py-0.5"
         style={{
-          height: s.tfootH,
+          height: s.tfootH + 0.5,
           borderTop: "1px solid var(--border-light)",
           borderRight: "1px solid var(--border-dark)",
           borderBottom: "1px solid var(--border-dark)",
@@ -178,7 +178,7 @@ function Table({
   const containerRef = React.useRef<HTMLDivElement>(null)
 
   return (
-    <div className="flex [&_thead_tr>*:last-child]:[border-right:none] [&_tfoot_tr>*:last-child]:[border-right:none]">
+    <div className="flex [&_thead_tr:first-child>*:last-child]:[border-right:none] [&_tfoot_tr:last-child>*:last-child]:[border-right:none]">
       <div
         ref={containerRef}
         className={cn(
@@ -215,7 +215,7 @@ function TableFooter({ className, ...props }: React.ComponentProps<"tfoot">) {
   return (
     <tfoot
       data-slot="table-footer"
-      className={cn("sticky bottom-0 z-10 [&_td]:bevel-out [&_td]:bg-panel", className)}
+      className={cn("sticky bottom-0 z-10 h-4 [&_td]:bevel-out [&_td]:bg-panel", className)}
       {...props}
     />
   )
@@ -252,7 +252,7 @@ function TableCell({ className, ...props }: React.ComponentProps<"td">) {
     <td
       data-slot="table-cell"
       className={cn(
-        "px-1 py-0.5 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+        "px-1 py-0.5 h-4! align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
         className
       )}
       {...props}
