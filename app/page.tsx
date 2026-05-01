@@ -48,6 +48,22 @@ import { Switch } from "@/registry/steam2003/ui/switch";
 import { Slider } from "@/registry/steam2003/ui/slider";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/registry/steam2003/ui/tooltip";
 import { Field, FieldLabel } from "@/registry/steam2003/ui/field";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuLabel,
+  DropdownMenuItem,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
+} from "@/registry/steam2003/ui/dropdown-menu";
 import { X } from "lucide-react";
 
 export default function Home() {
