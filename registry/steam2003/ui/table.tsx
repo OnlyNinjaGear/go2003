@@ -243,7 +243,7 @@ function TableHead({ className, ...props }: React.ComponentProps<"th">) {
     <th
       data-slot="table-head"
       className={cn(
-        "bevel-out bg-panel px-1 py-0 text-left align-middle font-normal whitespace-nowrap text-foreground cursor-default select-none [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+        "bevel-out bg-panel px-1 py-0 h-4 text-left align-middle font-normal whitespace-nowrap text-foreground cursor-default select-none [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
         className
       )}
       {...props}
