@@ -109,15 +109,17 @@ function Win32Scrollbar({
   return (
     <div className="flex flex-col self-stretch shrink-0" style={{ width: SB_W }}>
       {/* header row extension — no left border so it merges with last th */}
-      <div
-        className="bg-panel shrink-0 overflow-hidden px-1 py-0.5"
-        style={{
-          height: s.theadH - BTN_H,
-          borderTop: "1px solid var(--border-light)",
-          borderRight: "1px solid var(--border-dark)",
-          borderBottom: "1px solid var(--border-dark)",
-        }}
-      >{header}</div>
+      {s.theadH > BTN_H && (
+        <div
+          className="bg-panel shrink-0 overflow-hidden px-1 py-0.5"
+          style={{
+            height: s.theadH - BTN_H,
+            borderTop: "1px solid var(--border-light)",
+            borderRight: "1px solid var(--border-dark)",
+            borderBottom: "1px solid var(--border-dark)",
+          }}
+        >{header}</div>
+      )}
 
       {/* Up button */}
       <div
@@ -256,7 +258,7 @@ function TableCell({ className, ...props }: React.ComponentProps<"td">) {
     <td
       data-slot="table-cell"
       className={cn(
-        "px-1 py-0.5 h-4! first:border-l first:border-border-dark align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+        "px-1 py-0.5 h-4! align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
         className
       )}
       {...props}

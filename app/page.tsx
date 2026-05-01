@@ -164,9 +164,6 @@ export default function Home() {
           <Table containerClassName="max-h-[160px] bg-input-bg">
             <TableHeader>
               <TableRow>
-                <TableHead colSpan={4}></TableHead>
-              </TableRow>
-              <TableRow>
                 <TableHead>Name</TableHead>
                 <TableHead>Size</TableHead>
                 <TableHead>Last Played</TableHead>
@@ -230,9 +227,7 @@ export default function Home() {
               </TableRow>
             </TableBody>
             <TableFooter>
-              <TableRow>
-                <TableCell colSpan={4}></TableCell>
-              </TableRow>
+
             </TableFooter>
           </Table>
         </section>
