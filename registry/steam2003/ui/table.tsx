@@ -157,15 +157,17 @@ function Win32Scrollbar({
       </div>
 
       {/* footer row extension */}
-      <div
-        className="bg-panel shrink-0 overflow-hidden px-1 py-0.5"
-        style={{
-          height: s.tfootH,
-          borderTop: "1px solid var(--border-light)",
-          borderRight: "1px solid var(--border-dark)",
-          borderBottom: "1px solid var(--border-dark)",
-        }}
-      >{footer}</div>
+      {s.tfootH > 0 && (
+        <div
+          className="bg-panel shrink-0 overflow-hidden px-1 py-0.5"
+          style={{
+            height: s.tfootH,
+            borderTop: "1px solid var(--border-light)",
+            borderRight: "1px solid var(--border-dark)",
+            borderBottom: "1px solid var(--border-dark)",
+          }}
+        >{footer}</div>
+      )}
     </div>
   )
 }
