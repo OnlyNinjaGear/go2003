@@ -72,3 +72,12 @@
 [ 1575665ms] [LOG] [Fast Refresh] done in 876ms @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5809
 [ 1576217ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5949
 [ 1576222ms] [LOG] [Fast Refresh] done in 106ms @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5809
+[ 1591134ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5949
+[ 1591577ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:6282
+[ 1592293ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:6282
+[ 1592301ms] [LOG] [Fast Refresh] done in 1263ms @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5809
+[ 1592317ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) @ http://localhost:3000/#:0
+[ 1592426ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5949
+[ 1592459ms] [LOG] [Fast Refresh] done in 134ms @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5809
+[ 1592664ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5949
+[ 1597223ms] [LOG] [Fast Refresh] done in 4661ms @ http://localhost:3000/_next/static/chunks/012a3_next_dist_client_74da4f63._.js:5809
