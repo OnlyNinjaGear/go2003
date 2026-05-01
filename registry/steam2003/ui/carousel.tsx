@@ -195,7 +195,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="size-3" />
+      <svg width="5" height="7" viewBox="0 0 5 7" aria-hidden="true" fill="currentColor"><polygon points="0,3.5 5,0 5,7" /></svg>
       <span className="sr-only">Previous slide</span>
     </Button>
   )
