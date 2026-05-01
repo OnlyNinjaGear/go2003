@@ -48,6 +48,7 @@ import { Switch } from "@/registry/steam2003/ui/switch";
 import { Slider } from "@/registry/steam2003/ui/slider";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/registry/steam2003/ui/tooltip";
 import { Field, FieldLabel } from "@/registry/steam2003/ui/field";
+import { RadioGroup, RadioGroupItem } from "@/registry/steam2003/ui/radio-group";
 import {
   ContextMenu,
   ContextMenuTrigger,
