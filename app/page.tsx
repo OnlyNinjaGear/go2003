@@ -384,7 +384,7 @@ export default function Home() {
           <Collapsible className="max-w-xs">
             <CollapsibleTrigger asChild>
               <Button variant="ghost" className="flex w-full justify-between">
-                Installed games <ChevronDownIcon className="size-3" />
+                Installed games <svg width="7" height="5" viewBox="0 0 7 5" aria-hidden="true" fill="currentColor"><polygon points="3.5,5 7,0 0,0" /></svg>
               </Button>
             </CollapsibleTrigger>
             <CollapsibleContent>
