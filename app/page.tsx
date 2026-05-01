@@ -210,11 +210,11 @@ export default function Home() {
             </label>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox disabled />
-              <span className="peer-disabled:text-[var(--muted)]">Disabled unchecked</span>
+              <span className="peer-disabled:text-[var(--panel-pressed)] peer-disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)]">Disabled unchecked</span>
             </label>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox defaultChecked disabled />
-              <span className="peer-disabled:text-[var(--muted)]">Disabled checked</span>
+              <span className="peer-disabled:text-[var(--panel-pressed)] peer-disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)]">Disabled checked</span>
             </label>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox aria-invalid="true" />
