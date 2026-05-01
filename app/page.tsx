@@ -53,6 +53,19 @@ import { Textarea } from "@/registry/steam2003/ui/textarea";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/registry/steam2003/ui/accordion";
 import { Popover, PopoverTrigger, PopoverContent, PopoverHeader, PopoverTitle, PopoverDescription } from "@/registry/steam2003/ui/popover";
 import {
+  Menubar,
+  MenubarMenu,
+  MenubarTrigger,
+  MenubarContent,
+  MenubarItem,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarCheckboxItem,
+  MenubarSub,
+  MenubarSubTrigger,
+  MenubarSubContent,
+} from "@/registry/steam2003/ui/menubar";
+import {
   ContextMenu,
   ContextMenuTrigger,
   ContextMenuContent,
