@@ -59,6 +59,33 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Tooltip</h2>
+
+          <div className="flex flex-wrap gap-3">
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button>Hover me</Button>
+              </TooltipTrigger>
+              <TooltipContent>Install Half-Life 2</TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button variant="secondary">Server info</Button>
+              </TooltipTrigger>
+              <TooltipContent side="right">128 tick · sv_cheats 0 · VAC secured</TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button size="icon" aria-label="Close"><X /></Button>
+              </TooltipTrigger>
+              <TooltipContent side="bottom">Close window</TooltipContent>
+            </Tooltip>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Button</h2>
 
           <div className="flex flex-col gap-1">
