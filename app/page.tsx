@@ -277,6 +277,17 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Progress</h2>
+
+          <div className="flex flex-col gap-2 max-w-xs">
+            <Progress value={0} />
+            <Progress value={33} />
+            <Progress value={66} />
+            <Progress value={100} />
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Select</h2>
 
           <div className="flex flex-wrap items-start gap-3">
