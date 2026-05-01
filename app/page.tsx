@@ -96,6 +96,63 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Popover</h2>
+
+          <div className="flex flex-wrap gap-2">
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button>Game info</Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-64">
+                <PopoverHeader>
+                  <PopoverTitle>Half-Life 2</PopoverTitle>
+                  <PopoverDescription>Valve · 2004</PopoverDescription>
+                </PopoverHeader>
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Size</span>
+                    <span>4.2 GB</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Last played</span>
+                    <span>Today</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Status</span>
+                    <span>Ready</span>
+                  </div>
+                </div>
+              </PopoverContent>
+            </Popover>
+
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button variant="secondary">Filter</Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-48" align="start">
+                <PopoverHeader>
+                  <PopoverTitle>Show games</PopoverTitle>
+                </PopoverHeader>
+                <div className="flex flex-col gap-1.5">
+                  <label className="flex items-center gap-1.5 cursor-default">
+                    <Checkbox defaultChecked />
+                    <span>Installed</span>
+                  </label>
+                  <label className="flex items-center gap-1.5 cursor-default">
+                    <Checkbox defaultChecked />
+                    <span>Not installed</span>
+                  </label>
+                  <label className="flex items-center gap-1.5 cursor-default">
+                    <Checkbox />
+                    <span>Hidden</span>
+                  </label>
+                </div>
+              </PopoverContent>
+            </Popover>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Accordion</h2>
 
           <Accordion type="single" collapsible defaultValue="graphics" className="max-w-xs">
