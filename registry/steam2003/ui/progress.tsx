@@ -39,8 +39,11 @@ function Progress({
     >
       <ProgressPrimitive.Indicator
         data-slot="progress-indicator"
-        className="h-full bg-primary"
-        style={{ width: indicatorW }}
+        className="h-full"
+        style={{
+          width: indicatorW,
+          backgroundImage: `repeating-linear-gradient(to right, var(--primary) 0px, var(--primary) ${BLOCK}px, var(--input-bg) ${BLOCK}px, var(--input-bg) ${UNIT}px)`,
+        }}
       />
     </ProgressPrimitive.Root>
   )
