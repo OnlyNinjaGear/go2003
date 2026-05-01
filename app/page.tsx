@@ -182,17 +182,21 @@ export default function Home() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Store</NavigationMenuTrigger>
-                <NavigationMenuContent className="bevel-out bg-panel p-2 min-w-[180px]">
-                  <NavigationMenuLink className="block px-3 py-1 hover:bg-primary hover:text-primary-foreground cursor-default">Featured</NavigationMenuLink>
-                  <NavigationMenuLink className="block px-3 py-1 hover:bg-primary hover:text-primary-foreground cursor-default">New releases</NavigationMenuLink>
-                  <NavigationMenuLink className="block px-3 py-1 hover:bg-primary hover:text-primary-foreground cursor-default">Specials</NavigationMenuLink>
+                <NavigationMenuContent>
+                  <div className="p-2 min-w-[180px] flex flex-col">
+                    <NavigationMenuLink className="px-3 py-0.5">Featured</NavigationMenuLink>
+                    <NavigationMenuLink className="px-3 py-0.5">New releases</NavigationMenuLink>
+                    <NavigationMenuLink className="px-3 py-0.5">Specials</NavigationMenuLink>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Community</NavigationMenuTrigger>
-                <NavigationMenuContent className="bevel-out bg-panel p-2 min-w-[180px]">
-                  <NavigationMenuLink className="block px-3 py-1 hover:bg-primary hover:text-primary-foreground cursor-default">Forums</NavigationMenuLink>
-                  <NavigationMenuLink className="block px-3 py-1 hover:bg-primary hover:text-primary-foreground cursor-default">Workshop</NavigationMenuLink>
+                <NavigationMenuContent>
+                  <div className="p-2 min-w-[180px] flex flex-col">
+                    <NavigationMenuLink className="px-3 py-0.5">Forums</NavigationMenuLink>
+                    <NavigationMenuLink className="px-3 py-0.5">Workshop</NavigationMenuLink>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
