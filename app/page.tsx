@@ -164,7 +164,7 @@ export default function Home() {
           <Table containerClassName="max-h-[160px] bg-input-bg">
             <TableHeader>
               <TableRow>
-                <TableHead colSpan={4}>Installed games<Button>Button</Button></TableHead>
+                <TableHead colSpan={4}></TableHead>
               </TableRow>
               <TableRow>
                 <TableHead>Name</TableHead>
