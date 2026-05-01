@@ -190,7 +190,7 @@ function Table({
       <div
         ref={containerRef}
         className={cn(
-          "flex-1 min-w-0 overflow-x-auto overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [scroll-snap-type:y_mandatory] [scroll-behavior:auto] [box-shadow:inset_1px_0_0_var(--border-dark),inset_0_-1px_0_var(--border-light)] outline-none",
+          "flex-1 min-w-0 overflow-x-auto overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [scroll-snap-type:y_mandatory] [scroll-behavior:auto] [box-shadow:inset_1px_0_0_var(--border-dark),inset_0_-1px_0_var(--border-light)] outline-none focus-visible:[outline:1px_dotted_#000000] focus-visible:[outline-offset:-2px]",
           containerClassName
         )}
       >
