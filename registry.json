@@ -42,6 +42,20 @@
       ]
     },
     {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "Win32-style modal dialog. Dark title bar, bevel-out panel, X button top-right.",
+      "dependencies": ["radix-ui", "lucide-react"],
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/steam2003/ui/dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "progress",
       "type": "registry:ui",
       "title": "Progress",
