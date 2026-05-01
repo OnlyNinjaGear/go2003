@@ -22,6 +22,16 @@ import {
   CardFooter,
 } from "@/registry/steam2003/ui/card";
 import { Progress } from "@/registry/steam2003/ui/progress";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DialogClose,
+} from "@/registry/steam2003/ui/dialog";
 import { ProgressDemo } from "./progress-demo";
 import {
   Select,
