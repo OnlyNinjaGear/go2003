@@ -1244,7 +1244,7 @@ export default function Home() {
               </div>
             </ResizablePanel>
           </ResizablePanelGroup>
-          <ResizablePanelGroup direction="vertical" className="bevel-in bg-input-bg h-40 max-w-sm">
+          <ResizablePanelGroup orientation="vertical" className="bevel-in bg-input-bg h-40 max-w-sm">
             <ResizablePanel defaultSize={60}>
               <div className="flex h-full items-center justify-center p-2">
                 <span>Top panel</span>
