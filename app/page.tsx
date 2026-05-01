@@ -61,6 +61,17 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Slider</h2>
+
+          <div className="flex flex-col gap-4 max-w-xs">
+            <Slider defaultValue={[33]} />
+            <Slider defaultValue={[66]} />
+            <Slider defaultValue={[0]} disabled />
+            <Slider defaultValue={[25, 75]} />
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Badge</h2>
 
           <div className="flex flex-wrap items-center gap-2">
