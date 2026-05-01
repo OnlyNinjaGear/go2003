@@ -37,16 +37,17 @@ function AccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "flex flex-1 items-center gap-1.5 py-1.5 text-left font-bold cursor-default select-none outline-none",
+          "flex flex-1 items-center gap-1.5 py-1.5 text-left cursor-default select-none outline-none",
           "focus-visible:win32-focus",
           "disabled:pointer-events-none disabled:text-[var(--panel-pressed)] disabled:[text-shadow:0.5px_0.5px_0px_var(--border-light)]",
           "[&[data-state=open]>svg]:rotate-90",
-          "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-3",
           className
         )}
         {...props}
       >
-        <ChevronRightIcon className="text-muted-foreground" />
+        <svg width="5" height="7" viewBox="0 0 5 7" aria-hidden="true" className="shrink-0 text-muted-foreground" fill="currentColor">
+          <polygon points="5,3.5 0,0 0,7" />
+        </svg>
         {children}
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
