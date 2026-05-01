@@ -42,6 +42,19 @@
       ]
     },
     {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "Win32-style toggle. Bevel-in track, bevel-out sliding thumb, no animation.",
+      "dependencies": ["radix-ui"],
+      "files": [
+        {
+          "path": "registry/steam2003/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "slider",
       "type": "registry:ui",
       "title": "Slider",
