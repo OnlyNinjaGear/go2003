@@ -14,7 +14,7 @@ function Switch({
       data-slot="switch"
       className={cn(
         "peer inline-flex h-5 w-9 shrink-0 items-center cursor-default select-none outline-none",
-        "bevel-in bg-input-bg",
+        "bevel-in data-[state=checked]:bg-primary data-[state=unchecked]:bg-input-bg",
         "focus-visible:win32-focus",
         "disabled:opacity-50 disabled:pointer-events-none",
         className
