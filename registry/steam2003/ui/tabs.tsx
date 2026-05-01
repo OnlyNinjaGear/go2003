@@ -53,7 +53,7 @@ function TabsTrigger({
         "hover:text-foreground",
         "data-[state=active]:bg-panel data-[state=active]:text-accent",
         "focus-visible:win32-focus",
-        "disabled:text-[var(--muted)] disabled:pointer-events-none",
+        "disabled:text-[var(--panel-pressed)] disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)] disabled:pointer-events-none",
         "group-data-[orientation=vertical]/tabs:w-full group-data-[orientation=vertical]/tabs:justify-start",
         "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-3",
         className
