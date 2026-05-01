@@ -1231,7 +1231,7 @@ export default function Home() {
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2>Resizable</h2>
-          <ResizablePanelGroup direction="horizontal" className="bevel-in bg-input-bg h-32 max-w-sm">
+          <ResizablePanelGroup orientation="horizontal" className="bevel-in bg-input-bg h-32 max-w-sm">
             <ResizablePanel defaultSize={60}>
               <div className="flex h-full items-center justify-center p-2">
                 <span>Library</span>
