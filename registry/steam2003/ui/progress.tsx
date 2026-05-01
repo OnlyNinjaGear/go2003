@@ -25,10 +25,9 @@ function Progress({
     return () => ro.disconnect()
   }, [])
 
-  const pct = value ?? 0
-  const totalBlocks = Math.floor(innerW / UNIT)
-  const filledBlocks = Math.floor((totalBlocks * pct) / 100)
-  const indicatorW = pct >= 100 ? innerW : filledBlocks > 0 ? filledBlocks * UNIT - GAP : 0
+  const pct = Math.min(100, Math.max(0, value ?? 0))
+  const totalBlocks = Math.floor((innerW + GAP) / UNIT)
+  const filledBlocks = Math.round((totalBlocks * pct) / 100)
 
   return (
     <ProgressPrimitive.Root
@@ -37,14 +36,11 @@ function Progress({
       className={cn("relative h-6 p-0.5 w-full overflow-hidden bevel-in bg-input-bg", className)}
       {...props}
     >
-      <ProgressPrimitive.Indicator
-        data-slot="progress-indicator"
-        className="h-full"
-        style={{
-          width: indicatorW,
-          backgroundImage: `repeating-linear-gradient(to right, var(--primary) 0px, var(--primary) ${BLOCK}px, var(--input-bg) ${BLOCK}px, var(--input-bg) ${UNIT}px)`,
-        }}
-      />
+      <div className="flex h-full" style={{ gap: GAP }}>
+        {Array.from({ length: filledBlocks }).map((_, i) => (
+          <div key={i} className="h-full bg-primary shrink-0" style={{ width: BLOCK }} />
+        ))}
+      </div>
     </ProgressPrimitive.Root>
   )
 }
