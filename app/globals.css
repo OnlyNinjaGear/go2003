@@ -235,6 +235,7 @@ body {
   to { transform: rotate(360deg); }
 }
 [data-sonner-toast] .animate-spin,
+[data-sonner-toast] .win32-spin,
 .win32-spin {
-  animation: win32-spin 1s steps(12, end) infinite;
+  animation: win32-spin 1s steps(12, end) infinite !important;
 }
