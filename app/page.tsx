@@ -111,6 +111,32 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Alert</h2>
+
+          <div className="flex flex-col gap-2 max-w-sm">
+            <Alert>
+              <InfoIcon />
+              <AlertTitle>Update available</AlertTitle>
+              <AlertDescription>Steam has downloaded an update. Restart to apply.</AlertDescription>
+            </Alert>
+            <Alert variant="warning">
+              <AlertTriangleIcon />
+              <AlertTitle>Low disk space</AlertTitle>
+              <AlertDescription>You have less than 1 GB free on drive C:.</AlertDescription>
+            </Alert>
+            <Alert variant="destructive">
+              <XCircleIcon />
+              <AlertTitle>Installation failed</AlertTitle>
+              <AlertDescription>Half-Life 2 could not be installed. Error code: -107.</AlertDescription>
+            </Alert>
+            <Alert>
+              <AlertTitle>No icon</AlertTitle>
+              <AlertDescription>Alert without an icon also works.</AlertDescription>
+            </Alert>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Menubar</h2>
 
           <Menubar>
