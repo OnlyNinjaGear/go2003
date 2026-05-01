@@ -75,6 +75,11 @@
   *::after {
     border-radius: 0 !important;
     transition: none !important;
+  }
+
+  *:not(.win32-spin):not(.win32-spin *),
+  *::before,
+  *::after {
     animation: none !important;
   }
 
