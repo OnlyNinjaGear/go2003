@@ -63,6 +63,33 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Field</h2>
+
+          <div className="flex flex-col gap-3 max-w-xs">
+            <Field orientation="horizontal">
+              <Checkbox id="field-cb-1" />
+              <FieldLabel htmlFor="field-cb-1">Enable notifications</FieldLabel>
+            </Field>
+            <Field orientation="horizontal">
+              <Checkbox id="field-cb-2" defaultChecked />
+              <FieldLabel htmlFor="field-cb-2">Auto-update games</FieldLabel>
+            </Field>
+            <Field orientation="horizontal" data-disabled="true">
+              <Checkbox id="field-cb-3" disabled />
+              <FieldLabel htmlFor="field-cb-3">Disabled option</FieldLabel>
+            </Field>
+            <Field orientation="horizontal">
+              <Switch id="field-sw-1" />
+              <FieldLabel htmlFor="field-sw-1">Show friends online</FieldLabel>
+            </Field>
+            <Field orientation="horizontal" data-disabled="true">
+              <Switch id="field-sw-2" disabled />
+              <FieldLabel htmlFor="field-sw-2">Disabled switch</FieldLabel>
+            </Field>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Switch</h2>
 
           <div className="flex flex-col gap-2">
