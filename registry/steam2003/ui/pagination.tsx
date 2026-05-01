@@ -80,7 +80,7 @@ function PaginationNext({
       className={cn("px-1.5", className)}
       {...props}
     >
-      <ChevronRightIcon className="size-3" />
+      <svg width="5" height="7" viewBox="0 0 5 7" aria-hidden="true" fill="currentColor"><polygon points="5,3.5 0,0 0,7" /></svg>
     </PaginationLink>
   )
 }
