@@ -62,6 +62,29 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Switch</h2>
+
+          <div className="flex flex-col gap-2">
+            <label className="flex items-center gap-2 cursor-default">
+              <Switch />
+              <span>Off</span>
+            </label>
+            <label className="flex items-center gap-2 cursor-default">
+              <Switch defaultChecked />
+              <span>On</span>
+            </label>
+            <label className="flex items-center gap-2 cursor-default">
+              <Switch disabled />
+              <span className="text-[var(--muted)]">Disabled off</span>
+            </label>
+            <label className="flex items-center gap-2 cursor-default">
+              <Switch defaultChecked disabled />
+              <span className="text-[var(--muted)]">Disabled on</span>
+            </label>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Slider</h2>
 
           <div className="flex flex-col gap-4 max-w-xs">
