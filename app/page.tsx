@@ -164,7 +164,7 @@ export default function Home() {
           <Table containerClassName="max-h-[160px] bg-input-bg">
             <TableHeader>
               <TableRow>
-                <TableHead colSpan={4}>Installed games</TableHead>
+                <TableHead colSpan={4}>Installed games<Button>Button</Button></TableHead>
               </TableRow>
               <TableRow>
                 <TableHead>Name</TableHead>
@@ -231,8 +231,7 @@ export default function Home() {
             </TableBody>
             <TableFooter>
               <TableRow>
-                <TableCell colSpan={3}>Total</TableCell>
-                <TableCell>61 GB</TableCell>
+                <TableCell colSpan={4}><Button size="sm">Connect</Button></TableCell>
               </TableRow>
             </TableFooter>
           </Table>

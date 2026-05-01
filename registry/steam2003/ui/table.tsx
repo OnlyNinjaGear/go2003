@@ -55,6 +55,10 @@ function Win32Scrollbar({
     el.addEventListener("scroll", update, { passive: true })
     const ro = new ResizeObserver(update)
     ro.observe(el)
+    const thead = el.querySelector<HTMLElement>("table > thead")
+    const tfoot = el.querySelector<HTMLElement>("table > tfoot")
+    if (thead) ro.observe(thead)
+    if (tfoot) ro.observe(tfoot)
     return () => {
       el.removeEventListener("scroll", update)
       ro.disconnect()
