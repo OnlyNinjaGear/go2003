@@ -139,6 +139,7 @@ import {
 import { X } from "lucide-react";
 import { AspectRatio } from "@/registry/steam2003/ui/aspect-ratio";
 import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "@/registry/steam2003/ui/resizable";
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -238,13 +239,21 @@ export default function Home() {
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="">Carousel</h2>
-          <Carousel className="w-full max-w-xs mx-8">
-            <CarouselContent>
-              {["Half-Life 2","Counter-Strike","Team Fortress 2","Portal","Dota 2"].map((game, i) => (
-                <CarouselItem key={i}>
-                  <div className="bevel-in bg-input-bg flex h-20 items-center justify-center p-4">
-                    <span>{game}</span>
-                  </div>
+          <Carousel className="bevel-in w-full max-w-sm mx-8 overflow-hidden">
+            <CarouselContent className="-ml-0">
+              {[
+                { id: 220, name: "Half-Life 2" },
+                { id: 440, name: "Team Fortress 2" },
+                { id: 400, name: "Portal" },
+                { id: 550, name: "Left 4 Dead 2" },
+                { id: 620, name: "Portal 2" },
+              ].map((game) => (
+                <CarouselItem key={game.id} className="pl-0">
+                  <img
+                    src={`https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.id}/header.jpg`}
+                    alt={game.name}
+                    className="block w-full h-32 object-cover"
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>
