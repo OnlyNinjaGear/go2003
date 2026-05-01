@@ -75,11 +75,11 @@ export default function Home() {
             </label>
             <label className="flex items-center gap-2 cursor-default">
               <Switch disabled />
-              <span className="text-[var(--muted)]">Disabled off</span>
+              <span className="peer-disabled:text-[var(--panel-pressed)] peer-disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)]">Disabled off</span>
             </label>
             <label className="flex items-center gap-2 cursor-default">
               <Switch defaultChecked disabled />
-              <span className="text-[var(--muted)]">Disabled on</span>
+              <span className="peer-disabled:text-[var(--panel-pressed)] peer-disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)]">Disabled on</span>
             </label>
           </div>
         </section>
