@@ -209,14 +209,14 @@ export default function Home() {
               <Checkbox checked="indeterminate" />
               <span className="peer-data-[state=indeterminate]:text-primary">Indeterminate</span>
             </label>
-            <label className="flex items-center gap-1.5 cursor-default">
-              <Checkbox disabled />
-              <span className="peer-disabled:text-[var(--panel-pressed)] peer-disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)]">Disabled unchecked</span>
-            </label>
-            <label className="flex items-center gap-1.5 cursor-default">
-              <Checkbox defaultChecked disabled />
-              <span className="peer-disabled:text-[var(--panel-pressed)] peer-disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)]">Disabled checked</span>
-            </label>
+            <Field orientation="horizontal" data-disabled="true">
+              <Checkbox id="cb-disabled-off" disabled />
+              <FieldLabel htmlFor="cb-disabled-off">Disabled unchecked</FieldLabel>
+            </Field>
+            <Field orientation="horizontal" data-disabled="true">
+              <Checkbox id="cb-disabled-on" defaultChecked disabled />
+              <FieldLabel htmlFor="cb-disabled-on">Disabled checked</FieldLabel>
+            </Field>
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox aria-invalid="true" />
               <span className="peer-aria-[invalid=true]:text-destructive">Invalid</span>
@@ -224,10 +224,6 @@ export default function Home() {
             <label className="flex items-center gap-1.5 cursor-default">
               <Checkbox aria-invalid="true" defaultChecked />
               <span className="peer-aria-[invalid=true]:text-destructive-light">Invalid checked</span>
-            </label>
-            <label className="flex items-center gap-1.5 cursor-default">
-              <Checkbox />
-              <span className="peer-data-[state=checked]:text-primary peer-data-[state=indeterminate]:text-primary">Another checkbox</span>
             </label>
           </div>
         </section>
