@@ -49,6 +49,19 @@ import { Slider } from "@/registry/steam2003/ui/slider";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/registry/steam2003/ui/tooltip";
 import { Field, FieldLabel } from "@/registry/steam2003/ui/field";
 import {
+  ContextMenu,
+  ContextMenuTrigger,
+  ContextMenuContent,
+  ContextMenuItem,
+  ContextMenuCheckboxItem,
+  ContextMenuSeparator,
+  ContextMenuShortcut,
+  ContextMenuSub,
+  ContextMenuSubTrigger,
+  ContextMenuSubContent,
+  ContextMenuLabel,
+} from "@/registry/steam2003/ui/context-menu";
+import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
