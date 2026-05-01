@@ -28,7 +28,7 @@ function Progress({
   const pct = value ?? 0
   const totalBlocks = Math.floor(innerW / UNIT)
   const filledBlocks = Math.floor((totalBlocks * pct) / 100)
-  const indicatorW = filledBlocks > 0 ? filledBlocks * UNIT - GAP : 0
+  const indicatorW = pct >= 100 ? innerW : filledBlocks > 0 ? filledBlocks * UNIT - GAP : 0
 
   return (
     <ProgressPrimitive.Root
