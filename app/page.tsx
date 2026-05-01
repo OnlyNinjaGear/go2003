@@ -43,6 +43,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/registry/steam2003/ui/select";
+import { Badge } from "@/registry/steam2003/ui/badge";
 import { Tooltip, TooltipTrigger, TooltipContent } from "@/registry/steam2003/ui/tooltip";
 import { X } from "lucide-react";
 
