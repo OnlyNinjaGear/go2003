@@ -74,10 +74,10 @@ function DropdownMenuItem({
       data-inset={inset}
       data-variant={variant}
       className={cn(
-        "relative flex cursor-default items-center gap-2 px-4 py-1 outline-none select-none",
+        "relative flex cursor-default items-center gap-2 px-4 py-0.5 outline-none select-none",
         "focus:bg-primary focus:text-primary-foreground",
         "data-[disabled]:pointer-events-none data-[disabled]:text-[var(--panel-pressed)] data-[disabled]:[text-shadow:0.5px_0.5px_0px_var(--border-light)]",
-        "data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive data-[variant=destructive]:focus:text-destructive-foreground",
+        "data-[variant=destructive]:text-destructive-light data-[variant=destructive]:focus:bg-destructive data-[variant=destructive]:focus:text-destructive-foreground",
         "data-[inset]:pl-8",
         "[&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-3",
         className
@@ -166,7 +166,7 @@ function DropdownMenuLabel({
       data-slot="dropdown-menu-label"
       data-inset={inset}
       className={cn(
-        "px-4 py-0.5 font-bold text-muted-foreground data-[inset]:pl-8",
+        "px-2 py-0.5 text-muted-foreground data-[inset]:pl-8",
         className
       )}
       {...props}
@@ -181,7 +181,7 @@ function DropdownMenuSeparator({
   return (
     <DropdownMenuPrimitive.Separator
       data-slot="dropdown-menu-separator"
-      className={cn("h-px mx-2 bg-border-dark [box-shadow:0_1px_0_0_var(--border-light)]", className)}
+      className={cn("h-px mx-0 mb-px bg-border-dark [box-shadow:0_1px_0_0_var(--border-light)]", className)}
       {...props}
     />
   )
