@@ -110,7 +110,7 @@ function NavigationMenuViewport({
       <NavigationMenuPrimitive.Viewport
         data-slot="navigation-menu-viewport"
         className={cn(
-          "bevel-out bg-panel relative overflow-hidden",
+          "bevel-out bg-panel overflow-hidden",
           "h-[var(--radix-navigation-menu-viewport-height)] w-[var(--radix-navigation-menu-viewport-width)]",
           className
         )}
