@@ -20,7 +20,7 @@ function Progress({
   React.useEffect(() => {
     const el = rootRef.current
     if (!el) return
-    const ro = new ResizeObserver(() => setInnerW(el.clientWidth - 4))
+    const ro = new ResizeObserver(() => setInnerW(el.clientWidth))
     ro.observe(el)
     return () => ro.disconnect()
   }, [])
