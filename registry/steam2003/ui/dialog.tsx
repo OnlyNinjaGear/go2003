@@ -27,7 +27,7 @@ function DialogOverlay({ className, ...props }: React.ComponentProps<typeof Dial
   return (
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
-      className={cn("fixed inset-0 z-50 bg-black/40", className)}
+      className={cn("fixed inset-0 z-50 bg-black/75", className)}
       {...props}
     />
   )
@@ -58,7 +58,7 @@ function DialogContent({
           <DialogPrimitive.Close asChild>
             <Button
               size="icon"
-              className="absolute top-[3px] right-[3px] !size-[14px] [&_svg]:size-2.5"
+              className="absolute top-[4px] right-[6px] !size-[14px] [&_svg]:size-2.5"
               aria-label="Close"
             >
               <XIcon />
@@ -75,7 +75,7 @@ function DialogHeader({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="dialog-header"
       className={cn(
-        "flex items-center gap-2 bg-panel-pressed text-foreground px-2 py-0.5 pr-[22px]",
+        "flex items-center gap-2 text-foreground p-1.5 pr-[22px]",
         className
       )}
       {...props}
@@ -87,7 +87,7 @@ function DialogFooter({ className, children, ...props }: React.ComponentProps<"d
   return (
     <div
       data-slot="dialog-footer"
-      className={cn("flex justify-end gap-2 px-3 pb-3", className)}
+      className={cn("flex justify-end gap-2 p-1.5", className)}
       {...props}
     >
       {children}
@@ -99,7 +99,7 @@ function DialogTitle({ className, ...props }: React.ComponentProps<typeof Dialog
   return (
     <DialogPrimitive.Title
       data-slot="dialog-title"
-      className={cn("font-bold leading-none", className)}
+      className={cn("font-normal leading-none", className)}
       {...props}
     />
   )
@@ -109,7 +109,7 @@ function DialogDescription({ className, ...props }: React.ComponentProps<typeof 
   return (
     <DialogPrimitive.Description
       data-slot="dialog-description"
-      className={cn("text-muted-foreground px-3 pt-3 pb-1", className)}
+      className={cn("text-muted-foreground p-1.5 mx-1.5", className)}
       {...props}
     />
   )

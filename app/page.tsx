@@ -303,8 +303,8 @@ export default function Home() {
                   Are you sure you want to delete Half-Life 2? This will remove all saved games.
                 </DialogDescription>
                 <DialogFooter>
-                  <DialogClose asChild><Button variant="secondary">Cancel</Button></DialogClose>
-                  <DialogClose asChild><Button variant="destructive">Delete</Button></DialogClose>
+                  <DialogClose asChild><Button variant="secondary" size="sm">Cancel</Button></DialogClose>
+                  <DialogClose asChild><Button variant="destructive" size="sm">Delete</Button></DialogClose>
                 </DialogFooter>
               </DialogContent>
             </Dialog>
@@ -320,8 +320,8 @@ export default function Home() {
                 <div className="px-3 pt-3 pb-1 flex flex-col gap-2">
                   <Progress value={66} />
                 </div>
-                <DialogFooter>
-                  <DialogClose asChild><Button variant="secondary">Cancel</Button></DialogClose>
+                <DialogFooter className="pr-3">
+                  <DialogClose asChild><Button variant="secondary" size="sm">Cancel</Button></DialogClose>
                 </DialogFooter>
               </DialogContent>
             </Dialog>
