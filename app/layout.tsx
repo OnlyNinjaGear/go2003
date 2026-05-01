@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body><TooltipProvider>{children}</TooltipProvider></body>
+      <body><TooltipProvider>{children}</TooltipProvider><Toaster /></body>
     </html>
   );
 }
