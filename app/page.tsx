@@ -50,6 +50,7 @@ import { Tooltip, TooltipTrigger, TooltipContent } from "@/registry/steam2003/ui
 import { Field, FieldLabel } from "@/registry/steam2003/ui/field";
 import { RadioGroup, RadioGroupItem } from "@/registry/steam2003/ui/radio-group";
 import { Textarea } from "@/registry/steam2003/ui/textarea";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/registry/steam2003/ui/accordion";
 import {
   ContextMenu,
   ContextMenuTrigger,
