@@ -75,10 +75,9 @@ function NavigationMenuTrigger({
       {...props}
     >
       {children}
-      <ChevronDownIcon
-        className="size-3 ml-0.5"
-        aria-hidden="true"
-      />
+      <svg width="7" height="5" viewBox="0 0 7 5" aria-hidden="true" className="ml-0.5 shrink-0" fill="currentColor">
+        <polygon points="3.5,5 7,0 0,0" />
+      </svg>
     </NavigationMenuPrimitive.Trigger>
   )
 }
