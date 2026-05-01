@@ -158,7 +158,7 @@ function Win32Scrollbar({
       <div
         className="bg-panel shrink-0 overflow-hidden px-1 py-0.5"
         style={{
-          height: s.tfootH + 0.5,
+          height: s.tfootH,
           borderTop: "1px solid var(--border-light)",
           borderRight: "1px solid var(--border-dark)",
           borderBottom: "1px solid var(--border-dark)",
