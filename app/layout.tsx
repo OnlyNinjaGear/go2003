@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { TooltipProvider } from "@/registry/steam2003/ui/tooltip";
+import { Toaster } from "@/registry/steam2003/ui/sonner";
 
 export const metadata: Metadata = {
   title: "go2003 — Steam 2003 shadcn registry",
