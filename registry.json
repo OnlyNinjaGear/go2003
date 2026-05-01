@@ -42,6 +42,19 @@
       ]
     },
     {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "Win32-style tooltip. Bevel-out panel, no arrow, instant show.",
+      "dependencies": ["radix-ui"],
+      "files": [
+        {
+          "path": "registry/steam2003/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "dialog",
       "type": "registry:ui",
       "title": "Dialog",
