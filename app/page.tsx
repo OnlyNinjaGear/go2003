@@ -94,6 +94,17 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Textarea</h2>
+
+          <div className="flex flex-col gap-2 max-w-xs">
+            <Textarea placeholder="Write a message..." />
+            <Textarea defaultValue="Read only content" readOnly />
+            <Textarea defaultValue="Disabled content" disabled />
+            <Textarea defaultValue="Invalid content" aria-invalid="true" />
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Radio Group</h2>
 
           <div className="flex flex-wrap gap-6">
