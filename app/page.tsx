@@ -77,7 +77,23 @@ import {
   Sheet, SheetTrigger, SheetContent, SheetHeader,
   SheetTitle, SheetDescription, SheetFooter, SheetClose,
 } from "@/registry/steam2003/ui/sheet";
-import { InfoIcon, AlertTriangleIcon, XCircleIcon, BoldIcon, ItalicIcon, UnderlineIcon, AlignLeftIcon, AlignCenterIcon, AlignRightIcon, ChevronDownIcon } from "lucide-react";
+import { InfoIcon, AlertTriangleIcon, XCircleIcon, BoldIcon, ItalicIcon, UnderlineIcon, AlignLeftIcon, AlignCenterIcon, AlignRightIcon, ChevronDownIcon, SearchIcon, TerminalIcon } from "lucide-react";
+import {
+  Command, CommandInput, CommandList, CommandEmpty,
+  CommandGroup, CommandItem, CommandShortcut, CommandSeparator,
+} from "@/registry/steam2003/ui/command";
+import {
+  NavigationMenu, NavigationMenuList, NavigationMenuItem,
+  NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink,
+} from "@/registry/steam2003/ui/navigation-menu";
+import { Calendar } from "@/registry/steam2003/ui/calendar";
+import {
+  Drawer, DrawerTrigger, DrawerContent, DrawerHeader,
+  DrawerTitle, DrawerDescription, DrawerFooter, DrawerClose,
+} from "@/registry/steam2003/ui/drawer";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/registry/steam2003/ui/carousel";
+import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from "@/registry/steam2003/ui/input-otp";
+import { SonnerDemo } from "./sonner-demo";
 import {
   Menubar,
   MenubarMenu,
