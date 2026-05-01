@@ -92,6 +92,43 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Context Menu</h2>
+
+          <ContextMenu>
+            <ContextMenuTrigger className="bevel-in bg-input-bg flex h-16 items-center justify-center text-muted-foreground select-none">
+              Right-click here
+            </ContextMenuTrigger>
+            <ContextMenuContent>
+              <ContextMenuLabel>Half-Life 2</ContextMenuLabel>
+              <ContextMenuSeparator />
+              <ContextMenuItem>
+                Play<ContextMenuShortcut>Enter</ContextMenuShortcut>
+              </ContextMenuItem>
+              <ContextMenuItem>
+                Install<ContextMenuShortcut>Ctrl+I</ContextMenuShortcut>
+              </ContextMenuItem>
+              <ContextMenuSeparator />
+              <ContextMenuCheckboxItem checked>Show in library</ContextMenuCheckboxItem>
+              <ContextMenuCheckboxItem>Auto-update</ContextMenuCheckboxItem>
+              <ContextMenuSeparator />
+              <ContextMenuSub>
+                <ContextMenuSubTrigger>Manage</ContextMenuSubTrigger>
+                <ContextMenuSubContent>
+                  <ContextMenuItem>Verify files</ContextMenuItem>
+                  <ContextMenuItem>Browse local files</ContextMenuItem>
+                  <ContextMenuSeparator />
+                  <ContextMenuItem variant="destructive">Uninstall</ContextMenuItem>
+                </ContextMenuSubContent>
+              </ContextMenuSub>
+              <ContextMenuSeparator />
+              <ContextMenuItem disabled>
+                Create shortcut<ContextMenuShortcut>unavailable</ContextMenuShortcut>
+              </ContextMenuItem>
+            </ContextMenuContent>
+          </ContextMenu>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Dropdown Menu</h2>
 
           <div className="flex flex-wrap gap-2">
