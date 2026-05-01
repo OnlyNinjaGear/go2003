@@ -27,7 +27,7 @@ function SelectTrigger({
     <SelectPrimitive.Trigger
       data-slot="select-trigger"
       className={cn(
-        "flex w-full items-stretch size-6 cursor-default select-none outline-none",
+        "flex w-full items-stretch h-6 cursor-default select-none outline-none",
         "bevel-in bg-input-bg text-input-fg font-sans text-[11px]",
         "focus-visible:win32-focus-primary",
         "disabled:bg-panel-pressed disabled:text-[var(--muted)] disabled:pointer-events-none",
