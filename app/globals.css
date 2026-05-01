@@ -266,33 +266,6 @@ body {
   border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark) !important;
 }
 
-/* Two-row layout: icon+title on row 1, progress+button on row 2 */
-[data-sonner-toast]:has([data-description]) {
-  flex-wrap: wrap !important;
-  align-items: flex-start !important;
-  row-gap: 6px !important;
-}
-
-[data-sonner-toast]:has([data-description]) [data-content] {
-  flex: 1 1 auto !important;
-  min-width: 0 !important;
-}
-
-[data-sonner-toast]:has([data-description]) [data-description] {
-  margin-top: 6px !important;
-  width: 100% !important;
-  flex-basis: 100% !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-}
-
-/* Move button onto description row by reordering via flex */
-[data-sonner-toast]:has([data-description]) [data-button] {
-  order: 2 !important;
-  margin-left: auto !important;
-  align-self: center !important;
-}
 
 @keyframes win32-spin {
   from {
