@@ -161,6 +161,175 @@ export default function Home() {
         </section>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Alert Dialog</h2>
+          <div className="flex flex-wrap gap-2">
+            <AlertDialog>
+              <AlertDialogTrigger asChild><Button>Delete game</Button></AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Uninstall Half-Life 2?</AlertDialogTitle>
+                  <AlertDialogDescription>This will remove all game files and saved data from your computer.</AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                  <AlertDialogAction>Uninstall</AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Avatar</h2>
+          <div className="flex flex-wrap items-center gap-3">
+            <Avatar className="size-10"><AvatarImage src="https://github.com/shadcn.png" /><AvatarFallback>SC</AvatarFallback></Avatar>
+            <Avatar className="size-8"><AvatarFallback>HL</AvatarFallback></Avatar>
+            <Avatar className="size-12"><AvatarFallback>GN</AvatarFallback></Avatar>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Skeleton</h2>
+          <div className="flex flex-col gap-2 max-w-xs">
+            <Skeleton className="h-6 w-full" />
+            <Skeleton className="h-4 w-3/4" />
+            <Skeleton className="h-4 w-1/2" />
+            <div className="flex items-center gap-2 mt-1">
+              <Skeleton className="size-8 rounded-full" />
+              <div className="flex flex-col gap-1.5 flex-1">
+                <Skeleton className="h-3 w-full" />
+                <Skeleton className="h-3 w-2/3" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Toggle</h2>
+          <div className="flex flex-col gap-3">
+            <div className="flex flex-wrap gap-1.5">
+              <Toggle><BoldIcon /></Toggle>
+              <Toggle defaultPressed><ItalicIcon /></Toggle>
+              <Toggle><UnderlineIcon /></Toggle>
+              <Toggle disabled><BoldIcon /></Toggle>
+            </div>
+            <ToggleGroup type="single" defaultValue="left">
+              <ToggleGroupItem value="left"><AlignLeftIcon /></ToggleGroupItem>
+              <ToggleGroupItem value="center"><AlignCenterIcon /></ToggleGroupItem>
+              <ToggleGroupItem value="right"><AlignRightIcon /></ToggleGroupItem>
+            </ToggleGroup>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Collapsible</h2>
+          <Collapsible className="max-w-xs">
+            <CollapsibleTrigger asChild>
+              <Button variant="ghost" className="flex w-full justify-between">
+                Installed games <ChevronDownIcon className="size-3" />
+              </Button>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <div className="bevel-in bg-input-bg flex flex-col">
+                <div className="px-2 py-1">Half-Life 2</div>
+                <div className="px-2 py-1">Counter-Strike</div>
+                <div className="px-2 py-1">Team Fortress 2</div>
+              </div>
+            </CollapsibleContent>
+          </Collapsible>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Breadcrumb</h2>
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem><BreadcrumbLink href="#">Steam</BreadcrumbLink></BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem><BreadcrumbLink href="#">Library</BreadcrumbLink></BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem><BreadcrumbPage>Half-Life 2</BreadcrumbPage></BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Pagination</h2>
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem><PaginationPrevious href="#" /></PaginationItem>
+              <PaginationItem><PaginationLink href="#">1</PaginationLink></PaginationItem>
+              <PaginationItem><PaginationLink href="#" isActive>2</PaginationLink></PaginationItem>
+              <PaginationItem><PaginationLink href="#">3</PaginationLink></PaginationItem>
+              <PaginationItem><PaginationEllipsis /></PaginationItem>
+              <PaginationItem><PaginationLink href="#">12</PaginationLink></PaginationItem>
+              <PaginationItem><PaginationNext href="#" /></PaginationItem>
+            </PaginationContent>
+          </Pagination>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Hover Card</h2>
+          <div className="flex flex-wrap gap-3">
+            <HoverCard>
+              <HoverCardTrigger asChild><Button variant="link">@valve</Button></HoverCardTrigger>
+              <HoverCardContent className="w-64">
+                <div className="flex items-center gap-2">
+                  <Avatar className="size-8"><AvatarFallback>VL</AvatarFallback></Avatar>
+                  <div><div className="font-bold">Valve</div><div className="text-muted-foreground">Game developer since 1996</div></div>
+                </div>
+              </HoverCardContent>
+            </HoverCard>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Scroll Area</h2>
+          <ScrollArea className="bevel-in bg-input-bg h-32 w-64">
+            <div className="p-2 flex flex-col">
+              {["Half-Life 2","Counter-Strike","Team Fortress 2","Portal","Dota 2","Left 4 Dead 2","Garry's Mod","Portal 2","CS:GO","Half-Life: Alyx"].map(g => (
+                <div key={g} className="py-0.5 px-1">{g}</div>
+              ))}
+            </div>
+          </ScrollArea>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Sheet</h2>
+          <div className="flex flex-wrap gap-2">
+            <Sheet>
+              <SheetTrigger asChild><Button>Open right</Button></SheetTrigger>
+              <SheetContent>
+                <SheetHeader>
+                  <SheetTitle>Game settings</SheetTitle>
+                  <SheetDescription>Configure Half-Life 2 options.</SheetDescription>
+                </SheetHeader>
+                <div className="flex flex-col gap-2 p-3">
+                  <label className="flex items-center gap-1.5 cursor-default"><Checkbox defaultChecked /><span>Enable HDR</span></label>
+                  <label className="flex items-center gap-1.5 cursor-default"><Checkbox /><span>Anti-aliasing</span></label>
+                  <label className="flex items-center gap-1.5 cursor-default"><Checkbox defaultChecked /><span>Vsync</span></label>
+                </div>
+                <SheetFooter>
+                  <SheetClose asChild><Button variant="secondary" size="sm">Cancel</Button></SheetClose>
+                  <SheetClose asChild><Button size="sm">Apply</Button></SheetClose>
+                </SheetFooter>
+              </SheetContent>
+            </Sheet>
+            <Sheet>
+              <SheetTrigger asChild><Button variant="secondary">Open left</Button></SheetTrigger>
+              <SheetContent side="left">
+                <SheetHeader><SheetTitle>Navigation</SheetTitle></SheetHeader>
+                <div className="p-3 flex flex-col gap-1">
+                  <Button variant="ghost" className="justify-start">Library</Button>
+                  <Button variant="ghost" className="justify-start">Store</Button>
+                  <Button variant="ghost" className="justify-start">Community</Button>
+                  <Button variant="ghost" className="justify-start">Profile</Button>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Menubar</h2>
 
           <Menubar>
