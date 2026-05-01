@@ -95,6 +95,62 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Accordion</h2>
+
+          <Accordion type="single" collapsible defaultValue="graphics" className="max-w-xs">
+            <AccordionItem value="graphics">
+              <AccordionTrigger>Graphics settings</AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-1.5">
+                  <label className="flex items-center gap-1.5 cursor-default">
+                    <Checkbox defaultChecked />
+                    <span>Enable HDR</span>
+                  </label>
+                  <label className="flex items-center gap-1.5 cursor-default">
+                    <Checkbox />
+                    <span>Anti-aliasing</span>
+                  </label>
+                  <label className="flex items-center gap-1.5 cursor-default">
+                    <Checkbox defaultChecked />
+                    <span>Vsync</span>
+                  </label>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="audio">
+              <AccordionTrigger>Audio settings</AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center justify-between gap-4">
+                    <span>Master volume</span>
+                    <Slider defaultValue={[80]} className="w-24" />
+                  </div>
+                  <div className="flex items-center justify-between gap-4">
+                    <span>Music</span>
+                    <Slider defaultValue={[40]} className="w-24" />
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="network">
+              <AccordionTrigger>Network settings</AccordionTrigger>
+              <AccordionContent>
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="w-20 shrink-0">Rate</span>
+                    <Input defaultValue="30000" className="w-24" />
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="w-20 shrink-0">Update rate</span>
+                    <Input defaultValue="128" className="w-24" />
+                  </div>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Textarea</h2>
 
           <div className="flex flex-col gap-2 max-w-xs">
