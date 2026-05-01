@@ -79,6 +79,65 @@ export default function Home() {
 
       <main className="flex flex-1 flex-col gap-6">
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
+          <h2 className="font-bold">Dropdown Menu</h2>
+
+          <div className="flex flex-wrap gap-2">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button>Games</Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuLabel>My Library</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuGroup>
+                  <DropdownMenuItem>
+                    Half-Life 2
+                    <DropdownMenuShortcut>Play</DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem>
+                    Counter-Strike
+                    <DropdownMenuShortcut>Play</DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem disabled>
+                    Left 4 Dead 2
+                    <DropdownMenuShortcut>Update</DropdownMenuShortcut>
+                  </DropdownMenuItem>
+                </DropdownMenuGroup>
+                <DropdownMenuSeparator />
+                <DropdownMenuSub>
+                  <DropdownMenuSubTrigger>Sort by</DropdownMenuSubTrigger>
+                  <DropdownMenuSubContent>
+                    <DropdownMenuItem>Name</DropdownMenuItem>
+                    <DropdownMenuItem>Last played</DropdownMenuItem>
+                    <DropdownMenuItem>Size</DropdownMenuItem>
+                  </DropdownMenuSubContent>
+                </DropdownMenuSub>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem variant="destructive">Uninstall</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="secondary">View options</Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuCheckboxItem checked>Show friends panel</DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem>Show news feed</DropdownMenuCheckboxItem>
+                <DropdownMenuCheckboxItem checked>Show download progress</DropdownMenuCheckboxItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuRadioGroup value="small">
+                  <DropdownMenuLabel>Icon size</DropdownMenuLabel>
+                  <DropdownMenuRadioItem value="small">Small</DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="medium">Medium</DropdownMenuRadioItem>
+                  <DropdownMenuRadioItem value="large">Large</DropdownMenuRadioItem>
+                </DropdownMenuRadioGroup>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        </section>
+
+        <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="font-bold">Field</h2>
 
           <div className="flex flex-col gap-3 max-w-xs">
