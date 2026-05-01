@@ -67,7 +67,7 @@ function MenubarContent({
   className,
   align = "start",
   alignOffset = 0,
-  sideOffset = 2,
+  sideOffset = 1,
   ...props
 }: React.ComponentProps<typeof MenubarPrimitive.Content>) {
   return (
