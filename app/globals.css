@@ -215,6 +215,10 @@ html, * {
   scroll-behavior: auto !important;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* Sonner overrides */
 [data-sonner-toast] {
   box-shadow: none !important;
