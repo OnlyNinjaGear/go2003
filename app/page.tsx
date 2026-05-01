@@ -77,7 +77,7 @@ import {
   Sheet, SheetTrigger, SheetContent, SheetHeader,
   SheetTitle, SheetDescription, SheetFooter, SheetClose,
 } from "@/registry/steam2003/ui/sheet";
-import { InfoIcon, AlertTriangleIcon, XCircleIcon, BoldIcon, ItalicIcon, UnderlineIcon, AlignLeftIcon, AlignCenterIcon, AlignRightIcon, ChevronDownIcon, SearchIcon, TerminalIcon } from "lucide-react";
+import { InfoIcon, AlertTriangleIcon, XCircleIcon, BoldIcon, ItalicIcon, UnderlineIcon, AlignLeftIcon, AlignCenterIcon, AlignRightIcon, SearchIcon, TerminalIcon } from "lucide-react";
 import {
   Command, CommandInput, CommandList, CommandEmpty,
   CommandGroup, CommandItem, CommandShortcut, CommandSeparator,
