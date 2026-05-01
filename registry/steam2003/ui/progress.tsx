@@ -35,7 +35,7 @@ function Progress({
     <ProgressPrimitive.Root
       ref={rootRef}
       data-slot="progress"
-      className={cn("relative h-6 p-0.5 w-full overflow-hidden bevel-in bg-input-bg", className)}
+      className={cn("relative h-6 py-0.5 w-full overflow-hidden bevel-in bg-input-bg", className)}
       {...props}
     >
       <div className="flex h-full" style={{ gap: GAP }}>
