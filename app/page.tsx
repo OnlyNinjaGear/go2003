@@ -21,6 +21,7 @@ import {
   CardContent,
   CardFooter,
 } from "@/registry/steam2003/ui/card";
+import { Progress } from "@/registry/steam2003/ui/progress";
 import {
   Select,
   SelectContent,
