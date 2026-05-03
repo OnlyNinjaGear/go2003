@@ -77,7 +77,7 @@ import {
   Sheet, SheetTrigger, SheetContent, SheetHeader,
   SheetTitle, SheetDescription, SheetFooter, SheetClose,
 } from "@/registry/steam2003/ui/sheet";
-import { InfoIcon, AlertTriangleIcon, XCircleIcon, BoldIcon, ItalicIcon, UnderlineIcon, AlignLeftIcon, AlignCenterIcon, AlignRightIcon, SearchIcon, TerminalIcon } from "lucide-react";
+import { InfoIcon, AlertTriangleIcon, XCircleIcon, BoldIcon, ItalicIcon, UnderlineIcon, AlignLeftIcon, AlignCenterIcon, AlignRightIcon, SearchIcon, TerminalIcon, MonitorSmartphone, Calendar as CalendarIcon, Check } from "lucide-react";
 import {
   Command, CommandInput, CommandList, CommandEmpty,
   CommandGroup, CommandItem, CommandShortcut, CommandSeparator,
@@ -86,7 +86,6 @@ import {
   NavigationMenu, NavigationMenuList, NavigationMenuItem,
   NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink,
 } from "@/registry/steam2003/ui/navigation-menu";
-import { Calendar } from "@/registry/steam2003/ui/calendar";
 import {
   Drawer, DrawerTrigger, DrawerContent, DrawerHeader,
   DrawerTitle, DrawerDescription, DrawerFooter, DrawerClose,
@@ -139,6 +138,7 @@ import {
 import { X } from "lucide-react";
 import { AspectRatio } from "@/registry/steam2003/ui/aspect-ratio";
 import { ResizablePanelGroup, ResizablePanel, ResizableHandle } from "@/registry/steam2003/ui/resizable";
+import { Calendar } from "@/registry/steam2003/ui/calendar";
 
 export default function Home() {
   return (
@@ -152,6 +152,33 @@ export default function Home() {
       </header>
 
       <main className="flex flex-1 flex-col gap-6">
+
+        <section className="bevel-out bg-panel flex flex-col gap-1.5 p-3">
+          <div className="flex flex-row items-baseline gap-1.5 mb-1.5">
+            <p>🌱 Старт</p>
+            <p className="text-primary">Активна</p>
+          </div>
+          <div className="flex flex-row text-muted-foreground justify-between items-baseline gap-1.5">
+            <p>Трафик</p>
+            <p>150 / 300 Гб</p>
+          </div>
+          <Progress value={50} />
+          <div className="flex flex-row text-muted-foreground items-center gap-3">
+            <div className="flex flex-row text-muted-foreground items-center gap-1.5">
+              <MonitorSmartphone className="size-3 text-border-light" />
+              <p>1</p>
+            </div>
+            <div className="flex flex-row text-muted-foreground items-center gap-1.5">
+              <CalendarIcon className="size-3 text-border-light" />
+              <p>25.05.2026</p>
+            </div>
+            <div className="flex flex-row text-primary items-center gap-1.5">
+              <Check className="size-3" />
+              <p>Автопродление</p>
+            </div>
+          </div>
+        </section>
+        <Button className="w-full">Купить ещё тариф</Button>
 
         <section className="bevel-out bg-panel flex flex-col gap-3 p-3">
           <h2 className="">Sonner</h2>

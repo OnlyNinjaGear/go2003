@@ -225,9 +225,9 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   body {
-    zoom: 1.7;
+    font-size: 13px;
   }
 }
 
@@ -280,5 +280,5 @@ body {
 [data-sonner-toast] .animate-spin,
 [data-sonner-toast] .win32-spin,
 .win32-spin {
-  animation: win32-spin 1s steps(6, end) infinite !important;
+  animation: win32-spin 1s steps(3, end) infinite !important;
 }

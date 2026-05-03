@@ -1,6 +1,6 @@
 "use client"
 
-import { Loader2Icon } from "lucide-react"
+import { Loader } from "lucide-react"
 import { toast } from "sonner"
 import { Button } from "@/registry/steam2003/ui/button"
 import { Progress } from "@/registry/steam2003/ui/progress"
@@ -17,9 +17,9 @@ export function SonnerDemo() {
         onClick={() =>
           toast.custom(
             (id) => (
-              <div className="bevel-out bg-panel p-2 w-80 flex flex-col gap-1.5">
+              <div className="bg-panel p-2 w-80 flex flex-col gap-1.5">
                 <div className="flex items-center gap-1.5">
-                  <Loader2Icon className="size-4 win32-spin shrink-0" />
+                  <Loader className="size-3 win32-spin shrink-0" />
                   <span>Downloading update…</span>
                 </div>
                 <div className="flex items-center gap-1.5">
