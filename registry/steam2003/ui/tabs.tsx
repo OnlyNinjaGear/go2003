@@ -32,7 +32,7 @@ function TabsList({
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
-        "inline-flex items-end gap-0.5 group-data-[orientation=vertical]/tabs:flex-col group-data-[orientation=vertical]/tabs:items-start",
+        "flex flex-wrap items-end gap-0.5 group-data-[orientation=vertical]/tabs:flex-col group-data-[orientation=vertical]/tabs:items-start",
         className
       )}
       {...props}
