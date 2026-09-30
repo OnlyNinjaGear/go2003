@@ -33,9 +33,7 @@ for (const file of fs.readdirSync(DIR)) {
     if (item.registryDependencies) item.registryDependencies = fix(item.registryDependencies);
   }
 
-  if (changed) {
-    fs.writeFileSync(p, JSON.stringify(j, null, 2) + "\n");
-    touched++;
-  }
+  fs.writeFileSync(p, JSON.stringify(j, null, 2) + "\n");
+  if (changed) touched++;
 }
 console.log(`Абсолютные URL проставлены в ${touched} файлах`);
