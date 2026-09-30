@@ -219,7 +219,7 @@
     background: var(--panel);
   }
 
-  }
+  }
 @utility bevel-out {
   border-style: solid;
   border-width: 1px;

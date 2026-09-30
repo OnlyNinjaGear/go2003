@@ -9,7 +9,7 @@ const ROOT = path.resolve(import.meta.dirname, "..");
 const REG_PATH = path.join(ROOT, "registry.json");
 const THEME_CSS_PATH = path.join(ROOT, "registry/steam2003/css/theme.css");
 
-const css = fs.readFileSync(path.join(ROOT, "app/globals.css"), "utf8");
+const css = fs.readFileSync(path.join(ROOT, "app/globals.css"), "utf8").replace(/\r\n/g, "\n");
 
 // --- хелперы извлечения ---
 function block(re, label) {
