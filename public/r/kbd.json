@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd",
+  "title": "Kbd",
+  "description": "Win32-style keyboard key cap. Bevel-out miniature button.",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/kbd.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Kbd({ className, ...props }: React.ComponentProps<\"kbd\">) {\n  return (\n    <kbd\n      data-slot=\"kbd\"\n      className={cn(\n        \"pointer-events-none bevel-out inline-flex h-5 w-fit min-w-5 items-center justify-center gap-1 bg-panel px-1 font-sans text-[11px] leading-none text-muted-foreground select-none\",\n        \"[&_svg:not([class*='size-'])]:size-3\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction KbdGroup({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <kbd\n      data-slot=\"kbd-group\"\n      className={cn(\"inline-flex items-center gap-1\", className)}\n      {...props}\n    />\n  )\n}\n\nexport { Kbd, KbdGroup }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

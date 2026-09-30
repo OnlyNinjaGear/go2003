@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "toggle-group",
+  "title": "Toggle Group",
+  "description": "Win32-style joined toggle group. Bevel-out segments, sunken active.",
+  "dependencies": [
+    "class-variance-authority@^0.7.1",
+    "radix-ui@^1.4.3"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/toggle.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/toggle-group.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { type VariantProps } from \"class-variance-authority\"\nimport { ToggleGroup as ToggleGroupPrimitive } from \"radix-ui\"\n\nimport { cn } from \"@/lib/utils\"\nimport { toggleVariants } from \"@/registry/steam2003/ui/toggle\"\n\nconst ToggleGroupContext = React.createContext<\n  VariantProps<typeof toggleVariants>\n>({\n  size: \"default\",\n  variant: \"default\",\n})\n\nfunction ToggleGroup({\n  className,\n  variant,\n  size,\n  children,\n  ...props\n}: React.ComponentProps<typeof ToggleGroupPrimitive.Root> &\n  VariantProps<typeof toggleVariants>) {\n  return (\n    <ToggleGroupPrimitive.Root\n      data-slot=\"toggle-group\"\n      data-variant={variant}\n      data-size={size}\n      className={cn(\"flex gap-0.5 w-fit items-center\", className)}\n      {...props}\n    >\n      <ToggleGroupContext.Provider value={{ variant, size }}>\n        {children}\n      </ToggleGroupContext.Provider>\n    </ToggleGroupPrimitive.Root>\n  )\n}\n\nfunction ToggleGroupItem({\n  className,\n  children,\n  variant,\n  size,\n  ...props\n}: React.ComponentProps<typeof ToggleGroupPrimitive.Item> &\n  VariantProps<typeof toggleVariants>) {\n  const context = React.useContext(ToggleGroupContext)\n\n  return (\n    <ToggleGroupPrimitive.Item\n      data-slot=\"toggle-group-item\"\n      className={cn(\n        toggleVariants({\n          variant: context.variant || variant,\n          size: context.size || size,\n        }),\n        className\n      )}\n      {...props}\n    >\n      {children}\n    </ToggleGroupPrimitive.Item>\n  )\n}\n\nexport { ToggleGroup, ToggleGroupItem }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

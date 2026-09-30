@@ -16,7 +16,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body><TooltipProvider>{children}</TooltipProvider><Toaster /></body>
+      <body>
+        <TooltipProvider>
+          {/* Скроллбар живёт внутри холста: тогда backdrop и Sheet его накрывают */}
+          <div
+            id="app-scroll"
+            className="h-dvh overflow-y-auto [scrollbar-gutter:stable]"
+          >
+            {children}
+          </div>
+        </TooltipProvider>
+        <Toaster />
+      </body>
     </html>
   );
 }

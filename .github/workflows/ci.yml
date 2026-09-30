@@ -1,0 +1,26 @@
+name: Validate library
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 12.8.1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm registry:build
+      - run: git diff --exit-code -- registry.json registry/steam2003/css public/r
+      - run: pnpm lint
+      - run: pnpm build
+      - run: node scripts/prepare-installation-test.mjs
+      - run: pnpm exec shadcn add ./installation-test/all.json --cwd installation-test --yes --overwrite
+      - run: pnpm --dir installation-test exec tsc --noEmit

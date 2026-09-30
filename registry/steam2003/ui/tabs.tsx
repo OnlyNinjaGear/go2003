@@ -32,7 +32,7 @@ function TabsList({
     <TabsPrimitive.List
       data-slot="tabs-list"
       className={cn(
-        "flex flex-wrap items-end gap-0.5 group-data-[orientation=vertical]/tabs:flex-col group-data-[orientation=vertical]/tabs:items-start",
+        "flex flex-wrap items-end gap-0 group-data-[orientation=vertical]/tabs:flex-col group-data-[orientation=vertical]/tabs:items-start -mb-px",
         className
       )}
       {...props}
@@ -51,7 +51,7 @@ function TabsTrigger({
         "inline-flex items-center justify-center gap-1.5 px-3 h-[22px] whitespace-nowrap cursor-default select-none",
         "bevel-out bg-panel text-muted-foreground",
         "hover:text-foreground",
-        "data-[state=active]:bg-panel data-[state=active]:text-accent",
+        "data-[state=active]:bg-accent data-[state=active]:text-background data-[state=active]:bevel-in",
         "focus-visible:win32-focus",
         "disabled:text-[var(--panel-pressed)] disabled:text-shadow-[0.5px_0.5px_0px_var(--border-light)] disabled:pointer-events-none",
         "group-data-[orientation=vertical]/tabs:w-full group-data-[orientation=vertical]/tabs:justify-start",

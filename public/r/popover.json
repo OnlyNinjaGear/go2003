@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "popover",
+  "title": "Popover",
+  "description": "Win32-style popover. Bevel-out panel, no animation.",
+  "dependencies": [
+    "radix-ui@^1.4.3"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/popover.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Popover as PopoverPrimitive } from \"radix-ui\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Popover({\n  ...props\n}: React.ComponentProps<typeof PopoverPrimitive.Root>) {\n  return <PopoverPrimitive.Root data-slot=\"popover\" {...props} />\n}\n\nfunction PopoverTrigger({\n  ...props\n}: React.ComponentProps<typeof PopoverPrimitive.Trigger>) {\n  return <PopoverPrimitive.Trigger data-slot=\"popover-trigger\" {...props} />\n}\n\nfunction PopoverContent({\n  className,\n  align = \"center\",\n  sideOffset = 0,\n  ...props\n}: React.ComponentProps<typeof PopoverPrimitive.Content>) {\n  return (\n    <PopoverPrimitive.Portal>\n      <PopoverPrimitive.Content\n        data-slot=\"popover-content\"\n        align={align}\n        sideOffset={sideOffset}\n        className={cn(\n          \"z-50 w-72 bevel-out bg-panel p-3 outline-none\",\n          className\n        )}\n        {...props}\n      />\n    </PopoverPrimitive.Portal>\n  )\n}\n\nfunction PopoverAnchor({\n  ...props\n}: React.ComponentProps<typeof PopoverPrimitive.Anchor>) {\n  return <PopoverPrimitive.Anchor data-slot=\"popover-anchor\" {...props} />\n}\n\nfunction PopoverHeader({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"popover-header\"\n      className={cn(\"mb-2 flex flex-col gap-0.5\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction PopoverTitle({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"popover-title\"\n      className={cn(\"font-bold\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction PopoverDescription({\n  className,\n  ...props\n}: React.ComponentProps<\"p\">) {\n  return (\n    <p\n      data-slot=\"popover-description\"\n      className={cn(\"text-muted-foreground\", className)}\n      {...props}\n    />\n  )\n}\n\nexport {\n  Popover,\n  PopoverTrigger,\n  PopoverContent,\n  PopoverAnchor,\n  PopoverHeader,\n  PopoverTitle,\n  PopoverDescription,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

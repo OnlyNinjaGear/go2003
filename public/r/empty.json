@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "empty",
+  "title": "Empty",
+  "description": "Win32-style empty state. Dashed etched frame, sunken icon slot.",
+  "dependencies": [
+    "class-variance-authority@^0.7.1"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/empty.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\nimport { cn } from \"@/lib/utils\"\n\nfunction Empty({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"empty\"\n      className={cn(\n        \"flex min-w-0 flex-1 flex-col items-center justify-center gap-5 border border-dashed border-border p-6 text-center text-balance md:p-12\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction EmptyHeader({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"empty-header\"\n      className={cn(\n        \"flex max-w-sm flex-col items-center gap-2 text-center\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nconst emptyMediaVariants = cva(\n  \"mb-1 flex shrink-0 items-center justify-center [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-transparent\",\n        icon: \"bevel-in flex size-10 shrink-0 items-center justify-center bg-background text-muted-foreground [&_svg:not([class*='size-'])]:size-5\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n    },\n  }\n)\n\nfunction EmptyMedia({\n  className,\n  variant = \"default\",\n  ...props\n}: React.ComponentProps<\"div\"> & VariantProps<typeof emptyMediaVariants>) {\n  return (\n    <div\n      data-slot=\"empty-icon\"\n      data-variant={variant}\n      className={cn(emptyMediaVariants({ variant, className }))}\n      {...props}\n    />\n  )\n}\n\nfunction EmptyTitle({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"empty-title\"\n      className={cn(\"text-[13px] font-normal leading-none\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction EmptyDescription({ className, ...props }: React.ComponentProps<\"p\">) {\n  return (\n    <div\n      data-slot=\"empty-description\"\n      className={cn(\n        \"text-[11px] text-muted-foreground [&>a]:text-[var(--accent)] [&>a]:underline [&>a]:underline-offset-2\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction EmptyContent({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"empty-content\"\n      className={cn(\n        \"flex w-full max-w-sm min-w-0 flex-col items-center gap-2 text-[11px] text-balance\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport {\n  Empty,\n  EmptyHeader,\n  EmptyTitle,\n  EmptyDescription,\n  EmptyContent,\n  EmptyMedia,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

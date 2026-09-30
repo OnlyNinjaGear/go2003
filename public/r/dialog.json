@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "dialog",
+  "title": "Dialog",
+  "description": "Win32-style modal dialog. Dark title bar, bevel-out panel, X button top-right.",
+  "dependencies": [
+    "lucide-react@^0.487.0",
+    "radix-ui@^1.4.3"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/button.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/dialog.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { XIcon } from \"lucide-react\"\nimport { Dialog as DialogPrimitive } from \"radix-ui\"\n\nimport { cn } from \"@/lib/utils\"\nimport { Button } from \"@/registry/steam2003/ui/button\"\n\nfunction Dialog({ ...props }: React.ComponentProps<typeof DialogPrimitive.Root>) {\n  return <DialogPrimitive.Root data-slot=\"dialog\" {...props} />\n}\n\nfunction DialogTrigger({ ...props }: React.ComponentProps<typeof DialogPrimitive.Trigger>) {\n  return <DialogPrimitive.Trigger data-slot=\"dialog-trigger\" {...props} />\n}\n\nfunction DialogPortal({ ...props }: React.ComponentProps<typeof DialogPrimitive.Portal>) {\n  return <DialogPrimitive.Portal data-slot=\"dialog-portal\" {...props} />\n}\n\nfunction DialogClose({ ...props }: React.ComponentProps<typeof DialogPrimitive.Close>) {\n  return <DialogPrimitive.Close data-slot=\"dialog-close\" {...props} />\n}\n\nfunction DialogOverlay({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Overlay>) {\n  return (\n    <DialogPrimitive.Overlay\n      data-slot=\"dialog-overlay\"\n      className={cn(\"fixed inset-0 z-50 bg-black/75\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction DialogContent({\n  className,\n  children,\n  showCloseButton = true,\n  ...props\n}: React.ComponentProps<typeof DialogPrimitive.Content> & {\n  showCloseButton?: boolean\n}) {\n  return (\n    <DialogPortal>\n      <DialogOverlay />\n      <DialogPrimitive.Content\n        data-slot=\"dialog-content\"\n        className={cn(\n          \"fixed top-1/2 left-1/2 z-50 -translate-x-1/2 -translate-y-1/2\",\n          \"w-full max-w-sm bevel-out bg-panel outline-none\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n        {showCloseButton && (\n          <DialogPrimitive.Close asChild>\n            <Button\n              size=\"icon\"\n              className=\"absolute top-[4px] right-[6px] !size-[14px] [&_svg]:size-2.5\"\n              aria-label=\"Close\"\n            >\n              <XIcon />\n            </Button>\n          </DialogPrimitive.Close>\n        )}\n      </DialogPrimitive.Content>\n    </DialogPortal>\n  )\n}\n\nfunction DialogHeader({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"dialog-header\"\n      className={cn(\n        \"flex items-center gap-2 text-foreground p-1.5 pr-[22px]\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction DialogFooter({ className, children, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"dialog-footer\"\n      className={cn(\"flex justify-end gap-2 p-1.5\", className)}\n      {...props}\n    >\n      {children}\n    </div>\n  )\n}\n\nfunction DialogTitle({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Title>) {\n  return (\n    <DialogPrimitive.Title\n      data-slot=\"dialog-title\"\n      className={cn(\"font-normal leading-none\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction DialogDescription({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Description>) {\n  return (\n    <DialogPrimitive.Description\n      data-slot=\"dialog-description\"\n      className={cn(\"text-muted-foreground p-1.5 mx-1.5\", className)}\n      {...props}\n    />\n  )\n}\n\nexport {\n  Dialog,\n  DialogClose,\n  DialogContent,\n  DialogDescription,\n  DialogFooter,\n  DialogHeader,\n  DialogOverlay,\n  DialogPortal,\n  DialogTitle,\n  DialogTrigger,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

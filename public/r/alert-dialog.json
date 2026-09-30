@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog",
+  "title": "Alert Dialog",
+  "description": "Win32-style confirmation dialog. Dark title bar, bevel-out panel, action buttons.",
+  "dependencies": [
+    "radix-ui@^1.4.3"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/button.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/alert-dialog.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { AlertDialog as AlertDialogPrimitive } from \"radix-ui\"\n\nimport { cn } from \"@/lib/utils\"\nimport { Button } from \"@/registry/steam2003/ui/button\"\n\nfunction AlertDialog({\n  ...props\n}: React.ComponentProps<typeof AlertDialogPrimitive.Root>) {\n  return <AlertDialogPrimitive.Root data-slot=\"alert-dialog\" {...props} />\n}\n\nfunction AlertDialogTrigger({\n  ...props\n}: React.ComponentProps<typeof AlertDialogPrimitive.Trigger>) {\n  return (\n    <AlertDialogPrimitive.Trigger data-slot=\"alert-dialog-trigger\" {...props} />\n  )\n}\n\nfunction AlertDialogPortal({\n  ...props\n}: React.ComponentProps<typeof AlertDialogPrimitive.Portal>) {\n  return (\n    <AlertDialogPrimitive.Portal data-slot=\"alert-dialog-portal\" {...props} />\n  )\n}\n\nfunction AlertDialogOverlay({\n  className,\n  ...props\n}: React.ComponentProps<typeof AlertDialogPrimitive.Overlay>) {\n  return (\n    <AlertDialogPrimitive.Overlay\n      data-slot=\"alert-dialog-overlay\"\n      className={cn(\"fixed inset-0 z-50 bg-black/75\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction AlertDialogContent({\n  className,\n  ...props\n}: React.ComponentProps<typeof AlertDialogPrimitive.Content>) {\n  return (\n    <AlertDialogPortal>\n      <AlertDialogOverlay />\n      <AlertDialogPrimitive.Content\n        data-slot=\"alert-dialog-content\"\n        className={cn(\n          \"bevel-out bg-panel fixed top-[50%] left-[50%] z-50 min-w-[300px] w-full max-w-lg translate-x-[-50%] translate-y-[-50%]\",\n          className\n        )}\n        {...props}\n      />\n    </AlertDialogPortal>\n  )\n}\n\nfunction AlertDialogHeader({\n  className,\n  ...props\n}: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"alert-dialog-header\"\n      className={cn(\"p-3 pb-1 flex flex-col gap-1\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction AlertDialogFooter({\n  className,\n  ...props\n}: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"alert-dialog-footer\"\n      className={cn(\"flex justify-end gap-2 p-3 pt-1\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction AlertDialogTitle({\n  className,\n  ...props\n}: React.ComponentProps<typeof AlertDialogPrimitive.Title>) {\n  return (\n    <AlertDialogPrimitive.Title\n      data-slot=\"alert-dialog-title\"\n      className={cn(\"font-bold\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction AlertDialogDescription({\n  className,\n  ...props\n}: React.ComponentProps<typeof AlertDialogPrimitive.Description>) {\n  return (\n    <AlertDialogPrimitive.Description\n      data-slot=\"alert-dialog-description\"\n      className={cn(\"text-muted-foreground\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction AlertDialogAction({\n  className,\n  ...props\n}: React.ComponentProps<typeof AlertDialogPrimitive.Action>) {\n  return (\n    <Button variant=\"default\" asChild>\n      <AlertDialogPrimitive.Action\n        data-slot=\"alert-dialog-action\"\n        className={cn(className)}\n        {...props}\n      />\n    </Button>\n  )\n}\n\nfunction AlertDialogCancel({\n  className,\n  ...props\n}: React.ComponentProps<typeof AlertDialogPrimitive.Cancel>) {\n  return (\n    <Button variant=\"secondary\" asChild>\n      <AlertDialogPrimitive.Cancel\n        data-slot=\"alert-dialog-cancel\"\n        className={cn(className)}\n        {...props}\n      />\n    </Button>\n  )\n}\n\nexport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogOverlay,\n  AlertDialogPortal,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

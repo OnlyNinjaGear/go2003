@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination",
+  "title": "Pagination",
+  "description": "Win32-style pagination. Bevel-out page buttons, pressed state on active.",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/pagination.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Pagination({ className, ...props }: React.ComponentProps<\"nav\">) {\n  return (\n    <nav\n      role=\"navigation\"\n      aria-label=\"pagination\"\n      data-slot=\"pagination\"\n      className={cn(\"mx-auto flex w-full justify-center\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction PaginationContent({\n  className,\n  ...props\n}: React.ComponentProps<\"ul\">) {\n  return (\n    <ul\n      data-slot=\"pagination-content\"\n      className={cn(\"flex flex-row items-center\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction PaginationItem({ ...props }: React.ComponentProps<\"li\">) {\n  return <li data-slot=\"pagination-item\" {...props} />\n}\n\ntype PaginationLinkProps = {\n  isActive?: boolean\n} & React.ComponentProps<\"a\">\n\nfunction PaginationLink({\n  className,\n  isActive,\n  ...props\n}: PaginationLinkProps) {\n  return (\n    <a\n      aria-current={isActive ? \"page\" : undefined}\n      data-slot=\"pagination-link\"\n      data-active={isActive}\n      className={cn(\n        \"h-6 min-w-[24px] px-1.5 flex items-center justify-center cursor-default select-none outline-none focus-visible:win32-focus\",\n        isActive ? \"bevel-in bg-background\" : \"bevel-out bg-panel\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction PaginationPrevious({\n  className,\n  ...props\n}: React.ComponentProps<typeof PaginationLink>) {\n  return (\n    <PaginationLink\n      aria-label=\"Previous page\"\n      className={cn(\"px-1.5\", className)}\n      {...props}\n    >\n      <svg width=\"5\" height=\"7\" viewBox=\"0 0 5 7\" aria-hidden=\"true\" fill=\"currentColor\"><polygon points=\"0,3.5 5,0 5,7\" /></svg>\n    </PaginationLink>\n  )\n}\n\nfunction PaginationNext({\n  className,\n  ...props\n}: React.ComponentProps<typeof PaginationLink>) {\n  return (\n    <PaginationLink\n      aria-label=\"Next page\"\n      className={cn(\"px-1.5\", className)}\n      {...props}\n    >\n      <svg width=\"5\" height=\"7\" viewBox=\"0 0 5 7\" aria-hidden=\"true\" fill=\"currentColor\"><polygon points=\"5,3.5 0,0 0,7\" /></svg>\n    </PaginationLink>\n  )\n}\n\nfunction PaginationEllipsis({\n  className,\n  ...props\n}: React.ComponentProps<\"span\">) {\n  return (\n    <span\n      aria-hidden\n      data-slot=\"pagination-ellipsis\"\n      className={cn(\"flex h-6 min-w-[24px] items-center justify-center cursor-default select-none\", className)}\n      {...props}\n    >\n      …\n    </span>\n  )\n}\n\nexport {\n  Pagination,\n  PaginationContent,\n  PaginationLink,\n  PaginationItem,\n  PaginationPrevious,\n  PaginationNext,\n  PaginationEllipsis,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

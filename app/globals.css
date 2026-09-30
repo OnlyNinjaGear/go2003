@@ -31,6 +31,12 @@
   --color-destructive-pressed: var(--destructive-pressed);
   --color-destructive-light: var(--destructive-light);
   --color-scrollbar: var(--scrollbar);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
   --font-sans: "Tahoma", "Verdana", "Geneva", sans-serif;
   --font-mono: "Tahoma", "Verdana", "Geneva", sans-serif;
 }
@@ -66,6 +72,12 @@
   --input: #FFFFFF;
   --ring: #8D8311;
   --scrollbar: #55654E;
+  --sidebar: #4C5844;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-border: #2F3A28;
+  --sidebar-accent: #908637;
+  --sidebar-accent-foreground: #272C22;
+  --sidebar-ring: #8D8311;
 }
 
 @layer base {
@@ -83,13 +95,27 @@
     animation: none !important;
   }
 
+  /* Прокрутка страницы — во внутреннем контейнере #app-scroll (см. layout.tsx),
+     а не во вьюпорте: его классический скроллбар находится вне холста, из-за
+     чего backdrop и Sheet не могли его накрыть. Вьюпорт скролла не имеет. */
   html {
+    height: 100%;
+    overflow: hidden;
     scroll-behavior: auto;
-    scrollbar-color: #6B7B5C #4B5942;
-    scrollbar-width: auto;
+  }
+
+  /* Firefox не умеет ::-webkit-scrollbar — даём плоский scrollbar-color.
+     Chromium проигрывает этот блок и рисует кастомный скроллбар ниже. */
+  @supports not selector(::-webkit-scrollbar) {
+    #app-scroll {
+      scrollbar-color: var(--panel) var(--panel);
+      scrollbar-width: auto;
+    }
   }
 
   body {
+    height: 100%;
+    overflow: hidden;
     background-color: var(--background);
     color: var(--foreground);
     font-family: "Tahoma", "Verdana", "Geneva", sans-serif;
@@ -114,8 +140,8 @@
   }
 
   ::-webkit-scrollbar {
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
   }
 
   ::-webkit-scrollbar-track,
@@ -125,45 +151,61 @@
     border-radius: 0 !important;
   }
 
-  /* Win32 checkerboard track */
-  ::-webkit-scrollbar-track {
-    background-color: #4B5942;
-    background-image:
-      linear-gradient(45deg, #3D4635 25%, transparent 25%, transparent 75%, #3D4635 75%),
-      linear-gradient(45deg, #3D4635 25%, transparent 25%, transparent 75%, #3D4635 75%);
-    background-size: 2px 2px;
-    background-position: 0 0, 1px 1px;
+  /* Win32 native scrollbars — same look as ScrollArea/Win32Scrollbar */
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-button,
+  ::-webkit-scrollbar-corner {
+    border-radius: 0 !important;
   }
 
-  /* Raised thumb */
+  /* Hatch track, same as ScrollArea track */
+  ::-webkit-scrollbar-track {
+    background-color: var(--panel);
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--panel) 0px,
+      var(--panel) 1px,
+      var(--background) 1px,
+      var(--background) 4px
+    );
+
+  }
+
+  /* Raised bevel-out thumb */
   ::-webkit-scrollbar-thumb {
-    background-color: #6B7B5C;
+    background-color: var(--panel);
     border: 1px solid;
-    border-color: #8A9B7B #2F3A28 #2F3A28 #8A9B7B;
+    border-color: var(--border-light) var(--border-dark) var(--border-dark)
+      var(--border-light);
     min-height: 20px;
   }
 
   ::-webkit-scrollbar-thumb:active {
-    background-color: #5A6A4C;
-    border-color: #2F3A28 #8A9B7B #8A9B7B #2F3A28;
+    background-color: var(--panel);
+    border-color: var(--border-dark) var(--border-light) var(--border-light)
+      var(--border-dark);
   }
 
   /* Arrow buttons — bevel-out + arrow glyph */
   ::-webkit-scrollbar-button:single-button {
-    background-color: #6B7B5C;
+    background-color: var(--panel);
     border: 1px solid;
-    border-color: #8A9B7B #2F3A28 #2F3A28 #8A9B7B;
+    border-color: var(--border-light) var(--border-dark) var(--border-dark)
+      var(--border-light);
     display: block;
-    height: 16px;
-    width: 16px;
+    height: 17px;
+    width: 17px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 8px 8px;
   }
 
   ::-webkit-scrollbar-button:single-button:active {
-    border-color: #2F3A28 #8A9B7B #8A9B7B #2F3A28;
-    background-color: #5A6A4C;
+    border-color: var(--border-dark) var(--border-light) var(--border-light)
+      var(--border-dark);
+    background-color: var(--panel-pressed);
   }
 
   /* Up arrow ▲ */
@@ -187,7 +229,17 @@
   }
 
   ::-webkit-scrollbar-corner {
-    background: #4B5942;
+    background: var(--panel);
+  }
+
+  /* Radix scroll-lock: компенсация react-remove-scroll не нужна — у вьюпорта
+     нет классического скроллбара, ширина не меняется. Но обнуляем на случай
+     сторонних скриптов, измеряющих ширину скроллбара. */
+  html body[data-scroll-locked] {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
   }
 }
 
@@ -219,10 +271,6 @@
 html,
 * {
   scroll-behavior: auto !important;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 @media (max-width: 640px) {

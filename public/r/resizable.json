@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "resizable",
+  "title": "Resizable",
+  "description": "Win32-style resizable panels with solid 1px handles.",
+  "dependencies": [
+    "lucide-react@^0.487.0",
+    "react-resizable-panels@^4.10.0"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/resizable.tsx",
+      "content": "\"use client\"\n\nimport { GripVerticalIcon } from \"lucide-react\"\nimport * as ResizablePrimitive from \"react-resizable-panels\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction ResizablePanelGroup({\n  className,\n  ...props\n}: ResizablePrimitive.GroupProps) {\n  return (\n    <ResizablePrimitive.Group\n      data-slot=\"resizable-panel-group\"\n      className={cn(\n        \"flex h-full w-full aria-[orientation=vertical]:flex-col\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nfunction ResizablePanel({ ...props }: ResizablePrimitive.PanelProps) {\n  return <ResizablePrimitive.Panel data-slot=\"resizable-panel\" {...props} />\n}\n\nfunction ResizableHandle({\n  withHandle,\n  className,\n  ...props\n}: ResizablePrimitive.SeparatorProps & {\n  withHandle?: boolean\n}) {\n  return (\n    <ResizablePrimitive.Separator\n      data-slot=\"resizable-handle\"\n      className={cn(\n        \"relative flex w-px items-center justify-center bg-border-dark\",\n        \"after:absolute after:inset-y-0 after:left-1/2 after:w-1 after:-translate-x-1/2\",\n        \"focus-visible:win32-focus outline-hidden\",\n        \"aria-[orientation=horizontal]:h-px aria-[orientation=horizontal]:w-full\",\n        \"aria-[orientation=horizontal]:after:left-0 aria-[orientation=horizontal]:after:h-1\",\n        \"aria-[orientation=horizontal]:after:w-full aria-[orientation=horizontal]:after:translate-x-0\",\n        \"aria-[orientation=horizontal]:after:-translate-y-1/2\",\n        \"[&[aria-orientation=horizontal]>div]:rotate-90\",\n        className\n      )}\n      {...props}\n    >\n      {withHandle && (\n        <div className=\"z-10 flex h-4 w-3 items-center justify-center bevel-out bg-panel\">\n          <GripVerticalIcon className=\"size-2.5\" />\n        </div>\n      )}\n    </ResizablePrimitive.Separator>\n  )\n}\n\nexport { ResizableHandle, ResizablePanel, ResizablePanelGroup }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

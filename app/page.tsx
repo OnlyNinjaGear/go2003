@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/registry/steam2003/ui/button";
 import { Input } from "@/registry/steam2003/ui/input";
 import { Checkbox } from "@/registry/steam2003/ui/checkbox";
@@ -10,7 +11,6 @@ import {
   TableHead,
   TableRow,
   TableCell,
-  TableCaption,
 } from "@/registry/steam2003/ui/table";
 import {
   Card,
@@ -147,7 +147,13 @@ export default function Home() {
         <h1 className="text-base ">go2003 registry</h1>
         <p>
           Steam 2003 / Windows XP-era reskin of shadcn/ui primitives.
-          Components will appear here as they are added.
+          Components will appear here as they are added.{" "}
+          <Link
+            href="/new"
+            className="text-[var(--accent)] underline underline-offset-2"
+          >
+            → Новые компоненты
+          </Link>
         </p>
       </header>
 

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local registry experiments
+/.tmp-build-test/
+/.registry-item-schema.json
+/.style-test.json
+/installation-test/

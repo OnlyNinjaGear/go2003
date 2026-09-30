@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input-otp",
+  "title": "Input Otp",
+  "description": "Win32-style OTP input. Bevel-in slots, no animation.",
+  "dependencies": [
+    "input-otp@^1.4.2",
+    "lucide-react@^0.487.0"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/input-otp.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { OTPInput, OTPInputContext } from \"input-otp\"\nimport { MinusIcon } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction InputOTP({\n  className,\n  containerClassName,\n  ...props\n}: React.ComponentProps<typeof OTPInput> & {\n  containerClassName?: string\n}) {\n  return (\n    <OTPInput\n      data-slot=\"input-otp\"\n      containerClassName={cn(\n        \"flex items-center gap-1 has-disabled:text-[var(--muted)]\",\n        containerClassName\n      )}\n      className={cn(\"disabled:cursor-not-allowed\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction InputOTPGroup({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"input-otp-group\"\n      className={cn(\"flex items-center\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction InputOTPSlot({\n  index,\n  className,\n  ...props\n}: React.ComponentProps<\"div\"> & {\n  index: number\n}) {\n  const inputOTPContext = React.useContext(OTPInputContext)\n  const { char, hasFakeCaret, isActive } = inputOTPContext?.slots[index] ?? {}\n\n  return (\n    <div\n      data-slot=\"input-otp-slot\"\n      data-active={isActive}\n      className={cn(\n        \"bevel-in! bg-input-bg relative flex h-6 w-6 items-center justify-center border-r border-border-dark first:border-l first:border-border-dark outline-none selection:bg-primary selection:text-primary-foreground aria-invalid:border-destructive data-[active=true]:win32-focus\",\n        className\n      )}\n      {...props}\n    >\n      {char}\n      {hasFakeCaret && (\n        <div className=\"pointer-events-none absolute inset-0 flex items-center justify-center\">\n          <div className=\"h-3 w-px bg-foreground\" />\n        </div>\n      )}\n    </div>\n  )\n}\n\nfunction InputOTPSeparator({ ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div data-slot=\"input-otp-separator\" role=\"separator\" {...props}>\n      <MinusIcon className=\"size-3 text-muted-foreground\" />\n    </div>\n  )\n}\n\nexport { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

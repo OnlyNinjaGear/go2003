@@ -1,0 +1,297 @@
+/* steam2003 theme — полный globals.css для проекта-потребителя.
+   Генерируется scripts/gen-theme.mjs из app/globals.css. */
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-boost: var(--primary-boost);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-panel: var(--panel);
+  --color-panel-pressed: var(--panel-pressed);
+  --color-panel-hover: var(--panel-hover);
+  --color-border-light: var(--border-light);
+  --color-border-dark: var(--border-dark);
+  --color-input-bg: var(--input-bg);
+  --color-input-fg: var(--input-fg);
+  --color-destructive-pressed: var(--destructive-pressed);
+  --color-destructive-light: var(--destructive-light);
+  --color-scrollbar: var(--scrollbar);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: "Tahoma", "Verdana", "Geneva", sans-serif;
+  --font-mono: "Tahoma", "Verdana", "Geneva", sans-serif;
+}
+
+:root {
+  --background: #3D4635;
+  --foreground: #FFFFFF;
+  --panel: #4C5844;
+  --panel-pressed: #272C22;
+  --panel-hover: #3D4635;
+  --border-light: #87927D;
+  --border-dark: #232E19;
+  --accent: #C4BE78;
+  --accent-foreground: #000000;
+  --input-bg: #3D4635;
+  --input-fg: #FFFFFF;
+  --primary: #908637;
+  --primary-boost: #FF7302;
+  --primary-foreground: #272C22;
+  --secondary: #6B7B5C;
+  --secondary-foreground: #D5DBC8;
+  --card: #4C5844;
+  --card-foreground: #AFBCA9;
+  --popover: #6B7B5C;
+  --popover-foreground: #D5DBC8;
+  --muted: #636D5F;
+  --muted-foreground: #AFBCA9;
+  --destructive: #940A0A;
+  --destructive-light: #F24A4A;
+  --destructive-pressed: #730808;
+  --destructive-foreground: #FFFFFF;
+  --border: #2F3A28;
+  --input: #FFFFFF;
+  --ring: #8D8311;
+  --scrollbar: #55654E;
+  --sidebar: #4C5844;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-border: #2F3A28;
+  --sidebar-accent: #908637;
+  --sidebar-accent-foreground: #272C22;
+  --sidebar-ring: #8D8311;
+}
+
+@layer base {
+
+  *,
+  *::before,
+  *::after {
+    border-radius: 0 !important;
+    transition: none !important;
+  }
+
+  *:not(.win32-spin):not(.win32-spin *),
+  *::before,
+  *::after {
+    animation: none !important;
+  }
+
+  
+  
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "Tahoma", "Verdana", "Geneva", sans-serif;
+    font-size: 11px;
+  }
+
+  *::selection {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  button,
+  input,
+  select,
+  textarea,
+  optgroup {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+
+  ::-webkit-scrollbar {
+    width: 17px;
+    height: 17px;
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-button,
+  ::-webkit-scrollbar-corner {
+    border-radius: 0 !important;
+  }
+
+  /* Win32 native scrollbars — same look as ScrollArea/Win32Scrollbar */
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-button,
+  ::-webkit-scrollbar-corner {
+    border-radius: 0 !important;
+  }
+
+  /* Hatch track, same as ScrollArea track */
+  ::-webkit-scrollbar-track {
+    background-color: var(--panel);
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--panel) 0px,
+      var(--panel) 1px,
+      var(--background) 1px,
+      var(--background) 4px
+    );
+
+  }
+
+  /* Raised bevel-out thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--panel);
+    border: 1px solid;
+    border-color: var(--border-light) var(--border-dark) var(--border-dark)
+      var(--border-light);
+    min-height: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background-color: var(--panel);
+    border-color: var(--border-dark) var(--border-light) var(--border-light)
+      var(--border-dark);
+  }
+
+  /* Arrow buttons — bevel-out + arrow glyph */
+  ::-webkit-scrollbar-button:single-button {
+    background-color: var(--panel);
+    border: 1px solid;
+    border-color: var(--border-light) var(--border-dark) var(--border-dark)
+      var(--border-light);
+    display: block;
+    height: 17px;
+    width: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 8px;
+  }
+
+  ::-webkit-scrollbar-button:single-button:active {
+    border-color: var(--border-dark) var(--border-light) var(--border-light)
+      var(--border-dark);
+    background-color: var(--panel-pressed);
+  }
+
+  /* Up arrow ▲ */
+  ::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpolygon points='4,1 7,7 1,7' fill='%23232E19'/%3E%3C/svg%3E");
+  }
+
+  /* Down arrow ▼ */
+  ::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpolygon points='4,7 7,1 1,1' fill='%23232E19'/%3E%3C/svg%3E");
+  }
+
+  /* Left arrow ◀ */
+  ::-webkit-scrollbar-button:single-button:horizontal:decrement {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpolygon points='1,4 7,1 7,7' fill='%23232E19'/%3E%3C/svg%3E");
+  }
+
+  /* Right arrow ▶ */
+  ::-webkit-scrollbar-button:single-button:horizontal:increment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpolygon points='7,4 1,1 1,7' fill='%23232E19'/%3E%3C/svg%3E");
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: var(--panel);
+  }
+
+  }
+@utility bevel-out {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border-light) var(--border-dark) var(--border-dark) var(--border-light);
+}
+
+@utility bevel-in {
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark);
+}
+
+@utility win32-focus {
+  outline: 1px dotted #000000;
+  outline-offset: -3px;
+  box-shadow: 0 0 0 1px #000000;
+  border-width: 1px;
+}
+
+@utility win32-focus-primary {
+  outline: 0px;
+  border-color: #000000;
+  border-width: 1px;
+}
+
+/* Sonner overrides */
+[data-sonner-toast] {
+  box-shadow: none !important;
+}
+
+[data-sonner-toast] [data-title] {
+  font-weight: normal !important;
+}
+
+[data-sonner-toast] [data-description] {
+  font-weight: normal !important;
+}
+
+/* Win32 toast buttons */
+[data-sonner-toast] [data-button] {
+  background: var(--panel) !important;
+  color: var(--foreground) !important;
+  border-radius: 0 !important;
+  height: 22px !important;
+  padding: 0 10px !important;
+  border: 1px solid var(--border-light) !important;
+  border-right-color: var(--border-dark) !important;
+  border-bottom-color: var(--border-dark) !important;
+  box-shadow: inset 1px 1px 0 var(--border-light), inset -1px -1px 0 var(--border-dark) !important;
+  font-size: 11px !important;
+  font-weight: normal !important;
+  margin: 0 !important;
+  cursor: default !important;
+}
+
+[data-sonner-toast] [data-button]:active {
+  box-shadow: inset 1px 1px 0 var(--border-dark), inset -1px -1px 0 var(--border-light) !important;
+  border-color: var(--border-dark) var(--border-light) var(--border-light) var(--border-dark) !important;
+}
+
+@keyframes win32-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+[data-sonner-toast] .animate-spin,
+[data-sonner-toast] .win32-spin,
+.win32-spin {
+  animation: win32-spin 1s steps(3, end) infinite !important;
+}

@@ -46,8 +46,8 @@ function PaginationLink({
       data-slot="pagination-link"
       data-active={isActive}
       className={cn(
-        "bevel-out bg-panel h-6 min-w-[24px] px-1.5 flex items-center justify-center cursor-default select-none outline-none focus-visible:win32-focus",
-        isActive && "bevel-in bg-panel-pressed",
+        "h-6 min-w-[24px] px-1.5 flex items-center justify-center cursor-default select-none outline-none focus-visible:win32-focus",
+        isActive ? "bevel-in bg-background" : "bevel-out bg-panel",
         className
       )}
       {...props}
@@ -61,7 +61,7 @@ function PaginationPrevious({
 }: React.ComponentProps<typeof PaginationLink>) {
   return (
     <PaginationLink
-      aria-label="Go to previous page"
+      aria-label="Previous page"
       className={cn("px-1.5", className)}
       {...props}
     >
@@ -76,7 +76,7 @@ function PaginationNext({
 }: React.ComponentProps<typeof PaginationLink>) {
   return (
     <PaginationLink
-      aria-label="Go to next page"
+      aria-label="Next page"
       className={cn("px-1.5", className)}
       {...props}
     >

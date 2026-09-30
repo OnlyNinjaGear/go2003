@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "textarea",
+  "title": "Textarea",
+  "description": "Win32-style sunken multiline text field. Inset bevel, white background.",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/textarea.tsx",
+      "content": "import * as React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Textarea({ className, ...props }: React.ComponentProps<\"textarea\">) {\n  return (\n    <textarea\n      data-slot=\"textarea\"\n      className={cn(\n        \"bevel-in w-full min-h-16 px-1.5 py-1 resize-y\",\n        \"bg-input-bg text-input-fg\",\n        \"font-sans text-[11px] leading-snug\",\n        \"placeholder:text-[var(--muted)] placeholder:select-none\",\n        \"selection:bg-primary selection:text-primary-foreground\",\n        \"outline-none\",\n        \"aria-invalid:shadow-[0px_0px_0px_1px_var(--destructive)] aria-invalid:text-destructive-light\",\n        \"disabled:bg-panel-pressed disabled:text-[var(--muted)] disabled:cursor-default\",\n        \"read-only:bg-input-bg read-only:text-muted-foreground read-only:cursor-default\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Textarea }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

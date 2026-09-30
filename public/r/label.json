@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "label",
+  "title": "Label",
+  "description": "Win32-style static label text.",
+  "dependencies": [
+    "radix-ui@^1.4.3"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/label.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Label as LabelPrimitive } from \"radix-ui\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction Label({\n  className,\n  ...props\n}: React.ComponentProps<typeof LabelPrimitive.Root>) {\n  return (\n    <LabelPrimitive.Root\n      data-slot=\"label\"\n      className={cn(\n        \"flex items-center gap-2 leading-none select-none cursor-default\",\n        \"group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:text-[var(--panel-pressed)] group-data-[disabled=true]:[text-shadow:0.5px_0.5px_0px_var(--border-light)]\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n\nexport { Label }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

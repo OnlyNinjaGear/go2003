@@ -1,0 +1,23 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sheet",
+  "title": "Sheet",
+  "description": "Win32-style side sheet. Bevel-out panel edge, dark title bar.",
+  "dependencies": [
+    "lucide-react@^0.487.0",
+    "radix-ui@^1.4.3"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/button.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/sheet.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { XIcon } from \"lucide-react\"\nimport { Dialog as SheetPrimitive } from \"radix-ui\"\n\nimport { cn } from \"@/lib/utils\"\nimport { Button } from \"@/registry/steam2003/ui/button\"\n\nfunction Sheet({ ...props }: React.ComponentProps<typeof SheetPrimitive.Root>) {\n  return <SheetPrimitive.Root data-slot=\"sheet\" {...props} />\n}\n\nfunction SheetTrigger({\n  ...props\n}: React.ComponentProps<typeof SheetPrimitive.Trigger>) {\n  return <SheetPrimitive.Trigger data-slot=\"sheet-trigger\" {...props} />\n}\n\nfunction SheetClose({\n  ...props\n}: React.ComponentProps<typeof SheetPrimitive.Close>) {\n  return <SheetPrimitive.Close data-slot=\"sheet-close\" {...props} />\n}\n\nfunction SheetPortal({\n  ...props\n}: React.ComponentProps<typeof SheetPrimitive.Portal>) {\n  return <SheetPrimitive.Portal data-slot=\"sheet-portal\" {...props} />\n}\n\nfunction SheetOverlay({\n  className,\n  ...props\n}: React.ComponentProps<typeof SheetPrimitive.Overlay>) {\n  return (\n    <SheetPrimitive.Overlay\n      data-slot=\"sheet-overlay\"\n      className={cn(\"fixed inset-0 z-50 bg-black/75\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction SheetContent({\n  className,\n  children,\n  side = \"right\",\n  showCloseButton = true,\n  ...props\n}: React.ComponentProps<typeof SheetPrimitive.Content> & {\n  side?: \"top\" | \"right\" | \"bottom\" | \"left\"\n  showCloseButton?: boolean\n}) {\n  return (\n    <SheetPortal>\n      <SheetOverlay />\n      <SheetPrimitive.Content\n        data-slot=\"sheet-content\"\n        className={cn(\n          \"fixed z-50 flex flex-col bevel-out bg-panel\",\n          side === \"right\" && \"inset-y-0 right-0 h-full w-3/4 max-w-sm\",\n          side === \"left\" && \"inset-y-0 left-0 h-full w-3/4 max-w-sm\",\n          side === \"top\" && \"inset-x-0 top-0 w-full\",\n          side === \"bottom\" && \"inset-x-0 bottom-0 w-full\",\n          className\n        )}\n        {...props}\n      >\n        {children}\n        {showCloseButton && (\n          <SheetPrimitive.Close asChild>\n            <Button\n              size=\"icon\"\n              className=\"absolute top-1 right-1.5 !size-[14px] [&_svg]:size-3\"\n              aria-label=\"Close\"\n            >\n              <XIcon />\n            </Button>\n          </SheetPrimitive.Close>\n        )}\n      </SheetPrimitive.Content>\n    </SheetPortal>\n  )\n}\n\nfunction SheetHeader({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"sheet-header\"\n      className={cn(\"flex flex-col gap-1 p-3\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction SheetFooter({ className, ...props }: React.ComponentProps<\"div\">) {\n  return (\n    <div\n      data-slot=\"sheet-footer\"\n      className={cn(\"flex justify-end gap-2 p-3 pt-0\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction SheetTitle({\n  className,\n  ...props\n}: React.ComponentProps<typeof SheetPrimitive.Title>) {\n  return (\n    <SheetPrimitive.Title\n      data-slot=\"sheet-title\"\n      className={cn(\"font-bold\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction SheetDescription({\n  className,\n  ...props\n}: React.ComponentProps<typeof SheetPrimitive.Description>) {\n  return (\n    <SheetPrimitive.Description\n      data-slot=\"sheet-description\"\n      className={cn(\"text-muted-foreground\", className)}\n      {...props}\n    />\n  )\n}\n\nexport {\n  Sheet,\n  SheetTrigger,\n  SheetClose,\n  SheetContent,\n  SheetHeader,\n  SheetFooter,\n  SheetTitle,\n  SheetDescription,\n}\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

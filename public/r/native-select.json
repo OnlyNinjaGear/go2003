@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "native-select",
+  "title": "Native Select",
+  "description": "Win32-style native select. Bevel-in sunken field with triangle arrow glyph.",
+  "dependencies": [],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/native-select.tsx",
+      "content": "import * as React from \"react\"\nimport { cn } from \"@/lib/utils\"\n\nfunction NativeSelect({\n  className,\n  size = \"default\",\n  ...props\n}: Omit<React.ComponentProps<\"select\">, \"size\"> & { size?: \"sm\" | \"default\" }) {\n  return (\n    <div\n      className=\"group/native-select relative w-fit\"\n      data-slot=\"native-select-wrapper\"\n    >\n      <select\n        data-slot=\"native-select\"\n        data-size={size}\n        className={cn(\n          \"bevel-in h-6 w-full min-w-0 appearance-none bg-input-bg pl-1.5 pr-6 pt-0.5 font-sans text-[11px] leading-none text-input-fg outline-none\",\n          \"selection:bg-primary selection:text-primary-foreground\",\n          \"placeholder:text-[var(--muted)]\",\n          \"focus-visible:win32-focus-primary\",\n          \"aria-invalid:shadow-[0_0_0_1px_var(--destructive)] aria-invalid:text-destructive-light\",\n          \"disabled:bg-panel-pressed disabled:text-[var(--muted)] disabled:cursor-default disabled:pointer-events-none\",\n          \"data-[size=sm]:h-5 data-[size=sm]:text-[11px]\",\n          className\n        )}\n        {...props}\n      />\n      <span\n        className=\"pointer-events-none absolute top-1/2 right-1 flex -translate-y-1/2 select-none\"\n        aria-hidden=\"true\"\n        data-slot=\"native-select-icon\"\n      >\n        <svg width=\"7\" height=\"4\" viewBox=\"0 0 7 4\">\n          <polygon points=\"3.5,4 7,0 0,0\" fill=\"var(--muted-foreground)\" />\n        </svg>\n      </span>\n    </div>\n  )\n}\n\nfunction NativeSelectOption({\n  className,\n  ...props\n}: React.ComponentProps<\"option\">) {\n  return (\n    <option\n      data-slot=\"native-select-option\"\n      className={cn(\"bg-popover text-popover-foreground\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction NativeSelectOptGroup({\n  className,\n  ...props\n}: React.ComponentProps<\"optgroup\">) {\n  return (\n    <optgroup\n      data-slot=\"native-select-optgroup\"\n      className={cn(\"bg-popover text-popover-foreground\", className)}\n      {...props}\n    />\n  )\n}\n\nexport { NativeSelect, NativeSelectOptGroup, NativeSelectOption }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}

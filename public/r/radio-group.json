@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "radio-group",
+  "title": "Radio Group",
+  "description": "Win32-style radio buttons. Classic round dot indicator, sunken dot on check.",
+  "dependencies": [
+    "radix-ui@^1.4.3"
+  ],
+  "registryDependencies": [
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/theme.json",
+    "https://raw.githubusercontent.com/OnlyNinjaGear/go2003/main/public/r/utils.json"
+  ],
+  "files": [
+    {
+      "path": "registry/steam2003/ui/radio-group.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { RadioGroup as RadioGroupPrimitive } from \"radix-ui\"\n\nimport { cn } from \"@/lib/utils\"\n\nfunction RadioGroup({\n  className,\n  ...props\n}: React.ComponentProps<typeof RadioGroupPrimitive.Root>) {\n  return (\n    <RadioGroupPrimitive.Root\n      data-slot=\"radio-group\"\n      className={cn(\"flex flex-col gap-1.5\", className)}\n      {...props}\n    />\n  )\n}\n\nfunction RadioGroupItem({\n  className,\n  ...props\n}: React.ComponentProps<typeof RadioGroupPrimitive.Item>) {\n  return (\n    <RadioGroupPrimitive.Item\n      data-slot=\"radio-group-item\"\n      className={cn(\n        \"peer aspect-square size-[13px] shrink-0 rounded-full cursor-default\",\n        \"bg-input-bg [box-shadow:inset_1px_1px_0_var(--border-dark),inset_-1px_-1px_0_var(--border-light)]\",\n        \"outline-none focus-visible:win32-focus focus-visible:[outline-offset:1px]\",\n        \"disabled:bg-panel-pressed disabled:pointer-events-none\",\n        className\n      )}\n      {...props}\n    >\n      <RadioGroupPrimitive.Indicator\n        data-slot=\"radio-group-indicator\"\n        className=\"flex items-center justify-center\"\n      >\n        <span className=\"block size-[5px] rounded-full bg-foreground\" />\n      </RadioGroupPrimitive.Indicator>\n    </RadioGroupPrimitive.Item>\n  )\n}\n\nexport { RadioGroup, RadioGroupItem }\n",
+      "type": "registry:ui"
+    }
+  ],
+  "type": "registry:ui"
+}
